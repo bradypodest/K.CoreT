@@ -1,4 +1,5 @@
 ﻿using K.Core.Model;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -48,6 +49,20 @@ namespace K.Core.IServices.BASE
             Expression<Func<T, T2, T3, object[]>> joinExpression,
             Expression<Func<T, T2, T3, TResult>> selectExpression,
             Expression<Func<T, T2, T3, bool>> whereLambda = null) where T : class, new();
+
+
+
+        //----------------------
+        Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression,
+        PageDataOptions pageDataOptions);
+
+
+        /// <summary>
+        /// 导出
+        /// </summary>
+        /// <param name="pageData"></param>
+        /// <returns></returns>
+        Task<MessageModel<bool>> Export(PageDataOptions pageData);
     }
 
 }

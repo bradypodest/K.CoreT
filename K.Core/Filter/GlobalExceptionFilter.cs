@@ -13,7 +13,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace K.Core.Filter
+namespace K.Core.Services
 {
     /// <summary>
     /// 全局异常错误日志

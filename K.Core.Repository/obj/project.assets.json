@@ -10224,11 +10224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Repository\\K.Core.Repository.csproj",
+      "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Repository\\K.Core.Repository.csproj",
       "projectName": "K.Core.Repository",
-      "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Repository\\K.Core.Repository.csproj",
+      "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Repository\\K.Core.Repository.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Repository\\obj\\",
+      "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10247,11 +10247,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj"
+            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
+            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
+              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
             }
           }
         }

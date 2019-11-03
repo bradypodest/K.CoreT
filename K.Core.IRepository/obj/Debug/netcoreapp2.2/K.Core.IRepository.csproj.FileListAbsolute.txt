@@ -26,3 +26,17 @@ D:\localGitCode\study\stydyNetCore\copyProject\K.Core\K.Core.IRepository\obj\Deb
 D:\localGitCode\study\stydyNetCore\copyProject\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.csproj.CopyComplete
 D:\localGitCode\study\stydyNetCore\copyProject\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.dll
 D:\localGitCode\study\stydyNetCore\copyProject\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.IRepository.deps.json
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.IRepository.dll
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.IRepository.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Common.dll
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Model.dll
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Model.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Model.xml
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Common.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.csprojAssemblyReference.cache
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.AssemblyInfoInputs.cache
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.AssemblyInfo.cs
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.csproj.CopyComplete
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.dll
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.pdb

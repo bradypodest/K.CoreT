@@ -16,7 +16,7 @@ using K.Core.Common;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.LogHelper;
 using K.Core.Common.MemoryCache;
-using K.Core.Filter;
+using K.Core.Services;
 using K.Core.Hubs;
 using K.Core.IServices;
 using K.Core.Log;
@@ -313,7 +313,7 @@ namespace K.Core
             #region 【3、复杂策略授权】   不是很懂哦
 
             #region 参数
-            ////读取配置文件
+            //读取配置文件
             //var JWTConfig = Configuration.GetSection("JWT");
             //var symmetricKeyAsBase64 = JWTConfig["Secret"];
             //var keyByteArray = Encoding.ASCII.GetBytes(symmetricKeyAsBase64);

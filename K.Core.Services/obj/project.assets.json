@@ -7998,11 +7998,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Services\\K.Core.Services.csproj",
+      "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Services\\K.Core.Services.csproj",
       "projectName": "K.Core.Services",
-      "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Services\\K.Core.Services.csproj",
+      "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Services\\K.Core.Services.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Services\\obj\\",
+      "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8021,14 +8021,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj"
+            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj"
+            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj": {
+              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
+            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
+              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
             }
           }
         }

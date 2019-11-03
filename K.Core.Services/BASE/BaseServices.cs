@@ -1,15 +1,21 @@
-﻿using K.Core.IRepository.Base;
+﻿using K.Core.Services;
+using K.Core.IRepository.Base;
 using K.Core.IServices.BASE;
 using K.Core.Model;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using K.Core.Common.Helper;
 
 namespace K.Core.Services.BASE
 {
-    public class BaseServices<TEntity> : IBaseServices<TEntity> where TEntity : class, new()
+    public class BaseServices<TEntity> : ServiceFunFilter<TEntity>
+        , IBaseServices<TEntity> 
+        where TEntity : class, new()
     {
         //public IBaseRepository<TEntity> baseDal = new BaseRepository<TEntity>();
         public IBaseRepository<TEntity> BaseDal;//通过在子类的构造函数中注入，这里是基类，不用构造函数
@@ -254,6 +260,96 @@ namespace K.Core.Services.BASE
         {
             return await BaseDal.QueryMuch(joinExpression, selectExpression, whereLambda);
         }
+
+
+
+
+        //----------------------------
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="whereExpression"></param>
+        /// <param name="pageDataOptions"></param>
+        /// <returns></returns>
+        public async Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression, PageDataOptions pageDataOptions)
+        {
+            var oLamadaExtention = new LamadaExtention<TEntity>();
+
+            if (pageDataOptions.IsAll)
+            {
+            }
+            else 
+            {
+                oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+            }
+
+            //循环判断 : 只能处理 = ,like , !=  , > , <,  >=, <=
+            string[] wheres = new string[] { };
+            if (!string.IsNullOrWhiteSpace(pageDataOptions.Wheres)) 
+            {
+                wheres = pageDataOptions.Wheres.Split("|");
+            }
+            foreach (var item in wheres)
+            {
+                if (!string.IsNullOrWhiteSpace(item)) 
+                {
+                    string[] oneWhere = item.Split(",");
+
+                    oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], (ExpressionType)(oneWhere[1].ToInt()));
+                }
+            }
+
+            var lamada = oLamadaExtention.GetLambda();
+
+            pageDataOptions.Order=!string.IsNullOrWhiteSpace(pageDataOptions.Order)?pageDataOptions.Order:"CreateTime desc";
+
+
+            return await BaseDal.QueryPage(lamada,
+         pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+        }
+
+
+        //public  MessageModel<bool> Upload(List<IFormFile> files)
+        //{
+        //    return new MessageModel<bool>() { Success = false, Msg = " 文件上传功能开发中....", Data = false };
+        //}
+
+        //public Task<MessageModel<bool>> DownLoadTemplate()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public Task<MessageModel<bool>> Import(List<IFormFile> files)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        /// <summary>
+        /// 导出表格
+        /// </summary>
+        /// <param name="pageData"></param>
+        /// <returns></returns>
+        public virtual Task<MessageModel<bool>> Export(PageDataOptions pageData)
+        {
+            throw new NotImplementedException();
+            //pageData.Export = true;
+            ////List<TEntity> list = GetPageData(pageData).rows;
+            ////List<TEntity> list = GetPageData(pageData).rows;//查询数据
+            //string tableName = typeof(TEntity).GetEntityTableCnName();
+            //string fileName = tableName + DateTime.Now.ToString("yyyyMMddHHssmm") + ".xlsx";
+            //string folder = DateTime.Now.ToString("yyyyMMdd");
+            //string savePath = $"Download/ExcelExport/{folder}/".MapPath();
+            //List<string> ignoreColumn = new List<string>();
+            //if (ExportOnExecuting != null)
+            //{
+            //    Response = ExportOnExecuting(list, ignoreColumn);
+            //    if (!Response.Status) return Response;
+            //}
+            //EPPlusHelper.Export(list, ignoreColumn, savePath, fileName);
+            //return Response.OK(null, (savePath + "/" + fileName).EncryptDES(AppSetting.Secret.ExportFile));
+        }
+
+        
     }
 
 }

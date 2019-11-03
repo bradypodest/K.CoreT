@@ -42,6 +42,8 @@ namespace K.Core.Model.Models
 
 
                 // 创建表
+                myContext.CreateTableByEntity(false,
+                    typeof(SysUser));
                 //myContext.CreateTableByEntity(false,
                 //    typeof(Advertisement),
                 //    typeof(BlogArticle),
@@ -63,7 +65,7 @@ namespace K.Core.Model.Models
                 //myContext.Db.CodeFirst.InitTables(typeof(Permission)); 
                 //myContext.Db.CodeFirst.InitTables(typeof(Advertisement));
 
-                Console.WriteLine("Database:WMBlog created success!");
+                Console.WriteLine("Database:KCoreDB created success!");
                 Console.WriteLine();
 
                 if (Appsettings.app(new string[] { "AppSettings", "SeedDBDataEnabled" }).ObjToBool())

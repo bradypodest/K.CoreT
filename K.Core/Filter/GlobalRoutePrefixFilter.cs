@@ -15,7 +15,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace K.Core.Filter
+namespace K.Core.Services
 {
     /// <summary>
     /// 全局路由前缀公约

@@ -1,0 +1,267 @@
+2019-11-03 17:01:41,179| 
+【自定义错误】：Unable to resolve service for type 'K.Core.IServices.System.ISysUserService' while attempting to activate 'K.Core.Controllers.System.SysUserController'. 
+【异常类型】：InvalidOperationException 
+【异常信息】：Unable to resolve service for type 'K.Core.IServices.System.ISysUserService' while attempting to activate 'K.Core.Controllers.System.SysUserController'. 
+【堆栈调用】：   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:03:12,590| 
+【自定义错误】：Unable to resolve service for type 'K.Core.IServices.System.ISysUserService' while attempting to activate 'K.Core.Controllers.System.SysUserController'. 
+【异常类型】：InvalidOperationException 
+【异常信息】：Unable to resolve service for type 'K.Core.IServices.System.ISysUserService' while attempting to activate 'K.Core.Controllers.System.SysUserController'. 
+【堆栈调用】：   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:09:02,252| 
+【自定义错误】：Index was outside the bounds of the array. 
+【异常类型】：IndexOutOfRangeException 
+【异常信息】：Index was outside the bounds of the array. 
+【堆栈调用】：   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 300
+   at K.Core.AOP.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\AOP\LogAOP.cs:line 158
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:11:42,056| 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 293
+   at K.Core.AOP.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\AOP\LogAOP.cs:line 158
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:12:03,158| 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 293
+   at K.Core.AOP.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\AOP\LogAOP.cs:line 158
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:12:28,305| 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 293
+   at K.Core.AOP.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\AOP\LogAOP.cs:line 158
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:14:30,180| 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 293
+   at K.Core.AOP.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\AOP\LogAOP.cs:line 158
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:18:38,328| 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 293
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:22:43,955| 
+【自定义错误】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【异常类型】：ArgumentException 
+【异常信息】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Property(Expression expression, String propertyName)
+   at K.Core.Common.Helper.LambdaHelper.GetExpression[T,TKey](String propertyName, ParameterExpression parameter) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 72
+   at K.Core.Common.Helper.LambdaHelper.Compose[T](List`1 listExpress, Func`3 merge) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 347
+   at K.Core.Common.Helper.LambdaHelper.And[T](List`1 listExpress) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 327
+   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 318
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:24:53,059| 
+【自定义错误】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【异常类型】：ArgumentException 
+【异常信息】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Property(Expression expression, String propertyName)
+   at K.Core.Common.Helper.LambdaHelper.GetExpression[T,TKey](String propertyName, ParameterExpression parameter) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 72
+   at K.Core.Common.Helper.LambdaHelper.Compose[T](List`1 listExpress, Func`3 merge) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 347
+   at K.Core.Common.Helper.LambdaHelper.And[T](List`1 listExpress) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 327
+   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 318
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:25:14,835| 
+【自定义错误】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【异常类型】：ArgumentException 
+【异常信息】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Property(Expression expression, String propertyName)
+   at K.Core.Common.Helper.LambdaHelper.GetExpression[T,TKey](String propertyName, ParameterExpression parameter) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 72
+   at K.Core.Common.Helper.LambdaHelper.Compose[T](List`1 listExpress, Func`3 merge) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 347
+   at K.Core.Common.Helper.LambdaHelper.And[T](List`1 listExpress) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 327
+   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 318
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:29:14,704| 
+【自定义错误】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【异常类型】：ArgumentException 
+【异常信息】：Instance property 'Status' is not defined for type 'K.Core.Model.Models.SysUser'
+Parameter name: propertyName 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Property(Expression expression, String propertyName)
+   at K.Core.Common.Helper.LambdaHelper.GetExpression[T,TKey](String propertyName, ParameterExpression parameter) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 72
+   at K.Core.Common.Helper.LambdaHelper.Compose[T](List`1 listExpress, Func`3 merge) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 347
+   at K.Core.Common.Helper.LambdaHelper.And[T](List`1 listExpress) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\Helper\LamadaHelper.cs:line 327
+   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 318
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 17:50:02,290| 
+【自定义错误】：SQLite Error 1: 'no such table: SysUser'. 
+【异常类型】：SqliteException 
+【异常信息】：SQLite Error 1: 'no such table: SysUser'. 
+【堆栈调用】：   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at K.Core.Repository.Base.BaseRepository`1.QueryPage(Expression`1 whereExpression, Int32 intPageIndex, Int32 intPageSize, String strOrderByFileds) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Repository\BASE\BaseRepository.cs:line 387
+   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 332
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------
+2019-11-03 18:00:09,676| 
+【自定义错误】：列名 'Status' 无效。 
+【异常类型】：SqlException 
+【异常信息】：列名 'Status' 无效。 
+【堆栈调用】：   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at K.Core.Repository.Base.BaseRepository`1.QueryPage(Expression`1 whereExpression, Int32 intPageIndex, Int32 intPageSize, String strOrderByFileds) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Repository\BASE\BaseRepository.cs:line 387
+   at K.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\BASE\BaseServices.cs:line 307
+   at K.Core.Controllers.Base.BaseController`2.GetPageData(PageDataOptions pageDataOptions) in D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\Controllers\Base\BaseController.cs:line 41
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------

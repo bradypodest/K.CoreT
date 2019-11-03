@@ -7,3 +7,12 @@ D:\study\myStudy\studyAndr\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core
 D:\study\myStudy\studyAndr\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.csproj.CopyComplete
 D:\study\myStudy\studyAndr\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.dll
 D:\study\myStudy\studyAndr\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\bin\Debug\netcoreapp2.2\K.Core.Services.deps.json
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\bin\Debug\netcoreapp2.2\K.Core.Services.dll
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core\bin\Debug\netcoreapp2.2\K.Core.Services.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.AssemblyInfoInputs.cache
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.AssemblyInfo.cs
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.csproj.CopyComplete
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.dll
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Services\obj\Debug\netcoreapp2.2\K.Core.Services.csprojAssemblyReference.cache

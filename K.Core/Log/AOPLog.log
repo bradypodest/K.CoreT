@@ -261,3 +261,33 @@ Chinese Message :  连接数据库过程中发生错误，检查服务器是否�
 【当前执行方法】：GetUserRoleNameStr 
 【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
 【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/3 17:08:45|
+【当前执行方法】：QueryPage 
+【携带的参数有】： p => True, K.Core.Model.PageDataOptions 
+方法执行中出现异常：Index was outside the bounds of the array.
+【执行完成结果】：System.Threading.Tasks.Task`1[K.Core.Model.PageModel`1[K.Core.Model.Models.SysUser]]
+--------------------------------
+2019/11/3 17:11:41|
+【当前执行方法】：QueryPage 
+【携带的参数有】： p => True, K.Core.Model.PageDataOptions 
+方法执行中出现异常：Object reference not set to an instance of an object.
+【执行完成结果】：System.Threading.Tasks.Task`1[K.Core.Model.PageModel`1[K.Core.Model.Models.SysUser]]
+--------------------------------
+2019/11/3 17:12:02|
+【当前执行方法】：QueryPage 
+【携带的参数有】： p => True, K.Core.Model.PageDataOptions 
+方法执行中出现异常：Object reference not set to an instance of an object.
+【执行完成结果】：System.Threading.Tasks.Task`1[K.Core.Model.PageModel`1[K.Core.Model.Models.SysUser]]
+--------------------------------
+2019/11/3 17:12:21|
+【当前执行方法】：QueryPage 
+【携带的参数有】： p => True, K.Core.Model.PageDataOptions 
+方法执行中出现异常：Object reference not set to an instance of an object.
+【执行完成结果】：System.Threading.Tasks.Task`1[K.Core.Model.PageModel`1[K.Core.Model.Models.SysUser]]
+--------------------------------
+2019/11/3 17:14:29|
+【当前执行方法】：QueryPage 
+【携带的参数有】： p => True, K.Core.Model.PageDataOptions 
+方法执行中出现异常：Object reference not set to an instance of an object.
+【执行完成结果】：System.Threading.Tasks.Task`1[K.Core.Model.PageModel`1[K.Core.Model.Models.SysUser]]

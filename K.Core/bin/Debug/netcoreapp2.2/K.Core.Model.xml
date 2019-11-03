@@ -4,6 +4,86 @@
         <name>K.Core.Model</name>
     </assembly>
     <members>
+        <member name="P:K.Core.Model.TableInfoAttribute.TableName">
+            <summary>
+            真实表名(数据库表名，若没有填写默认实体为表名)
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.TableInfoAttribute.TableCnName">
+            <summary>
+            表中文名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.TableInfoAttribute.DetailTable">
+            <summary>
+            子表
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.TableInfoAttribute.DetailTableCnName">
+            <summary>
+            子表中文名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.TableInfoAttribute.DBServer">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:K.Core.Model.StatusE.Live">
+            <summary>
+            存活
+            </summary>
+        </member>
+        <member name="F:K.Core.Model.StatusE.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:K.Core.Model.StatusE.Ban">
+            <summary>
+            禁止  ，如用户
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendTwoEntity.CreateID">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendTwoEntity.Creator">
+             <summary>
+            创建人
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendTwoEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendTwoEntity.ModifyID">
+            <summary>
+            修改人ID
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendTwoEntity.Modifier">
+             <summary>
+            修改人
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendTwoEntity.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
         <member name="T:K.Core.Model.MessageModel`1">
             <summary>
             通用返回信息类
@@ -24,50 +104,85 @@
             返回数据集合
             </summary>
         </member>
-        <member name="T:K.Core.Model.PageModel`1">
+        <member name="P:K.Core.Model.Models.SysUser.UserName">
             <summary>
-            通用分页信息类
+            用户名
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.page">
+        <member name="P:K.Core.Model.Models.SysUser.UserPwd">
+             <summary>
+            密码
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.RoleId">
+             <summary>
+            角色id
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.RoleName">
             <summary>
-            当前页标
+            角色
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.pageCount">
+        <member name="P:K.Core.Model.Models.SysUser.LastLoginDate">
+             <summary>
+            最后登陆时间
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.LastModifyPwdDate">
+             <summary>
+            最后密码修改时间
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.ErrorCount">
+             <summary>
+            错误次数 
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.LastLoginFailDate">
+             <summary>
+            最后登陆失败时间
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.headPicUrl">
             <summary>
-            总页数
+            头像
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.dataCount">
+        <member name="P:K.Core.Model.Models.SysUser.Sex">
             <summary>
-            数据总数
+            性别
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.PageSize">
+        <member name="P:K.Core.Model.Models.SysUser.Age">
             <summary>
-            每页大小
+            年龄
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.data">
+        <member name="P:K.Core.Model.Models.SysUser.Birth">
             <summary>
-            返回数据
+            生日
             </summary>
         </member>
-        <member name="F:K.Core.Model.ResponseEnum.NoPermissions">
+        <member name="P:K.Core.Model.Models.SysUser.Address">
+             <summary>
+            地址
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.Mobile">
+             <summary>
+            电话
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysUser.Email">
             <summary>
-            无权限
+            邮箱
             </summary>
         </member>
-        <member name="F:K.Core.Model.ResponseEnum.NoFound">
-            <summary>
-            找不到指定资源
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.ResponseEnum.ServerError">
-            <summary>
-            找不到指定资源
-            </summary>
+        <member name="P:K.Core.Model.Models.SysUser.Remark">
+             <summary>
+            备注
+             </summary>
         </member>
         <member name="M:K.Core.Model.Models.DBSeed.SeedAsync(K.Core.Model.Models.MyContext)">
             <summary>
@@ -219,6 +334,72 @@
             </summary>
             <param name="config">config</param>
             <returns>返回值</returns>
+        </member>
+        <member name="T:K.Core.Model.PageModel`1">
+            <summary>
+            通用分页信息类
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageModel`1.page">
+            <summary>
+            当前页标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageModel`1.pageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageModel`1.dataCount">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageModel`1.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageModel`1.data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.Page">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.Rows">
+            <summary>
+            多少 pagesize
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.Order">
+            <summary>
+            排序方式    格式如  "ID desc"
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.Wheres">
+            <summary>
+            条件 格式：   字段名称,条件（如 0,1,2）,值 | 字段名称,条件（如）,值
+            关于条件 ，查看ExpressionType 枚举
+            </summary>
+        </member>
+        <member name="F:K.Core.Model.ResponseEnum.NoPermissions">
+            <summary>
+            无权限
+            </summary>
+        </member>
+        <member name="F:K.Core.Model.ResponseEnum.NoFound">
+            <summary>
+            找不到指定资源
+            </summary>
+        </member>
+        <member name="F:K.Core.Model.ResponseEnum.ServerError">
+            <summary>
+            找不到指定资源
+            </summary>
         </member>
         <member name="T:K.Core.Model.TableModel`1">
             <summary>
