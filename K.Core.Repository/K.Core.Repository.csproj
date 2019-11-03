@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\K.Core\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AdvertisementRepository.cs" />
+    <Compile Remove="BlogArticleRepository.cs" />
+    <Compile Remove="GuestbookRepository.cs" />
+    <Compile Remove="ModulePermissionRepository.cs" />
+    <Compile Remove="ModuleRepository.cs" />
+    <Compile Remove="PasswordLibRepository.cs" />
+    <Compile Remove="PermissionRepository.cs" />
+    <Compile Remove="RoleModulePermissionRepository.cs" />
+    <Compile Remove="RoleRepository.cs" />
+    <Compile Remove="sysUserInfoRepository.cs" />
+    <Compile Remove="TopicDetailRepository.cs" />
+    <Compile Remove="TopicRepository.cs" />
+    <Compile Remove="UserRoleRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.0.165" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\K.Core.IRepository\K.Core.IRepository.csproj" />
+    <ProjectReference Include="..\K.Core.Model\K.Core.Model.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="Copy &quot;$(OutDir)$(TargetFileName)&quot; &quot;$(SolutionDir)K.Core\$(TargetFileName)&quot;" />
+  </Target>
+
+</Project>

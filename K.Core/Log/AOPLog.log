@@ -1,0 +1,263 @@
+--------------------------------
+2019/11/2 18:53:19|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+方法执行中出现异常：English Message : Connection open error . A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Chinese Message :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，实在找不到原因请先Google错误信息：A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server).
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 18:56:47|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+方法执行中出现异常：SQLite Error 1: 'no such table: sysUserInfo'.
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 18:58:49|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 18:59:06|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 18:59:12|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:00:28|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:00:28|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:00:28|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:01:44|
+【当前执行方法】：GetRoleModule 
+【携带的参数有】：  
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.RoleModulePermission]]
+--------------------------------
+2019/11/2 19:01:45|
+【当前执行方法】：QueryPage 
+【携带的参数有】： a => ((a.IsDeleted != Convert(True, Nullable`1)) AndAlso ((a.Name != null) AndAlso a.Name.Contains(value(K.Core.Controllers.ModuleController+<>c__DisplayClass2_0).key))), 1, 50,  Id desc  
+【执行完成结果】：System.Threading.Tasks.Task`1[K.Core.Model.PageModel`1[K.Core.Model.Models.Module]]
+--------------------------------
+2019/11/2 19:03:00|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:00|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:01|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:02|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:02|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:02|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:03|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:03|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:04|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:04|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:04|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:04|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:05|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:05|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:05|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:06|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:06|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:06|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:07|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:07|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:07|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:08|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:08|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:08|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:09|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:09|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:09|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:10|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:10|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:10|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:11|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:11|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:11|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:12|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:12|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:12|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:13|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:13|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:13|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]
+--------------------------------
+2019/11/2 19:03:14|
+【当前执行方法】：Query 
+【携带的参数有】： d => ((d.uLoginName == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).name) AndAlso (d.uLoginPWD == value(K.Core.Controllers.LoginController+<>c__DisplayClass7_0).pass)) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.sysUserInfo]]
+--------------------------------
+2019/11/2 19:03:14|
+【当前执行方法】：Query 
+【携带的参数有】： ur => (ur.UserId == value(K.Core.FrameWork.Services.SysUserInfoServices+<>c__DisplayClass5_0).user.uID) 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[K.Core.Model.Models.UserRole]]
+--------------------------------
+2019/11/2 19:03:14|
+【当前执行方法】：GetUserRoleNameStr 
+【携带的参数有】： test, 98F6BCD4621D373CADE4E832627B4F6 
+【执行完成结果】：System.Threading.Tasks.Task`1[System.String]

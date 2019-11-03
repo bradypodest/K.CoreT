@@ -1,0 +1,367 @@
+--------------------------------
+2019/11/2 18:52:59|
+【SQL参数】：@uLoginName0:121
+@uLoginPWD1:4C56FF4CE4AAF9573AA5DFF913DF997A
+
+【SQL语句】：SELECT [uID],[uLoginName],[uLoginPWD],[uRealName],[uStatus],[uRemark],[uCreateTime],[uUpdateTime],[uLastErrTime],[uErrorCount],[name],[sex],[age],[birth],[addr],[tdIsDelete] FROM [sysUserInfo]  WHERE (( [uLoginName] = @uLoginName0 ) AND ( [uLoginPWD] = @uLoginPWD1 ))
+--------------------------------
+2019/11/2 18:56:46|
+【SQL参数】：@uLoginName0:121
+@uLoginPWD1:4C56FF4CE4AAF9573AA5DFF913DF997A
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 18:58:48|
+【SQL参数】：@uLoginName0:121
+@uLoginPWD1:4C56FF4CE4AAF9573AA5DFF913DF997A
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 18:59:06|
+【SQL参数】：@uLoginName0:admin
+@uLoginPWD1:E1ADC3949BA59ABBE56E057F2F883E
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 18:59:12|
+【SQL参数】：@uLoginName0:admin
+@uLoginPWD1:202CB962AC5975B964B7152D234B70
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:00:28|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:00:28|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:00:28|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:01:44|
+【SQL参数】：@IsDeleted0:True
+@MethodConst2:
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT `IsDeleted`,`ParentId`,`Name`,`LinkUrl`,`Area`,`Controller`,`Action`,`Icon`,`Code`,`OrderSort`,`Description`,`IsMenu`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Module`  WHERE (( `IsDeleted` <> @IsDeleted0 ) AND (( `Name` IS NOT NULL ) AND  (`Name` like '%'||@MethodConst2||'%') )) ) CountTable 
+--------------------------------
+2019/11/2 19:01:44|
+【SQL参数】：@IsDeleted0:True
+@MethodConst2:
+
+【SQL语句】：SELECT `IsDeleted`,`ParentId`,`Name`,`LinkUrl`,`Area`,`Controller`,`Action`,`Icon`,`Code`,`OrderSort`,`Description`,`IsMenu`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Module`   WHERE (( `IsDeleted` <> @IsDeleted0 ) AND (( `Name` IS NOT NULL ) AND  (`Name` like '%'||@MethodConst2||'%') ))  ORDER BY  Id desc  LIMIT 0,50
+--------------------------------
+2019/11/2 19:03:00|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:00|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:00|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:01|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:02|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:02|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:02|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:02|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:03|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:03|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:03|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:04|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:04|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:04|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:04|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:04|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:05|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:05|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:05|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:05|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:06|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:06|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:06|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:06|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:07|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:07|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:07|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:07|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:08|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:08|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:08|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:08|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:09|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:09|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:09|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:09|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:10|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:10|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:10|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:10|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:11|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:11|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:11|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:11|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:12|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:12|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:12|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:12|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:13|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:13|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:13|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:13|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   
+--------------------------------
+2019/11/2 19:03:14|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:14|
+【SQL参数】：@uLoginName0:test
+@uLoginPWD1:98F6BCD4621D373CADE4E832627B4F6
+
+【SQL语句】：SELECT `uID`,`uLoginName`,`uLoginPWD`,`uRealName`,`uStatus`,`uRemark`,`uCreateTime`,`uUpdateTime`,`uLastErrTime`,`uErrorCount`,`name`,`sex`,`age`,`birth`,`addr`,`tdIsDelete` FROM `sysUserInfo`  WHERE (( `uLoginName` = @uLoginName0 ) AND ( `uLoginPWD` = @uLoginPWD1 )) 
+--------------------------------
+2019/11/2 19:03:14|
+【SQL参数】：@UserId0:8
+
+【SQL语句】：SELECT `IsDeleted`,`UserId`,`RoleId`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `UserRole`  WHERE ( `UserId` = @UserId0 ) 
+--------------------------------
+2019/11/2 19:03:14|
+【SQL参数】：@InPara0:6
+
+【SQL语句】：SELECT `IsDeleted`,`Name`,`Description`,`OrderSort`,`Enabled`,`CreateId`,`CreateBy`,`CreateTime`,`ModifyId`,`ModifyBy`,`ModifyTime`,`Id` FROM `Role`  WHERE `Id` IN (@InPara0)   

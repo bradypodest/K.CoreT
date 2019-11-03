@@ -1,0 +1,9 @@
+D:\study\myStudy\studyAndr\K.Core\K.Core\bin\Debug\netcoreapp2.2\K.Core.Repository.deps.json
+D:\study\myStudy\studyAndr\K.Core\K.Core\bin\Debug\netcoreapp2.2\K.Core.Repository.dll
+D:\study\myStudy\studyAndr\K.Core\K.Core\bin\Debug\netcoreapp2.2\K.Core.Repository.pdb
+D:\study\myStudy\studyAndr\K.Core\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.csprojAssemblyReference.cache
+D:\study\myStudy\studyAndr\K.Core\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.AssemblyInfoInputs.cache
+D:\study\myStudy\studyAndr\K.Core\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.AssemblyInfo.cs
+D:\study\myStudy\studyAndr\K.Core\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.csproj.CopyComplete
+D:\study\myStudy\studyAndr\K.Core\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.dll
+D:\study\myStudy\studyAndr\K.Core\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.pdb

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Job1TimedService.cs" />
+    <Compile Remove="Job2TimedService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\K.Core.IServices\K.Core.IServices.csproj" />
+  </ItemGroup>
+
+</Project>

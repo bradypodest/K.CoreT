@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\K.Core\K.Core.Model.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Love.cs" />
+    <Compile Remove="Models\Advertisement.cs" />
+    <Compile Remove="Models\BlogArticle.cs" />
+    <Compile Remove="Models\Guestbook.cs" />
+    <Compile Remove="Models\Module.cs" />
+    <Compile Remove="Models\ModulePermission.cs" />
+    <Compile Remove="Models\OperateLog.cs" />
+    <Compile Remove="Models\PasswordLib.cs" />
+    <Compile Remove="Models\Permission.cs" />
+    <Compile Remove="Models\Role.cs" />
+    <Compile Remove="Models\RoleModulePermission.cs" />
+    <Compile Remove="Models\RootEntity.cs" />
+    <Compile Remove="Models\sysUserInfo.cs" />
+    <Compile Remove="Models\TestModels.cs" />
+    <Compile Remove="Models\Topic.cs" />
+    <Compile Remove="Models\TopicDetail.cs" />
+    <Compile Remove="Models\UserRole.cs" />
+    <Compile Remove="ViewModels\AdvertisementViewModels.cs" />
+    <Compile Remove="ViewModels\BlogViewModels.cs" />
+    <Compile Remove="ViewModels\GuestbookViewModels.cs" />
+    <Compile Remove="ViewModels\LoginInfoViewModels.cs" />
+    <Compile Remove="ViewModels\ModuleViewModels.cs" />
+    <Compile Remove="ViewModels\SidebarMenuViewModel.cs" />
+    <Compile Remove="ViewModels\TopgbViewModels.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\K.Core.Common\K.Core.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+</Project>

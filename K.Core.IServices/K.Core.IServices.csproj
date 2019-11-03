@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IAdvertisementServices.cs" />
+    <Compile Remove="IBlogArticleServices.cs" />
+    <Compile Remove="IGuestbookServices.cs" />
+    <Compile Remove="IModulePermissionServices.cs" />
+    <Compile Remove="IModuleServices.cs" />
+    <Compile Remove="IPasswordLibServices.cs" />
+    <Compile Remove="IPermissionServices.cs" />
+    <Compile Remove="IRoleModulePermissionServices.cs" />
+    <Compile Remove="IRoleServices.cs" />
+    <Compile Remove="IsysUserInfoServices.cs" />
+    <Compile Remove="ITopicDetailServices.cs" />
+    <Compile Remove="ITopicServices.cs" />
+    <Compile Remove="IUserRoleServices.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\K.Core.Model\K.Core.Model.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\K.Core\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AdvertisementServices.cs" />
+    <Compile Remove="BlogArticleServices.cs" />
+    <Compile Remove="GuestbookServices.cs" />
+    <Compile Remove="ModulePermissionServices.cs" />
+    <Compile Remove="ModuleServices.cs" />
+    <Compile Remove="PasswordLibServices.cs" />
+    <Compile Remove="PermissionServices.cs" />
+    <Compile Remove="RoleModulePermissionServices.cs" />
+    <Compile Remove="RoleServices.cs" />
+    <Compile Remove="sysUserInfoServices.cs" />
+    <Compile Remove="TopicDetailServices.cs" />
+    <Compile Remove="TopicServices.cs" />
+    <Compile Remove="UserRoleServices.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\K.Core.IRepository\K.Core.IRepository.csproj" />
+    <ProjectReference Include="..\K.Core.IServices\K.Core.IServices.csproj" />
+    <ProjectReference Include="..\K.Core.Model\K.Core.Model.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="Copy &quot;$(OutDir)$(TargetFileName)&quot; &quot;$(SolutionDir)K.Core\$(TargetFileName)&quot;" />
+  </Target>
+
+</Project>
