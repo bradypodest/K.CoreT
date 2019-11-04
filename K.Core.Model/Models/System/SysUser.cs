@@ -26,7 +26,7 @@ namespace K.Core.Model.Models
         /// </summary>
         [Display(Name = "密码")]
         [MaxLength(200)]
-        [JsonIgnore]//忽略其属性序列号
+        [JsonIgnore]//忽略其属性序列号 //可以在swagger 上面不显示
         [SugarColumn(Length = 200, IsNullable = false)]
         //[Column(TypeName = "nvarchar(200)")]
         public string UserPwd { get; set; }
@@ -57,6 +57,7 @@ namespace K.Core.Model.Models
         ///最后登陆时间
         /// </summary>
         [Display(Name = "最后登陆时间")]
+        [SugarColumn(IsNullable = true)]
         //[Column(TypeName = "datetime")]
         public DateTime? LastLoginDate { get; set; }
 
@@ -64,6 +65,7 @@ namespace K.Core.Model.Models
         ///最后密码修改时间
         /// </summary>
         [Display(Name = "最后密码修改时间")]
+        [SugarColumn(IsNullable = true)]
         //[Column(TypeName = "datetime")]
         public DateTime? LastModifyPwdDate { get; set; }
 
@@ -71,6 +73,7 @@ namespace K.Core.Model.Models
         ///错误次数 
         /// </summary>
         [Display(Name = "错误次数")]
+        [SugarColumn(IsNullable = true)]
         //[Column(TypeName = "int")]
         public int ErrorCount { get; set; }
 
@@ -78,6 +81,7 @@ namespace K.Core.Model.Models
         ///最后登陆失败时间
         /// </summary>
         [Display(Name = "最后登陆失败时间")]
+        [SugarColumn(IsNullable = true)]
         //[Column(TypeName = "datetime")]
         public DateTime? LastLoginFailDate { get; set; }
 
@@ -100,6 +104,7 @@ namespace K.Core.Model.Models
         /// 年龄
         /// </summary>
         [Display(Name = "年龄")]
+        [SugarColumn(IsNullable = true)]
         //[Column(TypeName = "int")]
         public int? Age { get; set; }
 
@@ -107,6 +112,7 @@ namespace K.Core.Model.Models
         /// 生日
         /// </summary>
         [Display(Name = "生日")]
+        [SugarColumn(IsNullable = true)]
         //[Column(TypeName = "datetime")]
         public DateTime? Birth { get; set; } = DateTime.Now;
 

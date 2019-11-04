@@ -52,6 +52,7 @@ namespace K.Core.Model
         /// <summary>
         /// 修改时间
         /// </summary>
+        [SugarColumn(IsNullable = true)]
         public System.DateTime? ModifyTime { get; set; }
 
     }

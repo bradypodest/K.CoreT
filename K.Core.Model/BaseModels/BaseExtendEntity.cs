@@ -32,7 +32,7 @@ namespace K.Core.Model
         [Key]//主键
         [Display(Name = "序号")]//字段显示名称
         //[Column(TypeName = "nvarchar(100)")] //EF
-        [Required(AllowEmptyStrings = false)]//必需
+        //[Required(AllowEmptyStrings = false)]//必需
         [SugarColumn(IsNullable = false, IsPrimaryKey = true, Length =100)]
         public string ID { get; set; }
 
@@ -44,6 +44,30 @@ namespace K.Core.Model
         [Editable(true)]
         [SugarColumn(IsNullable = false)]
         public StatusE Status { get; set; }
+
+        /// <summary>
+        /// 删除时间
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public System.DateTime? DeleteTime { get; set; }
+
+        /// <summary>
+        ///删除人
+        /// </summary>
+        [Display(Name = "删除人")]
+        [MaxLength(200)]
+        //[Column(TypeName = "nvarchar(200)")]
+        [SugarColumn(IsNullable = true, Length = 200)]
+        [Editable(true)]
+        public string Deleter { get; set; }
+
+        /// <summary>
+        /// 删除人ID
+        /// </summary>
+        [Display(Name = "删除人ID")]
+        //[Column(TypeName = "nvarchar(100)")]
+        [SugarColumn(IsNullable = true, Length = 100)]
+        public String DeleterID { get; set; }
     }
 
     public enum StatusE

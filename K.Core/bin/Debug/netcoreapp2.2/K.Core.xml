@@ -89,6 +89,41 @@
             这个是对应实体类的 service
             </summary>
         </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`2.GetPageData(K.Core.Model.PageDataOptions)">
+            <summary>
+            base 分页获取
+            </summary>
+            <param name="pageDataOptions">分页参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`2.GetOneByID(System.String)">
+            <summary>
+            base 根据id获取单独的一个实体  （看情况是否需要重写）
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`2.Add(`0)">
+            <summary>
+            base 增加一个实体 （看情况是否重写）
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`2.Update(`0)">
+            <summary>
+            base 更新一个实体 （需要在各自实体control中重写）
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`2.Delete(System.String)">
+            <summary>
+            base 根据id 删除一个实体
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Services.GlobalRouteAuthorizeConvention">
             <summary>
             Summary:全局路由权限公约

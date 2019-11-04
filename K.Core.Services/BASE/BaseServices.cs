@@ -266,7 +266,7 @@ namespace K.Core.Services.BASE
 
         //----------------------------
         /// <summary>
-        /// 
+        /// 分页查询 且 参数动态
         /// </summary>
         /// <param name="whereExpression"></param>
         /// <param name="pageDataOptions"></param>
@@ -283,29 +283,62 @@ namespace K.Core.Services.BASE
                 oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
             }
 
+            ////循环判断 : 只能处理 = ,like , !=  , > , <,  >=, <=
+            //string[] wheres = new string[] { };
+            //if (!string.IsNullOrWhiteSpace(pageDataOptions.Wheres)) 
+            //{
+            //    wheres = pageDataOptions.Wheres.Split("|");
+            //}
+            //foreach (var item in wheres)
+            //{
+            //    if (!string.IsNullOrWhiteSpace(item)) 
+            //    {
+            //        string[] oneWhere = item.Split(",");
+
+            //        oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], (ExpressionType)(oneWhere[1].ToInt()));
+            //    }
+            //}
+
+
+            #region  查询参数     时间类型的可能还是有点 问题
             //循环判断 : 只能处理 = ,like , !=  , > , <,  >=, <=
             string[] wheres = new string[] { };
-            if (!string.IsNullOrWhiteSpace(pageDataOptions.Wheres)) 
+            if (!string.IsNullOrWhiteSpace(pageDataOptions.Wheres))
             {
                 wheres = pageDataOptions.Wheres.Split("|");
             }
             foreach (var item in wheres)
             {
-                if (!string.IsNullOrWhiteSpace(item)) 
+                //如果有特殊情况就需要特殊判断 ： 如情况为 查找一个字符串包含在ID  或者  在Name中
+
+
+                if (!string.IsNullOrWhiteSpace(item))
                 {
                     string[] oneWhere = item.Split(",");
 
-                    oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], (ExpressionType)(oneWhere[1].ToInt()));
+                    //oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], (ExpressionType)(oneWhere[1].ToInt()));
+                    oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], oneWhere[1].ToEnum<ExpressionType>());
                 }
             }
 
-            var lamada = oLamadaExtention.GetLambda();
+            #endregion
 
+            var lamada = oLamadaExtention.GetLambda();
+            
             pageDataOptions.Order=!string.IsNullOrWhiteSpace(pageDataOptions.Order)?pageDataOptions.Order:"CreateTime desc";
 
+            if (lamada != null)
+            {
+                return await BaseDal.QueryPage(lamada,
+        pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+            }
+            else 
+            {
+                return await BaseDal.QueryPage(whereExpression,
+       pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+            }
+               
 
-            return await BaseDal.QueryPage(lamada,
-         pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
         }
 
 

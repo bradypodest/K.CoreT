@@ -39,6 +39,21 @@
             状态
             </summary>
         </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.DeleteTime">
+            <summary>
+            删除时间
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.Deleter">
+             <summary>
+            删除人
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.DeleterID">
+            <summary>
+            删除人ID
+            </summary>
+        </member>
         <member name="F:K.Core.Model.StatusE.Live">
             <summary>
             存活

@@ -16,6 +16,11 @@ namespace K.Core.Common.HttpContextUser
 
         public string Name => _accessor.HttpContext.User.Identity.Name;
 
+        //public int ID => GetClaimValueByType("jti").FirstOrDefault().ObjToInt();
+
+        //public int ID => GetClaimValueByType(JwtRegisteredClaimNames.Jti).FirstOrDefault().ObjToInt(); 
+        public string ID => GetClaimValueByType("jti").FirstOrDefault().ToString();
+
         public bool IsAuthenticated()
         {
             return _accessor.HttpContext.User.Identity.IsAuthenticated;

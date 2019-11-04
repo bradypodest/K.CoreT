@@ -395,3 +395,337 @@
 【SQL参数】：@Status0:1
 
 【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 10
+--------------------------------
+2019/11/4 20:35:50|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status] FROM [SysUser]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/4 20:35:50|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 12
+--------------------------------
+2019/11/4 22:12:45|
+【SQL参数】：@UserName:Karl
+@UserPwd:123456
+@RoleId:11
+@RoleName:11
+@LastLoginDate:
+@LastModifyPwdDate:
+@ErrorCount:0
+@LastLoginFailDate:
+@headPicUrl:
+@Sex:
+@Age:
+@Birth:2019/11/4 22:12:03
+@Address:
+@Mobile:
+@Email:
+@Remark:
+@CreateID:
+@Creator:
+@CreateTime:
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:1
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [SysUser]  
+           ([UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@UserName,@UserPwd,@RoleId,@RoleName,@LastLoginDate,@LastModifyPwdDate,@ErrorCount,@LastLoginFailDate,@headPicUrl,@Sex,@Age,@Birth,@Address,@Mobile,@Email,@Remark,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@Status,@DeleteTime,@Deleter,@DeleterID) ;SELECT SCOPE_IDENTITY();
+--------------------------------
+2019/11/4 22:19:01|
+【SQL参数】：@UserName:Karl
+@UserPwd:123456
+@RoleId:11
+@RoleName:11
+@LastLoginDate:
+@LastModifyPwdDate:
+@ErrorCount:0
+@LastLoginFailDate:
+@headPicUrl:
+@Sex:
+@Age:
+@Birth:2019/11/4 22:18:57
+@Address:
+@Mobile:
+@Email:
+@Remark:
+@CreateID:admin
+@Creator:admin
+@CreateTime:2019/11/4 22:19:00
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:1
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [SysUser]  
+           ([UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@UserName,@UserPwd,@RoleId,@RoleName,@LastLoginDate,@LastModifyPwdDate,@ErrorCount,@LastLoginFailDate,@headPicUrl,@Sex,@Age,@Birth,@Address,@Mobile,@Email,@Remark,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@Status,@DeleteTime,@Deleter,@DeleterID) ;SELECT SCOPE_IDENTITY();
+--------------------------------
+2019/11/4 22:21:49|
+【SQL参数】：@UserName:Karl
+@UserPwd:123456
+@RoleId:11
+@RoleName:11
+@LastLoginDate:
+@LastModifyPwdDate:
+@ErrorCount:0
+@LastLoginFailDate:
+@headPicUrl:
+@Sex:
+@Age:
+@Birth:2019/11/4 22:21:48
+@Address:
+@Mobile:
+@Email:
+@Remark:
+@CreateID:admin
+@Creator:admin
+@CreateTime:2019/11/4 22:21:49
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:1
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [SysUser]  
+           ([UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@UserName,@UserPwd,@RoleId,@RoleName,@LastLoginDate,@LastModifyPwdDate,@ErrorCount,@LastLoginFailDate,@headPicUrl,@Sex,@Age,@Birth,@Address,@Mobile,@Email,@Remark,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@Status,@DeleteTime,@Deleter,@DeleterID) ;SELECT SCOPE_IDENTITY();
+--------------------------------
+2019/11/4 22:22:49|
+【SQL参数】：@InPara0:System.Object
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/4 22:24:40|
+【SQL参数】：@InPara0:System.Object
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/4 22:25:26|
+【SQL参数】：@InPara0:System.Object
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/4 22:27:15|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/4 22:49:50|
+【SQL参数】：@UserName:string
+@UserPwd:
+@RoleId:string
+@RoleName:string
+@LastLoginDate:2019/11/4 14:43:09
+@LastModifyPwdDate:2019/11/4 14:43:09
+@ErrorCount:0
+@LastLoginFailDate:2019/11/4 14:43:09
+@headPicUrl:string
+@Sex:男
+@Age:0
+@Birth:2019/11/4 22:49:23
+@Address:
+@Mobile:
+@Email:
+@Remark:
+@CreateID:
+@Creator:
+@CreateTime:
+@ModifyID:adminU
+@Modifier:adminU
+@ModifyTime:2019/11/4 22:49:44
+@ID:
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysUser]  SET
+           [UserName]=@UserName,[UserPwd]=@UserPwd,[RoleId]=@RoleId,[RoleName]=@RoleName,[LastLoginDate]=@LastLoginDate,[LastModifyPwdDate]=@LastModifyPwdDate,[ErrorCount]=@ErrorCount,[LastLoginFailDate]=@LastLoginFailDate,[headPicUrl]=@headPicUrl,[Sex]=@Sex,[Age]=@Age,[Birth]=@Birth,[Address]=@Address,[Mobile]=@Mobile,[Email]=@Email,[Remark]=@Remark,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE x=>x.ID=
+--------------------------------
+2019/11/4 22:50:07|
+【SQL参数】：@UserName:string
+@UserPwd:
+@RoleId:string
+@RoleName:string
+@LastLoginDate:2019/11/4 14:43:09
+@LastModifyPwdDate:2019/11/4 14:43:09
+@ErrorCount:0
+@LastLoginFailDate:2019/11/4 14:43:09
+@headPicUrl:string
+@Sex:男
+@Age:0
+@Birth:2019/11/4 22:50:02
+@Address:
+@Mobile:
+@Email:
+@Remark:
+@CreateID:
+@Creator:
+@CreateTime:
+@ModifyID:adminU
+@Modifier:adminU
+@ModifyTime:2019/11/4 22:50:07
+@ID:
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysUser]  SET
+           [UserName]=@UserName,[UserPwd]=@UserPwd,[RoleId]=@RoleId,[RoleName]=@RoleName,[LastLoginDate]=@LastLoginDate,[LastModifyPwdDate]=@LastModifyPwdDate,[ErrorCount]=@ErrorCount,[LastLoginFailDate]=@LastLoginFailDate,[headPicUrl]=@headPicUrl,[Sex]=@Sex,[Age]=@Age,[Birth]=@Birth,[Address]=@Address,[Mobile]=@Mobile,[Email]=@Email,[Remark]=@Remark,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE x=>x.ID=
+--------------------------------
+2019/11/4 22:52:29|
+【SQL参数】：@UserName:string
+@UserPwd:
+@RoleId:string
+@RoleName:string
+@LastLoginDate:2019/11/4 14:43:09
+@LastModifyPwdDate:2019/11/4 14:43:09
+@ErrorCount:0
+@LastLoginFailDate:2019/11/4 14:43:09
+@headPicUrl:string
+@Sex:男
+@Age:0
+@Birth:2019/11/4 22:52:21
+@Address:
+@Mobile:
+@Email:
+@Remark:
+@CreateID:
+@Creator:
+@CreateTime:
+@ModifyID:adminU
+@Modifier:adminU
+@ModifyTime:2019/11/4 22:52:26
+@ID:1
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysUser]  SET
+           [UserName]=@UserName,[UserPwd]=@UserPwd,[RoleId]=@RoleId,[RoleName]=@RoleName,[LastLoginDate]=@LastLoginDate,[LastModifyPwdDate]=@LastModifyPwdDate,[ErrorCount]=@ErrorCount,[LastLoginFailDate]=@LastLoginFailDate,[headPicUrl]=@headPicUrl,[Sex]=@Sex,[Age]=@Age,[Birth]=@Birth,[Address]=@Address,[Mobile]=@Mobile,[Email]=@Email,[Remark]=@Remark,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID=1
+--------------------------------
+2019/11/4 22:53:59|
+【SQL参数】：@UserName:Karl
+@UserPwd:
+@RoleId:
+@RoleName:
+@LastLoginDate:2019/11/4 14:53:14
+@LastModifyPwdDate:2019/11/4 14:53:14
+@ErrorCount:0
+@LastLoginFailDate:2019/11/4 14:53:14
+@headPicUrl:string
+@Sex:string
+@Age:0
+@Birth:2019/11/4 14:53:14
+@Address:string
+@Mobile:string
+@Email:string
+@Remark:string
+@CreateID:string
+@Creator:string
+@CreateTime:2019/11/4 14:53:14
+@ModifyID:adminU
+@Modifier:adminU
+@ModifyTime:2019/11/4 22:53:59
+@ID:1
+@Status:0
+@DeleteTime:2019/11/4 14:53:14
+@Deleter:string
+@DeleterID:string
+
+【SQL语句】：UPDATE [SysUser]  SET
+           [UserName]=@UserName,[UserPwd]=@UserPwd,[RoleId]=@RoleId,[RoleName]=@RoleName,[LastLoginDate]=@LastLoginDate,[LastModifyPwdDate]=@LastModifyPwdDate,[ErrorCount]=@ErrorCount,[LastLoginFailDate]=@LastLoginFailDate,[headPicUrl]=@headPicUrl,[Sex]=@Sex,[Age]=@Age,[Birth]=@Birth,[Address]=@Address,[Mobile]=@Mobile,[Email]=@Email,[Remark]=@Remark,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID=1
+--------------------------------
+2019/11/4 22:55:48|
+【SQL参数】：@UserName:string
+@UserPwd:string
+@RoleId:string
+@RoleName:string
+@LastLoginDate:2019/11/4 14:55:26
+@LastModifyPwdDate:2019/11/4 14:55:26
+@ErrorCount:0
+@LastLoginFailDate:2019/11/4 14:55:26
+@headPicUrl:string
+@Sex:string
+@Age:0
+@Birth:2019/11/4 14:55:26
+@Address:string
+@Mobile:string
+@Email:string
+@Remark:string
+@CreateID:string
+@Creator:string
+@CreateTime:2019/11/4 14:55:26
+@ModifyID:adminU
+@Modifier:adminU
+@ModifyTime:2019/11/4 22:55:48
+@ID:1
+@Status:0
+@DeleteTime:2019/11/4 14:55:26
+@Deleter:string
+@DeleterID:string
+
+【SQL语句】：UPDATE [SysUser]  SET
+           [UserName]=@UserName,[UserPwd]=@UserPwd,[RoleId]=@RoleId,[RoleName]=@RoleName,[LastLoginDate]=@LastLoginDate,[LastModifyPwdDate]=@LastModifyPwdDate,[ErrorCount]=@ErrorCount,[LastLoginFailDate]=@LastLoginFailDate,[headPicUrl]=@headPicUrl,[Sex]=@Sex,[Age]=@Age,[Birth]=@Birth,[Address]=@Address,[Mobile]=@Mobile,[Email]=@Email,[Remark]=@Remark,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID=1
+--------------------------------
+2019/11/4 22:58:36|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/4 22:58:36|
+【SQL参数】：@UserName:string
+@UserPwd:string
+@RoleId:string
+@RoleName:string
+@LastLoginDate:2019/11/4 14:55:26
+@LastModifyPwdDate:2019/11/4 14:55:26
+@ErrorCount:0
+@LastLoginFailDate:2019/11/4 14:55:26
+@headPicUrl:string
+@Sex:string
+@Age:0
+@Birth:2019/11/4 14:55:26
+@Address:string
+@Mobile:string
+@Email:string
+@Remark:string
+@CreateID:string
+@Creator:string
+@CreateTime:2019/11/4 14:55:26
+@ModifyID:adminU
+@Modifier:adminU
+@ModifyTime:2019/11/4 22:55:48
+@ID:1
+@Status:1
+@DeleteTime:2019/11/4 22:58:36
+@Deleter:admind
+@DeleterID:admind
+
+【SQL语句】：UPDATE [SysUser]  SET
+           [UserName]=@UserName,[UserPwd]=@UserPwd,[RoleId]=@RoleId,[RoleName]=@RoleName,[LastLoginDate]=@LastLoginDate,[LastModifyPwdDate]=@LastModifyPwdDate,[ErrorCount]=@ErrorCount,[LastLoginFailDate]=@LastLoginFailDate,[headPicUrl]=@headPicUrl,[Sex]=@Sex,[Age]=@Age,[Birth]=@Birth,[Address]=@Address,[Mobile]=@Mobile,[Email]=@Email,[Remark]=@Remark,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2019/11/4 22:59:27|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  

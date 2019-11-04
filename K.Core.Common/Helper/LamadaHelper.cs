@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K.Core.Common.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -492,9 +493,34 @@ public class LamadaExtention<Dto> where Dto : new()
     {
         Expression expRes = null;
         MemberExpression member = Expression.PropertyOrField(m_Parameter, strPropertyName);
-        if (expressType == ExpressionType.Contains)
+
+        //判断是否是时间类型 （这边出现传入的object 不是yyyy-MM-dd hh:mm:ss 类型的字符串可能会报错）
+        if (member.Type == typeof(DateTime))
         {
-            expRes = Expression.Call(member, typeof(string).GetMethod("Contains"), Expression.Constant(strValue));
+            strValue = Convert.ToDateTime(strValue.ToString());
+        }
+
+        //if (expressType == ExpressionType.Contains)
+        if (expressType == ExpressionType.Contains || expressType == ExpressionType.NotContains)
+        {
+            //expRes = Expression.Call(member, typeof(string).GetMethod("Contains"), Expression.Constant(strValue));
+            Type proType = typeof(Dto).GetProperty(strPropertyName).PropertyType;
+            ConstantExpression constant = proType.ToString() == "System.String"
+            ? Expression.Constant(strValue) : Expression.Constant(strValue.ToString().ChangeType(proType));
+
+            MethodInfo method = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+            constant = Expression.Constant(strValue, typeof(string));
+            if (expressType == ExpressionType.Contains)
+            {
+                //expRes = Expression.Lambda(Expression.Call(member, method, constant), null);
+                expRes = Expression.Call(member, method, constant);
+            }
+            else
+            {
+                //expRes = Expression.Lambda(Expression.Not(Expression.Call(member, method, constant)), null);
+                expRes = Expression.Call(member, method, constant);
+            }
+
         }
         else if (expressType == ExpressionType.Equal)
         {
@@ -569,5 +595,6 @@ public enum ExpressionType
     LessThanOrEqual=4,//小于等于
     GreaterThan=5,//大于
     GreaterThanOrEqual=6,//大于等于
-    NotEqual=7
+    NotEqual=7,
+    NotContains = 8,
 }
