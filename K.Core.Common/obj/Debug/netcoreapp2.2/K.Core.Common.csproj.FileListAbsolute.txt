@@ -20,3 +20,11 @@ D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\obj\Debug\netcoreapp2.2\
 D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.AssemblyInfo.cs
 D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.dll
 D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.pdb
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\bin\Debug\netcoreapp2.2\K.Core.Common.deps.json
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\bin\Debug\netcoreapp2.2\K.Core.Common.dll
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\bin\Debug\netcoreapp2.2\K.Core.Common.pdb
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.AssemblyInfoInputs.cache
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.AssemblyInfo.cs
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.dll
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.pdb
+D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Common\obj\Debug\netcoreapp2.2\K.Core.Common.csprojAssemblyReference.cache

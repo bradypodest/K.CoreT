@@ -55,7 +55,7 @@ namespace K.Core
             Configuration = configuration;
             Env = env;
 
-            #region  我觉得这块的代码是设置 log4net的配置且启动
+            #region  设置 log4net的配置且启动
             //log4net
             Repository = LogManager.CreateRepository(Configuration["Logging:Log4Net:Name"]);
             //指定配置文件，如果这里你遇到问题，应该是使用了InProcess模式，请查看K.Core.csproj,并删之
@@ -157,7 +157,7 @@ namespace K.Core
             //关于代码使用 可见  如 LogAOP 类  MiniProfiler.Current.Step($"执行Service方法：{invocation.Method.Name}() -> ");
             #endregion
 
-            #region Swagger UI Service  //见https://www.cnblogs.com/laozhang-is-phi/p/9507387.html
+            #region Swagger UI Service  
 
             var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;//获取项目路径
             services.AddSwaggerGen(c =>
@@ -172,7 +172,7 @@ namespace K.Core
                         Title = $"{ApiName} 接口文档",
                         Description = $"{ApiName} HTTP API " + version,
                         TermsOfService = "None",
-                        Contact = new Contact { Name = "K.Core", Email = "K.Core@xxx.com", Url = "https://www.jianshu.com/u/94102b59cc2a" }
+                        Contact = new Contact { Name = "K.Core", Email = "K.Core@xxx.com", Url = "http://baidu.com" }
                     });
                     // 按相对路径排序，作者：Alby
                     c.OrderActionsBy(o => o.RelativePath);
@@ -232,7 +232,7 @@ namespace K.Core
 
             #endregion
 
-            #region TimedJob   定时任务  ：现阶段我发现没有什么实际的作用
+            #region TimedJob   定时任务 
 
             //services.AddHostedService<Job1TimedService>();
             //services.AddHostedService<Job2TimedService>();
@@ -535,14 +535,6 @@ namespace K.Core
                 // 在开发环境中，使用异常页面，这样可以暴露错误堆栈信息，所以不要放在生产环境。
                 app.UseDeveloperExceptionPage();
 
-                //app.Use(async (context, next) =>
-                //{
-                //    //这里会多次调用，这里测试一下就行，不要打开注释
-                //    //var blogs =await _blogArticleServices.GetBlogs();
-                //    var processName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
-                //    Console.WriteLine(processName);
-                //    await next();
-                //});
             }
             else
             {

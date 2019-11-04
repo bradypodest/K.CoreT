@@ -49,10 +49,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="index.html" />
+    <Content Remove="wwwroot\logo.jpg.jpg" />
+    <Content Remove="wwwroot\logo.png.png" />
+    <Content Remove="wwwroot\logocore.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="index.html" />
+    <None Remove="index22.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="index22.html" />
     <EmbeddedResource Include="index.html" />
   </ItemGroup>
 

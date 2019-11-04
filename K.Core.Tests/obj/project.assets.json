@@ -3191,11 +3191,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "2.2.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
@@ -3204,7 +3204,7 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.4": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -3216,11 +3216,11 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "2.2.3",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "2.2.4",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -3230,10 +3230,10 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "2.2.4"
         },
         "compile": {
           "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.dll": {}
@@ -3242,10 +3242,10 @@
           "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "2.2.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
@@ -3254,12 +3254,12 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "2.2.0",
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "2.2.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
@@ -3268,11 +3268,11 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "2.8.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "2.2.3",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "2.2.4",
           "Newtonsoft.Json": "11.0.2",
           "NuGet.Frameworks": "4.7.0"
         },
@@ -3283,10 +3283,10 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.3": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration": "2.2.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
@@ -6092,8 +6092,7 @@
           "IdentityServer4.AccessTokenValidation": "2.7.0",
           "K.Core.IRepository": "1.0.0",
           "K.Core.IServices": "1.0.0",
-          "K.Core.Tasks": "1.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "MiniProfiler.AspNetCore.Mvc": "4.0.165",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
@@ -6191,19 +6190,6 @@
         },
         "runtime": {
           "bin/placeholder/K.Core.Services.dll": {}
-        }
-      },
-      "K.Core.Tasks/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "K.Core.IServices": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/K.Core.Tasks.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/K.Core.Tasks.dll": {}
         }
       }
     }
@@ -9465,49 +9451,49 @@
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
-      "sha512": "wc71c9HWTeXy9/w9O4Yr2LKmdJjVyIoJ/XQX8/6uma4EAVU25RLtUWlvhA0gpgFw9Kf1TkCv70x+CbKnRw/d8Q==",
+    "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
+      "sha512": "yBKo8R7q5fWe0PSLbLJNbgjh055y/OIM/ZwFW3iToyS9X9bfzfsTIL1LnCf3joSBbcsAS5+aIeyNlIiikXzhnw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
-        "microsoft.visualstudio.web.codegeneration.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.3": {
-      "sha512": "wXlpxDfRD5aPypa0p0UE97tkRQvAz9D9FfA2GITzr+LlGIpybyGnxkwGVp0Vha1Ibr0kJG0HdnqfeHME/WuAcQ==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.4": {
+      "sha512": "eHH/NtOAagGRFU3sPA4YLHgpBF//DR+MQrndh23VT88KOu39E3brliQ+xMpHaXU4Sg3RRXmHIJ01CEhFrf072w==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.contracts/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration.contracts/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.xml",
-        "microsoft.visualstudio.web.codegeneration.contracts.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.contracts.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.contracts.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.3": {
-      "sha512": "APdPavBUYcGPBaW4rjxBVRePWmg0ZzhIRymOzvLFWUtzfvJKw1+8PaCzsH7Uvl+felm0L1UVQwBx1Do0R7j7Xg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.4": {
+      "sha512": "BmDLlopXEWbQl4q2+2poW/rdpFKPXvEkLFsRTdA6A2H+WiNov81WS+nKZYgr9le4QO1XyuGcuksMfq0XMAVtgQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.core/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration.core/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
-        "microsoft.visualstudio.web.codegeneration.core.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.core.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.3": {
-      "sha512": "xH50cYOU+infRq4KikBuu2qeXcwW4tE0D5TDfKLuLrEtDm90aXI+0qygPsqyISf+lOW7L7rQ64BH/dRYkK3c3Q==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.4": {
+      "sha512": "X/hZMw8xTuiYt0CYLTLo8ikAO4fE4I6AuM2RcMEgcUIk8bbH05OeZI2W+5eNM/IhPAMSf3adbIgjcYa2cW+vJQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.design/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration.design/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -9515,7 +9501,7 @@
         "lib/net461/dotnet-aspnet-codegenerator-design.xml",
         "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.dll",
         "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.xml",
-        "microsoft.visualstudio.web.codegeneration.design.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.design.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.design.nuspec",
         "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.exe",
         "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.xml",
@@ -9527,50 +9513,50 @@
         "runtimes/win7-x86/lib/net461/dotnet-aspnet-codegenerator-design.xml"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.3": {
-      "sha512": "N9S7TeFZjXzNY9OVbz4OFw9cM9oEeMaCnuLFhetNioy/wPwZbgglrctAEYxfDbvocQ17YCAVR2EMRbYHNDHyVg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.4": {
+      "sha512": "6aWoPy22KTE+DWLFJMp5BCS3b/dz7ptdCXBnKOj8g3Zswk+p1Q43d0meZPRBGqfwLwPKVbVjy8A1g4MaHymmkQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Templates/DbContext/NewLocalDbContext.cshtml",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
-        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.3": {
-      "sha512": "sW2lHnOoL1xFnSm/2zSedeUoQPlbhPfWjSuUYsxYUj/N5QmLmH98ZLaqP26k6Om/heR6Gux/veXI96yM1Parow==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.4": {
+      "sha512": "MPPC1ID2FrS7TGTTb58WxNPhLN57MigZ/agflH8E7S9ZJ3UbSmkp679QetsrnRzehItww3B2yvqYSADJfQclrg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
-        "microsoft.visualstudio.web.codegeneration.templating.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.templating.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.templating.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.3": {
-      "sha512": "/r/y+XpOpbCwN/M/HopjfGTDRlmixTd4G6HG6FaBkD/YF3T1u+4WMRVtuB6zz7aw571HmX+6UokEa6HJSwkPDA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.4": {
+      "sha512": "CWsZ1FCKScLHOO6jHluXAYqJvqCWn35xt3tz5I2gkb1XZ37+QOZ58XDguPExISiOyXTBxwUhSEtc00OcEwvgpw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/2.2.3",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
-        "microsoft.visualstudio.web.codegeneration.utils.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.utils.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.3": {
-      "sha512": "0gVuA4KUCHFM4M/9SjG+7j7BzZ7SW/BufF97Q78i2VV8JBbQXc/5Rf6YUG1VGW2fwSEOl9+S26utEGS+86GGGw==",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.4": {
+      "sha512": "NFflOxpi1ueszxM/f4yaejbSNI93IennOLD2VNQGkcP/pXm1AlcWro7lB0OeDaVtnJpufoME8Fm2ai0CUfKfow==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.3",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -9848,7 +9834,7 @@
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
         "lib/netstandard2.0/bootstrap3_identitygeneratorfilesconfig.json",
         "lib/netstandard2.0/bootstrap4_identitygeneratorfilesconfig.json",
-        "microsoft.visualstudio.web.codegenerators.mvc.2.2.3.nupkg.sha512",
+        "microsoft.visualstudio.web.codegenerators.mvc.2.2.4.nupkg.sha512",
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
@@ -10314,12 +10300,11 @@
       ]
     },
     "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
+      "sha512": "LdIvj7Bi2jiaNTqY/ezZGVXHe1KI5fjLSI026O1TjVzsmdgTP/zTF+f3nwHCjwttyhsPBEiswv0PekimPWZwWg==",
       "type": "package",
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -10357,12 +10342,11 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
+      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -10441,12 +10425,11 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
+      "sha512": "Kh9W4agE0r/hK8AX1LvyQI2NrKHBL8pO0gRoDTdDb0LL6Ta1Z2OtFx3lOaAE0ZpCUc/dt9Wzs3rA7a3IsKdOVA==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -10483,12 +10466,11 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -11078,12 +11060,11 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -14623,12 +14604,11 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -14953,12 +14933,11 @@
       ]
     },
     "System.Security.Cryptography.Csp/4.3.0": {
-      "sha512": "X4s/FCkEUnRGnwR3aSfVIkldBmtURMhmexALNTwpjklzxWU7yjMk7GHLKOZTNkgnWnE0q7+BCf9N2LVRWxewaA==",
+      "sha512": "yO2k5o+Z+DiFRBvvB9vdRRAGHi6bm02M9OWXfCqQ8K0UxD3Woc3svQheZfb7PoTEFs0kGacO0IzzMWsb6Mkeow==",
       "type": "package",
       "path": "system.security.cryptography.csp/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -15026,12 +15005,11 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
+      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -16600,11 +16578,6 @@
       "type": "project",
       "path": "../K.Core.Services/K.Core.Services.csproj",
       "msbuildProject": "../K.Core.Services/K.Core.Services.csproj"
-    },
-    "K.Core.Tasks/1.0.0": {
-      "type": "project",
-      "path": "../K.Core.Tasks/K.Core.Tasks.csproj",
-      "msbuildProject": "../K.Core.Tasks/K.Core.Tasks.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -16621,23 +16594,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\Karl\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Tests\\K.Core.Tests.csproj",
+      "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj",
       "projectName": "K.Core.Tests",
-      "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Tests\\K.Core.Tests.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Tests\\obj\\",
+      "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj",
+      "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+      "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -16650,14 +16623,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Repository\\K.Core.Repository.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Repository\\K.Core.Repository.csproj"
+            "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Services\\K.Core.Services.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core.Services\\K.Core.Services.csproj"
+            "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core\\K.Core.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core\\K.Core\\K.Core.csproj"
+            "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj"
             }
           }
         }

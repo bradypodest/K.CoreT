@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controller_Test\BlogArticleController_Should.cs" />
+    <Compile Remove="DependencyInjection\DI_Test.cs" />
+    <Compile Remove="Repository_Test\Repository_Base_Should.cs" />
+    <Compile Remove="Service_Test\BlogArticleService_Should.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="appsettings.json" />
   </ItemGroup>
 
@@ -29,6 +36,13 @@
     <ProjectReference Include="..\K.Core.Repository\K.Core.Repository.csproj" />
     <ProjectReference Include="..\K.Core.Services\K.Core.Services.csproj" />
     <ProjectReference Include="..\K.Core\K.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controller_Test\" />
+    <Folder Include="DependencyInjection\" />
+    <Folder Include="Repository_Test\" />
+    <Folder Include="Service_Test\" />
   </ItemGroup>
 
 </Project>

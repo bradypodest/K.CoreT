@@ -385,3 +385,13 @@
 【SQL参数】：@Status0:1
 
 【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],ROW_NUMBER() OVER(ORDER BY ID desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 20
+--------------------------------
+2019/11/4 13:09:33|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status] FROM [SysUser]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/4 13:09:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 10
