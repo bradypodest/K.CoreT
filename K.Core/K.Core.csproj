@@ -28,7 +28,6 @@
 
   <ItemGroup>
     <Compile Remove="AuthHelper\OverWrite\JwtTokenAuth.cs" />
-    <Compile Remove="AuthHelper\Policys\JwtToken.cs" />
     <Compile Remove="AuthHelper\Policys\PermissionHandler.cs" />
     <Compile Remove="AuthHelper\Policys\PermissionItem.cs" />
     <Compile Remove="AuthHelper\Policys\PermissionRequirement.cs" />
@@ -36,7 +35,6 @@
     <Compile Remove="Controllers\ClaimsController.cs" />
     <Compile Remove="Controllers\DepartmentController.cs" />
     <Compile Remove="Controllers\ImgController.cs" />
-    <Compile Remove="Controllers\LoginController.cs" />
     <Compile Remove="Controllers\ModuleController.cs" />
     <Compile Remove="Controllers\MonitorController.cs" />
     <Compile Remove="Controllers\PermissionController.cs" />
@@ -89,10 +87,6 @@
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="AuthHelper\Policys\" />
   </ItemGroup>
 
 </Project>

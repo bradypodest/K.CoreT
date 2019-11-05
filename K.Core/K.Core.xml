@@ -79,6 +79,18 @@
             职能
             </summary>
         </member>
+        <member name="T:K.Core.AuthHelper.JwtToken">
+            <summary>
+            JWTToken生成类
+            </summary>
+        </member>
+        <member name="M:K.Core.AuthHelper.JwtToken.BuildJwtToken(System.Security.Claims.Claim[])">
+            <summary>
+            获取基于JWT的Token  
+            </summary>
+            <param name="claims"></param>
+            <returns></returns>
+        </member>
         <member name="M:K.Core.AutoMapper.CustomProfile.#ctor">
             <summary>
             配置构造函数，用来创建关系映射
@@ -123,6 +135,24 @@
             </summary>
             <param name="ID"></param>
             <returns></returns>
+        </member>
+        <member name="T:K.Core.Controllers.LoginController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:K.Core.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            获取token 
+            </summary>
+            <param name="name"></param>
+            <param name="pass"></param>
+            <returns></returns>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysUserController">
+            <summary>
+            用户管理
+            </summary>
         </member>
         <member name="T:K.Core.Services.GlobalRouteAuthorizeConvention">
             <summary>

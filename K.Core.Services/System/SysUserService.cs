@@ -1,11 +1,13 @@
 ﻿using K.Core.Common.Helper.AutofacManager;
 using K.Core.IRepository.System;
 using K.Core.IServices.System;
+using K.Core.Model;
 using K.Core.Model.Models;
 using K.Core.Services.BASE;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace K.Core.Services.System
 {
@@ -26,5 +28,10 @@ namespace K.Core.Services.System
         {
             get { return AutofacContainerModule.GetService<ISysUserService>(); }
         }
+
+        #region ISysUserService 实现方法
+
+       
+        #endregion
     }
 }

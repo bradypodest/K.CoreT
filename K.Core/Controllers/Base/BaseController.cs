@@ -7,6 +7,7 @@ using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.IServices.BASE;
 using K.Core.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.Base
@@ -49,10 +50,10 @@ namespace K.Core.Controllers.Base
 
             var oLamadaExtention = LambdaHelper.True<T>();
 
-            resp.Data= await _service.QueryPage(oLamadaExtention, pageDataOptions);
+            resp.data= await _service.QueryPage(oLamadaExtention, pageDataOptions);
 
-            resp.Success = true;
-            resp.Msg = "OK";
+            resp.success = true;
+            resp.msg = "OK";
 
             return resp;
         }
@@ -62,6 +63,7 @@ namespace K.Core.Controllers.Base
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [Authorize("admin")]//实验jwt 验证 ：角色名称为 “admin”
         [HttpGet,Route("GetOneByID")]
         [ResponseCache(Duration = 60)]
         public virtual async Task<MessageModel<T>> GetOneByID(string id) 
@@ -71,10 +73,10 @@ namespace K.Core.Controllers.Base
             //传入参数检查
 
 
-            resp.Data = await _service.QueryById(id);
+            resp.data = await _service.QueryById(id);
 
-            resp.Success = true;
-            resp.Msg = "OK";
+            resp.success = true;
+            resp.msg = "OK";
             return resp;
         }
 
@@ -102,10 +104,10 @@ namespace K.Core.Controllers.Base
             t.Creator =  "admin";
 
 
-            resp.Data = await _service.Add(t);
+            resp.data = await _service.Add(t);
 
-            resp.Success = true;
-            resp.Msg = "OK";
+            resp.success = true;
+            resp.msg = "OK";
             return resp;
         }
 
@@ -139,10 +141,10 @@ namespace K.Core.Controllers.Base
             lstIgnoreColumns.Add("CreateID");
             lstIgnoreColumns.Add("CreateTime");
 
-            resp.Data = await _service.Update(t,null,lstIgnoreColumns,"ID="+t.ID);
+            resp.data = await _service.Update(t,null,lstIgnoreColumns,"ID="+t.ID);
 
-            resp.Success = true;
-            resp.Msg = "OK";
+            resp.success = true;
+            resp.msg = "OK";
             return resp;
         }
         
@@ -169,10 +171,10 @@ namespace K.Core.Controllers.Base
             deleteOne.Deleter = "admind";
             deleteOne.DeleteTime = DateTime.Now;
 
-            resp.Data = await _service.Update(deleteOne);
+            resp.data = await _service.Update(deleteOne);
 
-            resp.Success = true;
-            resp.Msg = "OK";
+            resp.success = true;
+            resp.msg = "OK";
             return resp;
         }
     }

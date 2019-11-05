@@ -299,13 +299,13 @@ namespace K.Core
 
             // 1【授权】、这个和上边的异曲同工，好处就是不用在controller中，写多个 roles 。
             // 然后这么写 [Authorize(Policy = "Admin")]
-            //services.AddAuthorization(options =>
-            //{
-            //    options.AddPolicy("Client", policy => policy.RequireRole("Client").Build());
-            //    options.AddPolicy("Admin", policy => policy.RequireRole("Admin").Build());
-            //    options.AddPolicy("SystemOrAdmin", policy => policy.RequireRole("Admin", "System"));
-            //    options.AddPolicy("A_S_O", policy => policy.RequireRole("Admin", "System", "Others"));
-            //});
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Client", policy => policy.RequireRole("Client").Build());
+                options.AddPolicy("Admin", policy => policy.RequireRole("Admin").Build());
+                options.AddPolicy("SystemOrAdmin", policy => policy.RequireRole("Admin", "System"));
+                options.AddPolicy("A_S_O", policy => policy.RequireRole("Admin", "System", "Others"));
+            });
 
 
             #endregion
