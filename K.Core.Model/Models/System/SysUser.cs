@@ -13,20 +13,17 @@ namespace K.Core.Model.Models
         /// <summary>
         /// 用户名
         /// </summary>
-        [Display(Name = "用户名")]
-        [MaxLength(100)]
+        //[Display(Name = "用户名")]
+        //[MaxLength(100)]
         //[Column(TypeName = "navarchar(100)")]
         [SugarColumn(Length = 100, IsNullable = false)]
-        [Editable(true)]
-        [Required(AllowEmptyStrings = false)]
+        //[Editable(true)]
+        //[Required(AllowEmptyStrings = false)]
         public String UserName { get; set; }
 
         /// <summary>
         ///密码
         /// </summary>
-        [Display(Name = "密码")]
-        [MaxLength(200)]
-        [JsonIgnore]//忽略其属性序列号 //可以在swagger 上面不显示
         [SugarColumn(Length = 200, IsNullable = false)]
         //[Column(TypeName = "nvarchar(200)")]
         public string UserPwd { get; set; }
@@ -34,11 +31,11 @@ namespace K.Core.Model.Models
         /// <summary>
         ///角色id
         /// </summary>
-        [Display(Name = "角色id")]
-        [MaxLength(600)]
+        //[Display(Name = "角色id")]
+        //[MaxLength(600)]
         //[Column(TypeName = "nvarchar(100)")]
-        [Editable(true)]
-        [Required(AllowEmptyStrings = false)]
+        //[Editable(true)]
+        //[Required(AllowEmptyStrings = false)]
         [SugarColumn(Length = 100, IsNullable = true)]
         public String RoleId { get; set; }
 

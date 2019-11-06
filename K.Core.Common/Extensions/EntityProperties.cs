@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K.Core.Const;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +8,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using K.Core.Model;
+
+using K.Core.Common.Helper;
+using K.Core.Common.Model;
 /*
 * jxx 2017-08-09 
 * 通用实体属操作
@@ -595,29 +598,29 @@ namespace K.Core.Extensions
 
         private static string[] _userEditFields { get; set; }
 
-        private static string[] UserEditFields
-        {
-            get
-            {
-                if (_userEditFields != null)   return _userEditFields;
-                _userEditFields = AppSetting.CreateMember.GetType().GetProperties()
-                     .Select(x => x.GetValue(AppSetting.ModifyMember)?.ToString()?.ToLower())
-                     .Where(w => !string.IsNullOrEmpty(w)).ToArray();
-                return _userEditFields;
-            }
-        }
+        //private static string[] UserEditFields
+        //{
+        //    get
+        //    {
+        //        if (_userEditFields != null)   return _userEditFields;
+        //        _userEditFields = AppSetting.CreateMember.GetType().GetProperties()
+        //             .Select(x => x.GetValue(AppSetting.ModifyMember)?.ToString()?.ToLower())
+        //             .Where(w => !string.IsNullOrEmpty(w)).ToArray();
+        //        return _userEditFields;
+        //    }
+        //}
         /// <summary>
         /// 获取实体所有可以编辑的列
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static string[] GetEditField(this Type type)
-        {
-            Type editType = typeof(EditableAttribute);
-            PropertyInfo[] propertyInfo = type.GetProperties();
-            string keyName = propertyInfo.GetKeyName();
-            return propertyInfo.Where(x => x.Name != keyName && (UserEditFields.Contains(x.Name.ToLower()) || x.ContainsCustomAttributes(editType))).Select(s => s.Name).ToArray();
-        }
+        //public static string[] GetEditField(this Type type)
+        //{
+        //    Type editType = typeof(EditableAttribute);
+        //    PropertyInfo[] propertyInfo = type.GetProperties();
+        //    string keyName = propertyInfo.GetKeyName();
+        //    return propertyInfo.Where(x => x.Name != keyName && (UserEditFields.Contains(x.Name.ToLower()) || x.ContainsCustomAttributes(editType))).Select(s => s.Name).ToArray();
+        //}
 
 
         /// <summary>
@@ -672,19 +675,20 @@ namespace K.Core.Extensions
         /// <param name="entityList"></param>
         /// <param name="expression"></param>
         /// <returns></returns>
-        public static MessageModel<String> ValidationEntityList<T>(this List<T> entityList, Expression<Func<T, object>> expression = null)
+        public static MessageModel<T> ValidationEntityList<T>(this List<T> entityList, Expression<Func<T, object>> expression = null)
         {
-            WebResponseContent responseData = new WebResponseContent();
+            MessageModel<T> messageModel = new MessageModel<T>();
             foreach (T entity in entityList)
             {
-                responseData = entity.ValidationEntity(expression);
-                if (!responseData.Status)
+                messageModel = entity.ValidationEntity(expression);
+                if (!messageModel.success)
                 {
-                    return responseData;
+                    return messageModel;
                 }
             }
-            responseData.Status = true;
-            return responseData;
+
+            messageModel.success = true;
+            return messageModel;
         }
         /// <summary>
         /// 指定需要验证的字段
@@ -693,7 +697,7 @@ namespace K.Core.Extensions
         /// <param name="entity"></param>
         /// <param name="expression">对指定属性进行验证x=>{x.Name,x.Size}</param>
         /// <returns></returns>
-        public static WebResponseContent ValidationEntity<T>(this T entity, Expression<Func<T, object>> expression = null, Expression<Func<T, object>> validateProperties = null)
+        public static MessageModel<T> ValidationEntity<T>(this T entity, Expression<Func<T, object>> expression = null, Expression<Func<T, object>> validateProperties = null)
         {
             return ValidationEntity<T>(entity, expression?.GetExpressionProperty<T>(), validateProperties?.GetExpressionProperty<T>());
         }
@@ -707,10 +711,15 @@ namespace K.Core.Extensions
         /// <param name="specificProperties">验证指定的属性，并且非空判断</param>
         /// <param name="validateProperties">验证指定属性，只对字段合法性判断，不验证是否为空</param>
         /// <returns></returns>
-        public static WebResponseContent ValidationEntity<T>(this T entity, string[] specificProperties, string[] validateProperties = null)
+        public static MessageModel<T> ValidationEntity<T>(this T entity, string[] specificProperties, string[] validateProperties = null)
         {
-            WebResponseContent responseData = new WebResponseContent();
-            if (entity == null)   return responseData.Error("对象不能为null");
+            MessageModel<T> messageModel = new MessageModel<T>();
+            if (entity == null) return new MessageModel<T>()
+            {
+                success = false,
+                msg = "对象不能为空",
+                data = default(T)
+            };
 
             PropertyInfo[] propertyArray = typeof(T).GetProperties();
             //若T为object取不到属性
@@ -752,9 +761,20 @@ namespace K.Core.Extensions
                     specificProperties != null && specificProperties.Contains(propertyInfo.Name) ? true : false
                     );
                 if (!reslut.Item1)
-                    return responseData.Error(reslut.Item2);
+                    //return responseData.Error(reslut.Item2);
+                    return new MessageModel<T>()
+                    {
+                        success = false,
+                        msg = reslut.Item2,
+                        data = default(T)
+                    };
             }
-            return responseData.OK();
+            return new MessageModel<T>()
+            {
+                success = true,
+                msg = "OK",
+                data = default(T)
+            }; 
         }
 
         /// <summary>
@@ -1278,93 +1298,6 @@ namespace K.Core.Extensions
             }
         }
 
-        /// <summary>
-        /// 设置默认字段的值"CreateID", "Creator", "CreateDate"，"ModifyID", "Modifier", "ModifyDate"
-        /// </summary>
-        /// <param name="saveDataModel"></param>
-        /// <param name="setType">true=新增设置"CreateID", "Creator", "CreateDate"值
-        /// false=编辑设置"ModifyID", "Modifier", "ModifyDate"值
-        /// </param>
-        public static SaveModel SetDefaultVal(this SaveModel saveDataModel, TableDefaultColumns defaultColumns, UserInfo userInfo = null)
-        {
-            SetDefaultVal(saveDataModel.MainData, defaultColumns, userInfo);
-            if (saveDataModel.DetailData != null && saveDataModel.DetailData.Count > 0)
-            {
-                foreach (var item in saveDataModel.DetailData)
-                {
-                    if (item.Count == 0) continue;
-                    SetDefaultVal(item, defaultColumns, userInfo);
-                }
-            }
-            return saveDataModel;
-        }
-
-        public static TSource SetCreateDefaultVal<TSource>(this TSource source, UserInfo userInfo = null)
-        {
-            return SetDefaultVal(source, AppSetting.CreateMember, userInfo);
-        }
-        public static TSource SetModifyDefaultVal<TSource>(this TSource source, UserInfo userInfo = null)
-        {
-            return SetDefaultVal(source, AppSetting.ModifyMember, userInfo);
-        }
-        /// <summary>
-        /// 
-        /// 设置默认字段的值如:"CreateID", "Creator", "CreateDate"，"ModifyID", "Modifier", "ModifyDate"
-        /// </summary>
-        /// <param name="saveDataModel"></param>
-        /// <param name="setType">true=新增设置"CreateID", "Creator", "CreateDate"值
-        /// false=编辑设置"ModifyID", "Modifier", "ModifyDate"值
-        /// </param>
-        private static TSource SetDefaultVal<TSource>(this TSource source, TableDefaultColumns defaultColumns, UserInfo userInfo = null)
-        {
-            userInfo = userInfo ?? ManageUser.UserContext.Current.UserInfo;
-            foreach (PropertyInfo property in typeof(TSource).GetProperties())
-            {
-                string filed = property.Name.ToLower();
-                if (filed == defaultColumns.UserIdField?.ToLower())
-                    property.SetValue(source, userInfo.User_Id);
-
-                if (filed == defaultColumns.UserNameField?.ToLower())
-                    property.SetValue(source, userInfo.UserTrueName);
-
-                if (filed == defaultColumns.DateField?.ToLower())
-                    property.SetValue(source, DateTime.Now);
-            }
-            return source;
-        }
-        private static Dictionary<string, object> SetDefaultVal(this Dictionary<string, object> dic, TableDefaultColumns defaultColumns, UserInfo userInfo = null)
-        {
-            userInfo = userInfo ?? ManageUser.UserContext.Current.UserInfo;
-
-            KeyValuePair<string, object> valuePair = dic.Where(x => x.Key.ToLower() == defaultColumns.UserIdField?.ToLower()).FirstOrDefault();
-
-            if (valuePair.Key!=null|| defaultColumns.UserIdField!=null)
-            {
-                dic[valuePair.Key ?? defaultColumns.UserIdField] = userInfo.User_Id;
-            }
-    
-            valuePair = dic.Where(x => x.Key.ToLower() == defaultColumns.UserNameField?.ToLower()).FirstOrDefault();
-            if (valuePair.Key != null || defaultColumns.UserNameField != null)
-            {
-                dic[valuePair.Key ?? defaultColumns.UserNameField] = userInfo.UserTrueName;
-            }
-
-            valuePair = dic.Where(x => x.Key.ToLower() == defaultColumns.DateField?.ToLower()).FirstOrDefault();
-            if (valuePair.Key != null || defaultColumns.DateField != null)
-            {
-                dic[valuePair.Key ?? defaultColumns.DateField] = DateTime.Now;
-            }
-
-            return dic;
-        }
-        public static Dictionary<string, object> SetCreateDefaultVal(this Dictionary<string, object> dic)
-        {
-            return SetDefaultVal(dic, AppSetting.CreateMember);
-        }
-        public static Dictionary<string, object> SetModifyDefaultVal(this Dictionary<string, object> dic)
-        {
-            return SetDefaultVal(dic, AppSetting.ModifyMember);
-        }
     }
 
     public class ArrayEntity

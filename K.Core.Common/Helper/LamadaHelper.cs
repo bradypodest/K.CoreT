@@ -1,4 +1,5 @@
 ﻿using K.Core.Common.Helper;
+using K.Core.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -287,26 +288,26 @@ namespace K.Core.Common.Helper
             return queryable;
         }
 
-        ///// <summary>
-        ///// 获取对象表达式指定属性的值
-        ///// 如获取:Out_Scheduling对象的ID或基他字段
-        ///// </summary>
-        ///// <typeparam name="TEntity"></typeparam>
-        ///// <param name="expression">格式 Expression<Func<Out_Scheduling, object>>sch=x=>new {x.v1,x.v2} or x=>x.v1 解析里面的值返回为数组</param>
-        ///// <returns></returns>
-        //public static string[] GetExpressionToArray<TEntity>(this Expression<Func<TEntity, object>> expression)
-        //{
-        //    string[] propertyNames = null;
-        //    if (expression.Body is MemberExpression)
-        //    {
-        //        propertyNames = new string[] { ((MemberExpression)expression.Body).Member.Name };
-        //    }
-        //    else
-        //    {
-        //        propertyNames = expression.GetExpressionProperty().Distinct().ToArray();
-        //    }
-        //    return propertyNames;
-        //}
+        /// <summary>
+        /// 获取对象表达式指定属性的值
+        /// 如获取:Out_Scheduling对象的ID或基他字段
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="expression">格式 Expression<Func<Out_Scheduling, object>>sch=x=>new {x.v1,x.v2} or x=>x.v1 解析里面的值返回为数组</param>
+        /// <returns></returns>
+        public static string[] GetExpressionToArray<TEntity>(this Expression<Func<TEntity, object>> expression)
+        {
+            string[] propertyNames = null;
+            if (expression.Body is MemberExpression)
+            {
+                propertyNames = new string[] { ((MemberExpression)expression.Body).Member.Name };
+            }
+            else
+            {
+                propertyNames = expression.GetExpressionProperty().Distinct().ToArray();
+            }
+            return propertyNames;
+        }
 
         /// <summary>
         /// 与下面and生成方式有所不同，如果直接用表达式1.2进行合并产会提示数据源不同的异常，只能使用下面的的and合并

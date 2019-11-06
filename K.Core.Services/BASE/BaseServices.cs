@@ -10,30 +10,33 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using K.Core.Common.Helper;
+using K.Core.Common.HttpContextUser;
+using K.Core.Common.Model;
 
 namespace K.Core.Services.BASE
 {
     public class BaseServices<TEntity> : ServiceFunFilter<TEntity>
         , IBaseServices<TEntity> 
-        where TEntity : class, new()
+        where TEntity : BaseExtendTwoEntity, new()
     {
         //public IBaseRepository<TEntity> baseDal = new BaseRepository<TEntity>();
-        public IBaseRepository<TEntity> BaseDal;//通过在子类的构造函数中注入，这里是基类，不用构造函数
+        public IBaseRepository<TEntity> baseDal;//通过在子类的构造函数中注入，这里是基类，不用构造函数
+
+        protected IUser _httpUser;
 
         public async Task<TEntity> QueryById(object objId)
         {
-            return await BaseDal.QueryById(objId);
+            return await baseDal.QueryById(objId);
         }
         /// <summary>
         /// 功能描述:根据ID查询一条数据
-        /// 作　　者:AZLinli.K.Core
         /// </summary>
         /// <param name="objId">id（必须指定主键特性 [SugarColumn(IsPrimaryKey=true)]），如果是联合主键，请使用Where条件</param>
         /// <param name="blnUseCache">是否使用缓存</param>
         /// <returns>数据实体</returns>
         public async Task<TEntity> QueryById(object objId, bool blnUseCache = false)
         {
-            return await BaseDal.QueryById(objId, blnUseCache);
+            return await baseDal.QueryById(objId, blnUseCache);
         }
 
         /// <summary>
@@ -44,7 +47,7 @@ namespace K.Core.Services.BASE
         /// <returns>数据实体列表</returns>
         public async Task<List<TEntity>> QueryByIDs(object[] lstIds)
         {
-            return await BaseDal.QueryByIDs(lstIds);
+            return await baseDal.QueryByIDs(lstIds);
         }
 
         /// <summary>
@@ -54,7 +57,7 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public async Task<int> Add(TEntity entity)
         {
-            return await BaseDal.Add(entity);
+            return await baseDal.Add(entity);
         }
 
         /// <summary>
@@ -64,11 +67,11 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public async Task<bool> Update(TEntity entity)
         {
-            return await BaseDal.Update(entity);
+            return await baseDal.Update(entity);
         }
         public async Task<bool> Update(TEntity entity, string strWhere)
         {
-            return await BaseDal.Update(entity, strWhere);
+            return await baseDal.Update(entity, strWhere);
         }
 
         public async Task<bool> Update(
@@ -78,7 +81,7 @@ namespace K.Core.Services.BASE
          string strWhere = ""
             )
         {
-            return await BaseDal.Update(entity, lstColumns, lstIgnoreColumns, strWhere);
+            return await baseDal.Update(entity, lstColumns, lstIgnoreColumns, strWhere);
         }
 
 
@@ -89,7 +92,7 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public async Task<bool> Delete(TEntity entity)
         {
-            return await BaseDal.Delete(entity);
+            return await baseDal.Delete(entity);
         }
 
         /// <summary>
@@ -99,7 +102,7 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public async Task<bool> DeleteById(object id)
         {
-            return await BaseDal.DeleteById(id);
+            return await baseDal.DeleteById(id);
         }
 
         /// <summary>
@@ -109,7 +112,7 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public async Task<bool> DeleteByIds(object[] ids)
         {
-            return await BaseDal.DeleteByIds(ids);
+            return await baseDal.DeleteByIds(ids);
         }
 
 
@@ -121,7 +124,7 @@ namespace K.Core.Services.BASE
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query()
         {
-            return await BaseDal.Query();
+            return await baseDal.Query();
         }
 
         /// <summary>
@@ -132,7 +135,7 @@ namespace K.Core.Services.BASE
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(string strWhere)
         {
-            return await BaseDal.Query(strWhere);
+            return await baseDal.Query(strWhere);
         }
 
         /// <summary>
@@ -143,7 +146,7 @@ namespace K.Core.Services.BASE
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(Expression<Func<TEntity, bool>> whereExpression)
         {
-            return await BaseDal.Query(whereExpression);
+            return await baseDal.Query(whereExpression);
         }
         /// <summary>
         /// 功能描述:查询一个列表
@@ -154,12 +157,12 @@ namespace K.Core.Services.BASE
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(Expression<Func<TEntity, bool>> whereExpression, Expression<Func<TEntity, object>> orderByExpression, bool isAsc = true)
         {
-            return await BaseDal.Query(whereExpression, orderByExpression, isAsc);
+            return await baseDal.Query(whereExpression, orderByExpression, isAsc);
         }
 
         public async Task<List<TEntity>> Query(Expression<Func<TEntity, bool>> whereExpression, string strOrderByFileds)
         {
-            return await BaseDal.Query(whereExpression, strOrderByFileds);
+            return await baseDal.Query(whereExpression, strOrderByFileds);
         }
 
         /// <summary>
@@ -171,7 +174,7 @@ namespace K.Core.Services.BASE
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(string strWhere, string strOrderByFileds)
         {
-            return await BaseDal.Query(strWhere, strOrderByFileds);
+            return await baseDal.Query(strWhere, strOrderByFileds);
         }
 
         /// <summary>
@@ -184,7 +187,7 @@ namespace K.Core.Services.BASE
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query(Expression<Func<TEntity, bool>> whereExpression, int intTop, string strOrderByFileds)
         {
-            return await BaseDal.Query(whereExpression, intTop, strOrderByFileds);
+            return await baseDal.Query(whereExpression, intTop, strOrderByFileds);
         }
 
         /// <summary>
@@ -200,7 +203,7 @@ namespace K.Core.Services.BASE
             int intTop,
             string strOrderByFileds)
         {
-            return await BaseDal.Query(strWhere, intTop, strOrderByFileds);
+            return await baseDal.Query(strWhere, intTop, strOrderByFileds);
         }
 
         /// <summary>
@@ -219,7 +222,7 @@ namespace K.Core.Services.BASE
             int intPageSize,
             string strOrderByFileds)
         {
-            return await BaseDal.Query(
+            return await baseDal.Query(
               whereExpression,
               intPageIndex,
               intPageSize,
@@ -242,7 +245,7 @@ namespace K.Core.Services.BASE
           int intPageSize,
           string strOrderByFileds)
         {
-            return await BaseDal.Query(
+            return await baseDal.Query(
             strWhere,
             intPageIndex,
             intPageSize,
@@ -252,13 +255,13 @@ namespace K.Core.Services.BASE
         public async Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression,
         int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null)
         {
-            return await BaseDal.QueryPage(whereExpression,
+            return await baseDal.QueryPage(whereExpression,
          intPageIndex, intPageSize, strOrderByFileds);
         }
 
         public async Task<List<TResult>> QueryMuch<T, T2, T3, TResult>(Expression<Func<T, T2, T3, object[]>> joinExpression, Expression<Func<T, T2, T3, TResult>> selectExpression, Expression<Func<T, T2, T3, bool>> whereLambda = null) where T : class, new()
         {
-            return await BaseDal.QueryMuch(joinExpression, selectExpression, whereLambda);
+            return await baseDal.QueryMuch(joinExpression, selectExpression, whereLambda);
         }
 
 
@@ -329,12 +332,12 @@ namespace K.Core.Services.BASE
 
             if (lamada != null)
             {
-                return await BaseDal.QueryPage(lamada,
+                return await baseDal.QueryPage(lamada,
         pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
             }
             else 
             {
-                return await BaseDal.QueryPage(whereExpression,
+                return await baseDal.QueryPage(whereExpression,
        pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
             }
                
@@ -380,9 +383,161 @@ namespace K.Core.Services.BASE
             //}
             //EPPlusHelper.Export(list, ignoreColumn, savePath, fileName);
             //return Response.OK(null, (savePath + "/" + fileName).EncryptDES(AppSetting.Secret.ExportFile));
+
+
+
+
         }
 
-        
+        #region  增删改查*****
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public virtual async Task<MessageModel<int>> AddOne(TEntity t)
+        {
+            MessageModel<int> resp = new MessageModel<int>();
+
+            //传入参数检查  放在 实体类的controller里面吗？ 
+
+
+            t.CreateID = _httpUser.ID ?? "";
+            t.CreateTime = DateTime.Now;
+            t.Creator = _httpUser.Name ?? "";
+
+           
+            resp.data = await baseDal.Add(t);
+
+            resp.success = true;
+            resp.msg = "OK";
+            return resp;
+        }
+
+        public virtual async Task<MessageModel<bool>> DeleteOne(string ID)
+        {
+            MessageModel<bool> resp = new MessageModel<bool>();
+
+            //传入参数检查
+
+            TEntity deleteOne = await baseDal.QueryById(ID);
+
+            //标志删除
+            deleteOne.Status = StatusE.Delete;
+            deleteOne.DeleterID = _httpUser.ID;
+            deleteOne.Deleter = _httpUser.Name;
+            deleteOne.DeleteTime = DateTime.Now;
+            
+
+            resp.data = await baseDal.Update(deleteOne);
+
+            resp.success = true;
+            resp.msg = "OK";
+            return resp;
+        }
+
+        public virtual async Task<MessageModel<bool>> UpdateOne(TEntity t)
+        {
+            MessageModel<bool> resp = new MessageModel<bool>();
+
+            //传入参数检查
+
+            t.Modifier = _httpUser.Name;
+            t.ModifyID = _httpUser.ID;
+            t.ModifyTime = DateTime.Now;
+
+            List<string> lstIgnoreColumns = new List<string>();
+            lstIgnoreColumns.Add("ID");
+            lstIgnoreColumns.Add("Status");
+            lstIgnoreColumns.Add("Creator");
+            lstIgnoreColumns.Add("CreateID");
+            lstIgnoreColumns.Add("CreateTime");
+
+            resp.data = await baseDal.Update(t, null, lstIgnoreColumns, "ID=" + t.ID);
+
+            resp.success = true;
+            resp.msg = "OK";
+            return resp;
+        }
+
+        public virtual async Task<MessageModel<TEntity>> GetOneByID(string id)
+        {
+            MessageModel<TEntity> resp = new MessageModel<TEntity>();
+
+            //传入参数检查
+
+
+            resp.data = await baseDal.QueryById(id);
+
+            resp.success = true;
+            resp.msg = "OK";
+            return resp;
+        }
+
+        public virtual async Task<MessageModel<PageModel<TEntity>>> GetPageData(PageDataOptions pageDataOptions)
+        {
+            MessageModel<PageModel<TEntity>> resp = new MessageModel<PageModel<TEntity>>();
+
+            //检查传入参数是否有误 （未实现） 
+                       
+
+            var oLamadaExtention = new LamadaExtention<TEntity>();
+
+            if (pageDataOptions.IsAll)
+            {
+            }
+            else
+            {
+                oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+            }
+
+            #region  查询参数     时间类型的可能还是有点 问题
+            //循环判断 : 只能处理 = ,like , !=  , > , <,  >=, <=
+            string[] wheres = new string[] { };
+            if (!string.IsNullOrWhiteSpace(pageDataOptions.Wheres))
+            {
+                wheres = pageDataOptions.Wheres.Split("|");
+            }
+            foreach (var item in wheres)
+            {
+                //如果有特殊情况就需要特殊判断 ： 如情况为 查找一个字符串包含在ID  或者  在Name中
+
+
+                if (!string.IsNullOrWhiteSpace(item))
+                {
+                    string[] oneWhere = item.Split(",");
+
+                    //oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], (ExpressionType)(oneWhere[1].ToInt()));
+                    oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], oneWhere[1].ToEnum<ExpressionType>());
+                }
+            }
+
+            #endregion
+
+            var lamada = oLamadaExtention.GetLambda();
+
+            pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
+
+            if (lamada != null)
+            {
+                resp.data= await baseDal.QueryPage(lamada,
+        pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+            }
+            else
+            {
+                resp.data= await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
+       pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+            }
+
+
+            resp.success = true;
+            resp.msg = "OK";
+
+            return resp;
+        }
+        #endregion
+
+
     }
 
 }

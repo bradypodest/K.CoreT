@@ -99,26 +99,6 @@
             修改时间
             </summary>
         </member>
-        <member name="T:K.Core.Model.MessageModel`1">
-            <summary>
-            通用返回信息类
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.MessageModel`1.success">
-            <summary>
-            操作是否成功
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.MessageModel`1.msg">
-            <summary>
-            返回信息
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.MessageModel`1.data">
-            <summary>
-            返回数据集合
-            </summary>
-        </member>
         <member name="P:K.Core.Model.Models.SysUser.UserName">
             <summary>
             用户名
@@ -440,6 +420,71 @@
             <summary>
             返回数据集
             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.UserPwd">
+             <summary>
+            密码
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.RoleId">
+             <summary>
+            角色id
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.RoleName">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.ErrorCount">
+             <summary>
+            错误次数 
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.headPicUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Birth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Address">
+             <summary>
+            地址
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Mobile">
+             <summary>
+            电话
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Remark">
+             <summary>
+            备注
+             </summary>
         </member>
     </members>
 </doc>

@@ -96,40 +96,40 @@
             配置构造函数，用来创建关系映射
             </summary>
         </member>
-        <member name="F:K.Core.Controllers.Base.BaseController`2._service">
+        <member name="F:K.Core.Controllers.Base.BaseController`3._service">
             <summary>
             这个是对应实体类的 service
             </summary>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`2.GetPageData(K.Core.Model.PageDataOptions)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.GetPageData(K.Core.Model.PageDataOptions)">
             <summary>
             base 分页获取
             </summary>
             <param name="pageDataOptions">分页参数</param>
             <returns></returns>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`2.GetOneByID(System.String)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.GetOneByID(System.String)">
             <summary>
             base 根据id获取单独的一个实体  （看情况是否需要重写）
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`2.Add(`0)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Add(`0)">
             <summary>
             base 增加一个实体 （看情况是否重写）
             </summary>
             <param name="t"></param>
             <returns></returns>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`2.Update(`0)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Update(`0)">
             <summary>
-            base 更新一个实体 （需要在各自实体control中重写）
+            base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）
             </summary>
             <param name="t"></param>
             <returns></returns>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`2.Delete(System.String)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Delete(System.String)">
             <summary>
             base 根据id 删除一个实体
             </summary>

@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
+using K.Core.Common.Model;
 using K.Core.IServices.BASE;
 using K.Core.Model;
 using Microsoft.AspNetCore.Authorization;
@@ -12,8 +13,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.Base
 {
-    public class BaseController <T,IEntityService>: Controller
+    public class BaseController <T,TVM,IEntityService>: Controller
         where T : BaseExtendTwoEntity
+        where TVM: BaseExtendTwoEntity
         where IEntityService : IBaseServices<T>
     {
         /// <summary>
@@ -39,23 +41,11 @@ namespace K.Core.Controllers.Base
         /// </summary>
         /// <param name="pageDataOptions">分页参数</param>
         /// <returns></returns>
-        //[ApiExplorerSettings(IgnoreApi = true)]
         [HttpPost, Route("GetPageData")]
         [ResponseCache(Duration = 60)]
         public virtual async Task<MessageModel<PageModel<T>>> GetPageData([FromBody]PageDataOptions pageDataOptions)
         {
-            MessageModel<PageModel<T>> resp = new MessageModel<PageModel<T>>();
-
-            //检查传入参数是否有误 （未实现） 
-
-            var oLamadaExtention = LambdaHelper.True<T>();
-
-            resp.data= await _service.QueryPage(oLamadaExtention, pageDataOptions);
-
-            resp.success = true;
-            resp.msg = "OK";
-
-            return resp;
+            return await _service.GetPageData(pageDataOptions);
         }
 
         /// <summary>
@@ -68,16 +58,7 @@ namespace K.Core.Controllers.Base
         [ResponseCache(Duration = 60)]
         public virtual async Task<MessageModel<T>> GetOneByID(string id) 
         {
-            MessageModel<T> resp = new MessageModel<T>();
-
-            //传入参数检查
-
-
-            resp.data = await _service.QueryById(id);
-
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return await _service.GetOneByID(id);
         }
 
         /// <summary>
@@ -89,63 +70,21 @@ namespace K.Core.Controllers.Base
         [ResponseCache(Duration = 60)]
         public virtual async Task<MessageModel<int>> Add([FromBody]T t)
         {
-            MessageModel<int> resp = new MessageModel<int>();
 
-            //传入参数检查
+            //_ = ModelState.IsValid;
 
-            //t.CreateID = _httpUser.ID??"admin";
-            //t.CreateTime = DateTime.Now;
-            //t.Creator = _httpUser.Name ?? "admin";
-
-            //jwt 还没有，使用下面
-            t.ID = Guid.NewGuid().ToString();
-            t.CreateID =  "admin";
-            t.CreateTime = DateTime.Now;
-            t.Creator =  "admin";
-
-
-            resp.data = await _service.Add(t);
-
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return await _service.AddOne(t);
         }
 
         /// <summary>
-        /// base 更新一个实体 （需要在各自实体control中重写）
+        /// base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）
         /// </summary>
         /// <param name="t"></param>
         /// <returns></returns>
         [HttpPost, Route("Update")]
         public virtual async Task<MessageModel<bool>> Update([FromBody]T t)
         {
-            MessageModel<bool> resp = new MessageModel<bool>();
-
-            //传入参数检查
-
-            //t.Modifier = _httpUser.Name;
-            //t.ModifyID = _httpUser.ID;
-            //t.ModifyTime = DateTime.Now;
-
-            t.Modifier = "adminU";
-            t.ModifyID = "adminU";
-            t.ModifyTime = DateTime.Now;
-
-            //List<string> lstColumns = new List<string>();
-            //lstColumns.Add("CreateTime");
-
-            List<string> lstIgnoreColumns = new List<string>();
-            lstIgnoreColumns.Add("ID");
-            lstIgnoreColumns.Add("Status");
-            lstIgnoreColumns.Add("Creator");
-            lstIgnoreColumns.Add("CreateID");
-            lstIgnoreColumns.Add("CreateTime");
-
-            resp.data = await _service.Update(t,null,lstIgnoreColumns,"ID="+t.ID);
-
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return await _service.UpdateOne(t);
         }
         
         /// <summary>
@@ -154,28 +93,9 @@ namespace K.Core.Controllers.Base
         /// <param name="ID"></param>
         /// <returns></returns>
         [HttpGet, Route("Delete")]
-        public virtual async Task<MessageModel<bool>> Delete(string ID)
+        public virtual async Task<MessageModel<bool>> Delete(string id)
         {
-            MessageModel<bool> resp = new MessageModel<bool>();
-
-            //传入参数检查
-
-            T deleteOne = await _service.QueryById(ID);
-
-            //标志删除
-            deleteOne.Status = StatusE.Delete;
-            //deleteOne.DeleterID = _httpUser.ID;
-            //deleteOne.Deleter = _httpUser.Name;
-            //deleteOne.DeleteTime = DateTime.Now;
-            deleteOne.DeleterID = "admind";
-            deleteOne.Deleter = "admind";
-            deleteOne.DeleteTime = DateTime.Now;
-
-            resp.data = await _service.Update(deleteOne);
-
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return await _service.DeleteOne(id);
         }
     }
 }

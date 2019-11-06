@@ -30,7 +30,7 @@ namespace K.Core.Model
         /// ID
         /// </summary>
         [Key]//主键
-        [Display(Name = "序号")]//字段显示名称
+        //[Display(Name = "序号")]//字段显示名称
         //[Column(TypeName = "nvarchar(100)")] //EF
         //[Required(AllowEmptyStrings = false)]//必需
         [SugarColumn(IsNullable = false, IsPrimaryKey = true, Length =100)]
@@ -39,7 +39,7 @@ namespace K.Core.Model
         /// <summary>
         /// 状态
         /// </summary>
-        [Display(Name = "状态")]
+        //[Display(Name = "状态")]
         //[Column(TypeName = "int")]
         [Editable(true)]
         [SugarColumn(IsNullable = false)]

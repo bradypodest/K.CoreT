@@ -1,4 +1,5 @@
-﻿using K.Core.Model;
+﻿using K.Core.Common.Model;
+using K.Core.Model;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace K.Core.IServices.BASE
 {
-    public interface IBaseServices<TEntity> where TEntity : class
+    public interface IBaseServices<TEntity> where TEntity : BaseExtendTwoEntity
     {
 
         Task<TEntity> QueryById(object objId);
@@ -63,6 +64,20 @@ namespace K.Core.IServices.BASE
         /// <param name="pageData"></param>
         /// <returns></returns>
         Task<MessageModel<bool>> Export(PageDataOptions pageData);
+
+
+
+        //将本来baseController执行的方法放到这里 ---------------------
+        Task<MessageModel<int>> AddOne(TEntity T);
+
+        Task<MessageModel<bool>> DeleteOne(string ID);
+
+        Task<MessageModel<bool>> UpdateOne(TEntity t);
+
+        Task<MessageModel<TEntity>> GetOneByID(string id);
+
+        Task<MessageModel<PageModel<TEntity>>> GetPageData(PageDataOptions pageDataOptions);
+
     }
 
 }

@@ -11,7 +11,7 @@ namespace K.Core.Model
         /// <summary>
         /// 创建人ID
         /// </summary>
-        [Display(Name = "CreateID")]
+        //[Display(Name = "CreateID")]
         //[Column(TypeName = "nvarchar(100)")]
         [SugarColumn(IsNullable = false, Length = 100)]
         public string CreateID { get; set; }
@@ -19,7 +19,7 @@ namespace K.Core.Model
         /// <summary>
         ///创建人
         /// </summary>
-        [Display(Name = "创建人")]
+        //[Display(Name = "创建人")]
         [MaxLength(200)]
         //[Column(TypeName = "nvarchar(200)")]
         [SugarColumn(IsNullable = false,  Length = 200)]
@@ -35,7 +35,7 @@ namespace K.Core.Model
         /// <summary>
         /// 修改人ID
         /// </summary>
-        [Display(Name = "ModifyID")]
+        //[Display(Name = "ModifyID")]
         //[Column(TypeName = "nvarchar(100)")]
         [SugarColumn(IsNullable = true, Length = 100)]
         public String ModifyID { get; set; }
@@ -43,7 +43,7 @@ namespace K.Core.Model
         /// <summary>
         ///修改人
         /// </summary>
-        [Display(Name = "修改人")]
+        //[Display(Name = "修改人")]
         [MaxLength(200)]
         [SugarColumn(IsNullable = true, Length = 100)]
         //[Column(TypeName = "nvarchar(200)")]

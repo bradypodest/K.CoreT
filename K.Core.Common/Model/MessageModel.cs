@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace K.Core.Model
+namespace K.Core.Common.Model
 {
     /// <summary>
     /// 通用返回信息类
