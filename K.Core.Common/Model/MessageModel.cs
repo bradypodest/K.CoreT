@@ -22,5 +22,42 @@ namespace K.Core.Common.Model
         /// </summary>
         public T data { get; set; }
 
+
+        public static MessageModel<T> Fail(string msgString="服务器异常") {
+            return new MessageModel<T>()
+            {
+                success = false,
+                msg = msgString,
+                data = default(T),
+            };
+        }
+
+        public static MessageModel<T> Fail(T obj ,string msgString= "服务器异常")
+        {
+            return new MessageModel<T>()
+            {
+                success = false,
+                msg = msgString,
+                data = obj,
+            };
+        }
+        
+        public static MessageModel<T> Success(string msgString="OK")
+        {
+            return new MessageModel<T>()
+            {
+                success = true,
+                msg = msgString,
+            };
+        }
+        public static MessageModel<T> Success(T obj,string msgString="OK")
+        {
+            return new MessageModel<T>()
+            {
+                success = true,
+                msg = msgString,
+                data=obj,
+            };
+        }
     }
 }

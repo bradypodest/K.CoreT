@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using AutoMapper;
+using K.Core.AutoMapper;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
 using K.Core.IServices.BASE;
 using K.Core.Model;
+using K.Core.Model.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +25,7 @@ namespace K.Core.Controllers.Base
         /// 这个是对应实体类的 service
         /// </summary>
         protected IEntityService _service;
-
+        protected IMapper _mapper;
         protected IUser _httpUser;
 
         public BaseController()
@@ -30,10 +33,11 @@ namespace K.Core.Controllers.Base
 
         }
 
-        public BaseController(IEntityService service,IUser httpUser)
+        public BaseController(IEntityService service,IUser httpUser,IMapper mapper)
         {
             _service = service;
             _httpUser = httpUser;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -68,12 +72,18 @@ namespace K.Core.Controllers.Base
         /// <returns></returns>
         [HttpPost, Route("Add")]
         [ResponseCache(Duration = 60)]
-        public virtual async Task<MessageModel<int>> Add([FromBody]T t)
+        public virtual async Task<MessageModel<int>> Add([FromBody]TVM tvm)
         {
+            //验证信息放在拦截器中
 
-            //_ = ModelState.IsValid;
+            //将数据转化为T
+            var source = new Source<TVM> { Value = tvm };
+            var t = _mapper.Map<Destination<T>>(source);
+            return await _service.AddOne(t.Value);
 
-            return await _service.AddOne(t);
+            //var t = _mapper.Map<SysUser>(tvm);
+
+            //return await _service.AddOne(t);
         }
 
         /// <summary>
@@ -82,9 +92,13 @@ namespace K.Core.Controllers.Base
         /// <param name="t"></param>
         /// <returns></returns>
         [HttpPost, Route("Update")]
-        public virtual async Task<MessageModel<bool>> Update([FromBody]T t)
+        public virtual async Task<MessageModel<bool>> Update([FromBody]TVM tvm)
         {
-            return await _service.UpdateOne(t);
+            //将数据转化为T
+            var source = new Source<TVM> { Value = tvm };
+            var t = _mapper.Map<Destination<T>>(source);
+
+            return await _service.UpdateOne(t.Value);
         }
         
         /// <summary>

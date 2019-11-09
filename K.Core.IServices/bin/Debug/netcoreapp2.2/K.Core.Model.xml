@@ -372,13 +372,18 @@
         </member>
         <member name="P:K.Core.Model.PageDataOptions.Order">
             <summary>
-            排序方式    格式如  "ID desc"
+            排序方式    格式如  "ID desc" 默认为 CreateTime desc
             </summary>
         </member>
         <member name="P:K.Core.Model.PageDataOptions.Wheres">
             <summary>
             条件 格式：   字段名称,条件（如 0,1,2）,值 | 字段名称,条件（如）,值
             关于条件 ，查看ExpressionType 枚举
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.IsAll">
+            <summary>
+            是否查询全部（包含删除的） ，默认不查询
             </summary>
         </member>
         <member name="F:K.Core.Model.ResponseEnum.NoPermissions">

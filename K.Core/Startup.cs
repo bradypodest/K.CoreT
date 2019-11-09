@@ -39,6 +39,7 @@ using Newtonsoft.Json.Serialization;
 using StackExchange.Profiling.Storage;
 using Swashbuckle.AspNetCore.Swagger;
 using static K.Core.SwaggerHelper.CustomApiVersion;
+using K.Core.Filter;
 
 namespace K.Core
 {
@@ -213,7 +214,7 @@ namespace K.Core
 
             #endregion
 
-            #region MVC + GlobalExceptions     //权限+数据库认证  这里可以多思考
+            #region MVC + GlobalExceptions     //权限+数据库认证  这里可以多思考  拦截器
 
             //注入全局异常捕获
             services.AddMvc(o =>
@@ -224,6 +225,8 @@ namespace K.Core
                 o.Conventions.Insert(0, new GlobalRouteAuthorizeConvention());//可以判断进入的方法是否具有某个属性
                 // 全局路由前缀，统一修改路由
                 o.Conventions.Insert(0, new GlobalRoutePrefixFilter(new RouteAttribute(RoutePrefix.Name)));//给url上加某个前缀
+
+                o.Filters.Add(typeof(GlobalActionFilterAttribute));
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)//兼容版本
             // 取消默认驼峰

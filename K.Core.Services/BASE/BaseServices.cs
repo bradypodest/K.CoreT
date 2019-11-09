@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
+using AutoMapper;
 
 namespace K.Core.Services.BASE
 {
@@ -23,6 +24,8 @@ namespace K.Core.Services.BASE
         public IBaseRepository<TEntity> baseDal;//通过在子类的构造函数中注入，这里是基类，不用构造函数
 
         protected IUser _httpUser;
+
+        protected IMapper _mapper;
 
         public async Task<TEntity> QueryById(object objId)
         {
@@ -397,29 +400,19 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public virtual async Task<MessageModel<int>> AddOne(TEntity t)
         {
-            MessageModel<int> resp = new MessageModel<int>();
-
-            //传入参数检查  放在 实体类的controller里面吗？ 
-
 
             t.CreateID = _httpUser.ID ?? "";
             t.CreateTime = DateTime.Now;
             t.Creator = _httpUser.Name ?? "";
 
            
-            resp.data = await baseDal.Add(t);
+            var  data = await baseDal.Add(t);//全局异常拦截应该就不需要 try 
 
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return MessageModel<int>.Success(data);
         }
 
         public virtual async Task<MessageModel<bool>> DeleteOne(string ID)
         {
-            MessageModel<bool> resp = new MessageModel<bool>();
-
-            //传入参数检查
-
             TEntity deleteOne = await baseDal.QueryById(ID);
 
             //标志删除
@@ -429,19 +422,13 @@ namespace K.Core.Services.BASE
             deleteOne.DeleteTime = DateTime.Now;
             
 
-            resp.data = await baseDal.Update(deleteOne);
+            var data = await baseDal.Update(deleteOne);
 
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return MessageModel<bool>.Success(true);
         }
 
         public virtual async Task<MessageModel<bool>> UpdateOne(TEntity t)
         {
-            MessageModel<bool> resp = new MessageModel<bool>();
-
-            //传入参数检查
-
             t.Modifier = _httpUser.Name;
             t.ModifyID = _httpUser.ID;
             t.ModifyTime = DateTime.Now;
@@ -453,34 +440,20 @@ namespace K.Core.Services.BASE
             lstIgnoreColumns.Add("CreateID");
             lstIgnoreColumns.Add("CreateTime");
 
-            resp.data = await baseDal.Update(t, null, lstIgnoreColumns, "ID=" + t.ID);
+            var data = await baseDal.Update(t, null, lstIgnoreColumns, "ID=" + t.ID);
 
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return MessageModel<bool>.Success(true);
         }
 
         public virtual async Task<MessageModel<TEntity>> GetOneByID(string id)
         {
-            MessageModel<TEntity> resp = new MessageModel<TEntity>();
+            var data = await baseDal.QueryById(id);
 
-            //传入参数检查
-
-
-            resp.data = await baseDal.QueryById(id);
-
-            resp.success = true;
-            resp.msg = "OK";
-            return resp;
+            return MessageModel<TEntity>.Success(data);
         }
 
         public virtual async Task<MessageModel<PageModel<TEntity>>> GetPageData(PageDataOptions pageDataOptions)
         {
-            MessageModel<PageModel<TEntity>> resp = new MessageModel<PageModel<TEntity>>();
-
-            //检查传入参数是否有误 （未实现） 
-                       
-
             var oLamadaExtention = new LamadaExtention<TEntity>();
 
             if (pageDataOptions.IsAll)
@@ -518,26 +491,25 @@ namespace K.Core.Services.BASE
 
             pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
 
+            
+
             if (lamada != null)
             {
-                resp.data= await baseDal.QueryPage(lamada,
+                var data= await baseDal.QueryPage(lamada,
         pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+
+                return MessageModel<PageModel<TEntity>>.Success(data);
             }
             else
             {
-                resp.data= await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
+                var data= await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
        pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+
+                return MessageModel<PageModel<TEntity>>.Success(data);
             }
 
-
-            resp.success = true;
-            resp.msg = "OK";
-
-            return resp;
         }
         #endregion
-
-
     }
 
 }

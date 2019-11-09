@@ -27,7 +27,9 @@ namespace K.Core.Services.System
 
             _httpUser = httpUser;
             base._httpUser = httpUser;
+
             _mapper = mapper;
+            base._mapper = mapper;
         }
 
         /// <summary>

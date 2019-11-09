@@ -774,3 +774,45 @@
 【SQL参数】：@Status0:1
 
 【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 50
+--------------------------------
+2019/11/9 13:02:53|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/9 13:09:34|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/9 13:11:00|
+【SQL参数】：@UserName:admin
+@UserPwd:adminpwd
+@RoleId:string
+@RoleName:string
+@LastLoginDate:
+@LastModifyPwdDate:
+@ErrorCount:0
+@LastLoginFailDate:
+@headPicUrl:string
+@Sex:string
+@Age:0
+@Birth:2019/11/9 4:45:40
+@Address:string
+@Mobile:string
+@Email:12@qq.com
+@Remark:string
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/9 13:10:57
+@ModifyID:string
+@Modifier:string
+@ModifyTime:2019/11/9 4:45:40
+@ID:string
+@Status:0
+@DeleteTime:2019/11/9 4:45:40
+@Deleter:string
+@DeleterID:string
+
+【SQL语句】：INSERT INTO [SysUser]  
+           ([UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[headPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@UserName,@UserPwd,@RoleId,@RoleName,@LastLoginDate,@LastModifyPwdDate,@ErrorCount,@LastLoginFailDate,@headPicUrl,@Sex,@Age,@Birth,@Address,@Mobile,@Email,@Remark,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@Status,@DeleteTime,@Deleter,@DeleterID) ;SELECT SCOPE_IDENTITY();

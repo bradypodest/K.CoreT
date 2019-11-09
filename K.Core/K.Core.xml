@@ -115,14 +115,14 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`3.Add(`0)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Add(`1)">
             <summary>
             base 增加一个实体 （看情况是否重写）
             </summary>
             <param name="t"></param>
             <returns></returns>
         </member>
-        <member name="M:K.Core.Controllers.Base.BaseController`3.Update(`0)">
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Update(`1)">
             <summary>
             base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）
             </summary>
@@ -225,6 +225,32 @@
             </summary>
             <param name="response"></param>
             <param name="ms"></param>
+        </member>
+        <member name="T:K.Core.ModelStateExtension">
+            <summary>
+            ModelState扩展类
+            </summary>
+        </member>
+        <member name="M:K.Core.ModelStateExtension.GetFirstErrMsg(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            获取模型绑定中的第一条错误信息
+            </summary>
+            <param name="msDictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.ModelStateExtension.GetErrMsgList(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+             获取错误信息列表
+            </summary>
+            <param name="msDictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.ModelStateExtension.GetAllErrMsgStr(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary,System.String)">
+            <summary>
+            获取ModelState所有错误信息，间隔符间隔
+            </summary>
+            <param name="splitStr">间隔符</param>
+            <returns></returns>
         </member>
         <member name="P:K.Core.Startup.Repository">
             <summary>

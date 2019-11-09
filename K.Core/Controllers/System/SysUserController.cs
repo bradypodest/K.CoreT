@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Controllers.Base;
@@ -21,12 +22,14 @@ namespace K.Core.Controllers.System
     {
         readonly ISysUserService _sysUserServices;
         private readonly IUser _user;
+        private readonly IMapper _mapper;
 
-        public SysUserController(ISysUserService service,IUser httpUser)
-        : base( service, httpUser)
+        public SysUserController(ISysUserService service,IUser httpUser,IMapper mapper)
+        : base( service, httpUser,mapper)
         {
             _sysUserServices = service;
             _user = httpUser;
+            _mapper = mapper;
         }
 
         #region  重写baseController 方法
