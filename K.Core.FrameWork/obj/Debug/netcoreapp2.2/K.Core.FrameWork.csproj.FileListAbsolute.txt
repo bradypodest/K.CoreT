@@ -20,4 +20,3 @@ D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.FrameWork\obj\Debug\ne
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.dll
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.pdb
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csprojAssemblyReference.cache
-D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csprojAssemblyReference.cache

@@ -8,7 +8,7 @@ namespace K.Core.Model.Models
     /// <summary>
     /// 菜单-权限组
     /// </summary>
-    public class SysMenuPowerGroup
+    public class SysMenuPowerGroup:BaseExtendTwoEntity
     {
         [SugarColumn(Length =100,IsNullable = true)]
         public string SysMenuID { get; set; }

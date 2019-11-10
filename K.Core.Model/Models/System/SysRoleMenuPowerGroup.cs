@@ -8,7 +8,7 @@ namespace K.Core.Model.Models
     /// <summary>
     /// 角色-菜单-权限组
     /// </summary>
-    public class SysRoleMenuPowerGroup
+    public class SysRoleMenuPowerGroup:BaseExtendTwoEntity
     {
         [SugarColumn(Length =100,IsNullable =false)]
         public string RoleID { get; set; }
