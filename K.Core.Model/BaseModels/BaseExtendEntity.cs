@@ -81,7 +81,7 @@ namespace K.Core.Model
         /// </summary>
         Delete = 1,
         /// <summary>
-        /// 禁止  ，如用户
+        /// 禁止  ，如用户  
         /// </summary>
         Ban = 2,
     }
