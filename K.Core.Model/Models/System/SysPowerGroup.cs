@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace K.Core.Model.Models.System
+namespace K.Core.Model.Models
 {
     /// <summary>
     /// 权限组（一组api接口组成的一个权限） 比如 查询权限里面包含那些接口

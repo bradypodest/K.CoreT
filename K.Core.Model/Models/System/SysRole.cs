@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace K.Core.Model.Models.System
+namespace K.Core.Model.Models
 {
     [TableInfoAttribute(TableName = "SysRole", TableCnName = "角色")]
     public class SysRole : BaseExtendTwoEntity

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace K.Core.Model.Models.System
+namespace K.Core.Model.Models
 {
     /// <summary>
     /// 单个权限 （一个api 接口）

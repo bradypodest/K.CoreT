@@ -66,7 +66,7 @@
         </member>
         <member name="F:K.Core.Model.StatusE.Ban">
             <summary>
-            禁止  ，如用户
+            禁止  ，如用户  
             </summary>
         </member>
         <member name="P:K.Core.Model.BaseExtendTwoEntity.CreateID">
@@ -97,6 +97,101 @@
         <member name="P:K.Core.Model.BaseExtendTwoEntity.ModifyTime">
             <summary>
             修改时间
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.ParentId">
+             <summary>
+            父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.Name">
+             <summary>
+            菜单名称
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.Url">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.OrderNo">
+             <summary>
+            排序号
+             </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysMenuPowerGroup">
+            <summary>
+            菜单-权限组
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysPower">
+            <summary>
+            单个权限 （一个api 接口）
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.SysPowerGroupID">
+            <summary>
+            权限组ID
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.Name">
+            <summary>
+            权限名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.ApiUrl">
+            <summary>
+            权限api
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.IsOpen">
+            <summary>
+            是否公开api   : 0 否，1 true
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysPowerGroup">
+            <summary>
+            权限组（一组api接口组成的一个权限） 比如 查询权限里面包含那些接口
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPowerGroup.Name">
+            <summary>
+            权限组名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPowerGroup.OrderNo">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysRole.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysRole.Description">
+             <summary>
+            描述
+             </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysRoleMenuPowerGroup">
+            <summary>
+            角色-菜单-权限组
             </summary>
         </member>
         <member name="P:K.Core.Model.Models.SysUser.UserName">

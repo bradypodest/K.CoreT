@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace K.Core.Model.Models.System
+namespace K.Core.Model.Models
 {
     /// <summary>
     /// 角色-菜单-权限组
