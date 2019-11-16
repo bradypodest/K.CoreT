@@ -31,7 +31,7 @@ namespace K.Core.Filter
                 //校验数据
                 if (context.ModelState.IsValid == false)
                 {
-                    var result = MessageModel<bool>.Fail(context.ModelState.GetAllErrMsgStr(","));
+                    var result = MessageModel<bool>.Fail(context.ModelState.GetAllErrMsgStr(","),ResponseEnum.ServerRequestError);
                     //result.message = actionContext.ModelState.GetAllErrMsgStr(",");
                     //actionContext.Response = new HttpResponseMessage { Content = new StringContent(JsonConvert.SerializeObject(result), Encoding.GetEncoding("UTF-8"), "application/json") };
 

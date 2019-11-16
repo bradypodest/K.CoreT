@@ -481,21 +481,6 @@
             是否查询全部（包含删除的） ，默认不查询
             </summary>
         </member>
-        <member name="F:K.Core.Model.ResponseEnum.NoPermissions">
-            <summary>
-            无权限
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.ResponseEnum.NoFound">
-            <summary>
-            找不到指定资源
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.ResponseEnum.ServerError">
-            <summary>
-            找不到指定资源
-            </summary>
-        </member>
         <member name="T:K.Core.Model.TableModel`1">
             <summary>
             表格数据，支持分页

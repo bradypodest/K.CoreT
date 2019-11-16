@@ -145,8 +145,8 @@
             <summary>
             获取token 
             </summary>
-            <param name="name"></param>
-            <param name="pass"></param>
+            <param name="username"></param>
+            <param name="password"></param>
             <returns></returns>
         </member>
         <member name="T:K.Core.Controllers.System.SysUserController">

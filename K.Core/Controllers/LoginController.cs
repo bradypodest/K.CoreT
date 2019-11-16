@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using K.Core.AuthHelper;
 using K.Core.Common.Helper;
+using K.Core.Common.Model;
 using K.Core.IServices.System;
 using K.Core.Model.Models;
 using Microsoft.AspNetCore.Authentication;
@@ -30,29 +31,30 @@ namespace K.Core.Controllers
         /// <summary>
         /// 获取token 
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="pass"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
         /// <returns></returns>
         [HttpGet]
         [Route("Login")]
-        public async Task<object> Login(string name = "", string pass = "")
+        public async Task<object> Login(string username = "", string password = "")
         {
             //JsonResult
             string jwtStr = string.Empty;
 
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(pass))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 return new JsonResult(new
                 {
-                    Status = false,
-                    message = "用户名或密码不能为空"
+                    code = ResponseEnum.ServerRequestError,
+                    success = false,
+                    msg = "用户名或密码不能为空"
                 });
             }
 
-            pass = MD5Helper.MD5Encrypt32(pass);//加密密码
+            password = MD5Helper.MD5Encrypt32(password);//加密密码
 
             List<SysUser> user = new List<SysUser>();
-            if ("admin".Equals(name))
+            if ("admin".Equals(username))
             {
                 user= await _sysUserServices.Query();
             }
@@ -61,7 +63,7 @@ namespace K.Core.Controllers
                 //判断当前用户是否已经登陆失败超过3次,超过3次则不能登陆，直接给user=null;
 
 
-                user = await _sysUserServices.Query(d => d.UserName == name && d.UserPwd == pass);
+                user = await _sysUserServices.Query(d => d.UserName == username && d.UserPwd == password);
             }
 
             
@@ -72,7 +74,7 @@ namespace K.Core.Controllers
                 ClaimsIdentity claimIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);//身份ID
 
                 var claims = new List<Claim> {//Claim是拥有什么
-                    new Claim(ClaimTypes.Name, name),//保存登陆人账号
+                    new Claim(ClaimTypes.Name, username),//保存登陆人账号
                     new Claim(JwtRegisteredClaimNames.Jti, userLogin.ID.ToString()),//保存登陆人ID
                     new Claim(ClaimTypes.Expiration, DateTime.Now.AddMinutes(60).ToString()) };//60分钟过期
 
@@ -84,7 +86,12 @@ namespace K.Core.Controllers
                 claimIdentity.AddClaims(claims);
 
                 var token = JwtToken.BuildJwtToken(claims.ToArray());
-                return new JsonResult(token);
+                return new JsonResult(new{
+                    code = ResponseEnum.Success,
+                    success = true,
+                    msg = "认证成功",
+                    data=token
+                });
             }
             else
             {
@@ -92,6 +99,7 @@ namespace K.Core.Controllers
 
                 return new JsonResult(new
                 {
+                    code=ResponseEnum.ServerRequestError,
                     success = false,
                     msg = "认证失败"
                 });
