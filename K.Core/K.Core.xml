@@ -154,6 +154,14 @@
             用户管理
             </summary>
         </member>
+        <member name="M:K.Core.Controllers.System.SysUserController.GetInfoByToken(System.String)">
+            <summary>
+            获取用户详情根据token
+            【无权限】
+            </summary>
+            <param name="token">令牌</param>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Services.GlobalRouteAuthorizeConvention">
             <summary>
             Summary:全局路由权限公约

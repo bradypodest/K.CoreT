@@ -134,6 +134,11 @@
             排序号
              </summary>
         </member>
+        <member name="P:K.Core.Model.Models.SysMenu.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
         <member name="T:K.Core.Model.Models.SysMenuPowerGroup">
             <summary>
             菜单-权限组
@@ -234,7 +239,7 @@
             最后登陆失败时间
              </summary>
         </member>
-        <member name="P:K.Core.Model.Models.SysUser.headPicUrl">
+        <member name="P:K.Core.Model.Models.SysUser.HeadPicUrl">
             <summary>
             头像
             </summary>
@@ -531,7 +536,7 @@
             错误次数 
              </summary>
         </member>
-        <member name="P:K.Core.Model.SysUserVM.headPicUrl">
+        <member name="P:K.Core.Model.SysUserVM.HeadPicUrl">
             <summary>
             头像
             </summary>

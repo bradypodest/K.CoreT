@@ -87,7 +87,8 @@ namespace K.Core.AuthHelper.OverWrite
             }
             var tm = new TokenModelJwt
             {
-                Uid = (jwtToken.Id).ObjToInt(),
+                //Uid = (jwtToken.Id).ObjToInt(),
+                Uid = jwtToken.Id,
                 Role = role != null ? role.ObjToString() : "",
             };
             return tm;
@@ -102,7 +103,7 @@ namespace K.Core.AuthHelper.OverWrite
         /// <summary>
         /// Id
         /// </summary>
-        public long Uid { get; set; }
+        public string Uid { get; set; }
         /// <summary>
         /// 角色
         /// </summary>

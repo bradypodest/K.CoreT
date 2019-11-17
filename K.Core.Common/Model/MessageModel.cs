@@ -38,7 +38,7 @@ namespace K.Core.Common.Model
         //    };
         //}
 
-        public static MessageModel<T> Fail(string msgString = "服务器异常", ResponseEnum codeEnum = ResponseEnum.ServerRequestError)
+        public static MessageModel<T> Fail(string msgString = "请求失败", ResponseEnum codeEnum = ResponseEnum.ServerRequestError)
         {
             return new MessageModel<T>()
             {

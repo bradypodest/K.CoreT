@@ -87,7 +87,7 @@ namespace K.Core.Model.Models
         /// </summary>
         [Display(Name = "头像")]
         [SugarColumn(Length = 200, IsNullable = true)]
-        public string headPicUrl { get; set; }
+        public string HeadPicUrl { get; set; }
 
         /// <summary>
         /// 性别

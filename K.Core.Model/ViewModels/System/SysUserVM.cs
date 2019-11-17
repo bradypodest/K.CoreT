@@ -52,7 +52,7 @@ namespace K.Core.Model
         /// 头像
         /// </summary>
         [Display(Name = "头像")]
-        public string headPicUrl { get; set; }
+        public string HeadPicUrl { get; set; }
 
         /// <summary>
         /// 性别

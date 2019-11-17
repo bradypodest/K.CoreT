@@ -67,6 +67,13 @@ namespace K.Core.Model.Models
         public int? OrderNo { get; set; }
 
 
+        /// <summary>
+        /// 是否显示
+        /// </summary>
+        [Display(Name = "是否显示")]
+        [Editable(true)]
+        public bool? IsShow { get; set; }
+
         ///// <summary>
         ///// 权限
         ///// </summary>
