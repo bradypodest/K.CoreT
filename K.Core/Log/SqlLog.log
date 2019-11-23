@@ -1911,3 +1911,994 @@
 【SQL参数】：@Status0:1
 
 【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:03:39|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 20:03:41|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 20:03:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:03:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:05:08|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 20:05:10|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:05:10|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:08:17|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:08:18|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:08:20|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:08:21|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 3 AND 4
+--------------------------------
+2019/11/23 20:08:22|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:08:22|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:10:12|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:10:13|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:10:22|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:10:24|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:14:21|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:14:23|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:14:23|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:14:24|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:17:52|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:17:52|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:18:52|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:18:53|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:19:14|
+【SQL参数】：@InPara0:4eda0ebe-516f-49c4-9fd9-3afa5be2dee1
+
+【SQL语句】：SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 20:19:38|
+【SQL参数】：@ParentId:
+@Name:dsadfa
+@Url:
+@Description:
+@Icon:
+@OrderNo:10
+@IsShow:True
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 16:03:42
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:4eda0ebe-516f-49c4-9fd9-3afa5be2dee1
+@Status:1
+@DeleteTime:2019/11/23 20:19:34
+@Deleter:admin
+@DeleterID:1
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2019/11/23 20:19:45|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:19:45|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:21:05|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:21:06|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:21:15|
+【SQL参数】：@InPara0:b20735b7-15ac-4bef-b0e4-3f155168dd0e
+
+【SQL语句】：SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 20:21:15|
+【SQL参数】：@ParentId:
+@Name:sfd
+@Url:
+@Description:
+@Icon:
+@OrderNo:10
+@IsShow:True
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 14:46:09
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:b20735b7-15ac-4bef-b0e4-3f155168dd0e
+@Status:1
+@DeleteTime:2019/11/23 20:21:15
+@Deleter:admin
+@DeleterID:1
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[Status]=@Status,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2019/11/23 20:21:16|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:21:16|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:21:26|
+【SQL参数】：@InPara0:39fa7cb0-60fe-4917-ba26-2cbdd444a619
+
+【SQL语句】：SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 20:21:26|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:21:26|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:30:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:30:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:36:32|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:36:33|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:36:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:36:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:36:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:36:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:39:01|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:39:01|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:39:17|
+【SQL参数】：@MethodConst0:eee
+@MethodConst1:
+
+【SQL语句】：SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE (([Name] = @MethodConst0) AND ([ParentId] = @MethodConst1) )
+--------------------------------
+2019/11/23 20:39:26|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:39:26|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:40:01|
+【SQL参数】：@MethodConst0:dwww
+@MethodConst1:
+
+【SQL语句】：SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE (([Name] = @MethodConst0) AND ([ParentId] = @MethodConst1) )
+--------------------------------
+2019/11/23 20:40:08|
+【SQL参数】：@ParentId:
+@Name:dwww
+@Url:
+@Description:
+@Icon:
+@OrderNo:20
+@IsShow:True
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 20:40:01
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:512cdeca-ef0a-40c7-a56d-aedf89f48b78
+@Status:0
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [SysMenu]  
+           ([ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@ParentId,@Name,@Url,@Description,@Icon,@OrderNo,@IsShow,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@Status,@DeleteTime,@Deleter,@DeleterID) ;SELECT SCOPE_IDENTITY();
+--------------------------------
+2019/11/23 20:40:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:40:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:40:59|
+【SQL参数】：@MethodConst0:grrrr
+@MethodConst1:
+
+【SQL语句】：SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE (([Name] = @MethodConst0) AND ([ParentId] = @MethodConst1) )
+--------------------------------
+2019/11/23 20:41:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:41:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:41:56|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:41:56|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:44:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:44:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:50:17|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 20:50:30|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 20:50:30|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 20:50:44|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:04:36|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:05:41|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:05:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:05:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:05:47|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:05:54|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:05:54
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID=3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+--------------------------------
+2019/11/23 21:06:45|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:06:45
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID=3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+--------------------------------
+2019/11/23 21:09:06|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:07:29
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID=3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+--------------------------------
+2019/11/23 21:22:55|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 21:22:57|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:22:57|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:23:03|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:23:18|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:admin
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:23:18
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 21:23:19|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:23:19|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:29:16|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 21:29:18|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:29:19|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:29:29|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:29:41|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:jjj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:29:41
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 21:29:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:29:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:29:55|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:29:55|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:37:49|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 21:37:51|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:37:51|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:37:59|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:38:16|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:38:47|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:jjooj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:38:16
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 21:38:47|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:38:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:41:42|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 21:41:44|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:41:44|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:41:55|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:42:03|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:42:06|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:jj5ooj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:42:03
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 21:42:07|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 21:42:07|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 21:42:50|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 21:43:09|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:jjo888oj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 21:42:50
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 22:42:53|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 22:42:55|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 22:42:55|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 22:43:15|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 22:43:28|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 22:43:57|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr
+@Url:
+@Description:jjo8848oj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 22:43:28
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 22:44:07|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 22:44:07|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 22:44:11|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 22:44:12|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 22:48:01|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 22:48:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 22:48:03|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 22:48:14|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 22:48:26|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 22:48:56|
+【SQL参数】：@Status:0
+@ParentId:
+@Name:grrrr7
+@Url:
+@Description:jjo8848oj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@CreateID:1
+@Creator:123
+@CreateTime:2019/11/23 20:40:59
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 22:48:26
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [Status]=@Status,[ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 22:49:17|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 22:49:18|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 22:55:12|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 22:55:14|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 22:55:14|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 22:55:31|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 22:55:39|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 22:56:10|
+【SQL参数】：@ParentId:
+@Name:grrrr7
+@Url:
+@Description:jj8848oj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 22:55:39
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE ID='3e4d5608-5b1f-4a19-8287-c9d8ed8472f4'
+--------------------------------
+2019/11/23 23:41:46|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 23:41:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 23:41:49|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 23:42:28|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 23:42:36|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 23:42:44|
+【SQL参数】：@ParentId:
+@Name:grrrr7
+@Url:
+@Description:jj87848oj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 23:42:36
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2019/11/23 23:46:09|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/11/23 23:46:11|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 23:46:11|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/11/23 23:46:21|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 23:46:29|
+【SQL参数】：@InPara0:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/11/23 23:46:31|
+【SQL参数】：@ParentId:
+@Name:grrrr7
+@Url:
+@Description:jjh8848oj
+@Icon:
+@OrderNo:25
+@IsShow:False
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2019/11/23 23:46:29
+@ID:3e4d5608-5b1f-4a19-8287-c9d8ed8472f4
+
+【SQL语句】：UPDATE [SysMenu]  SET
+           [ParentId]=@ParentId,[Name]=@Name,[Url]=@Url,[Description]=@Description,[Icon]=@Icon,[OrderNo]=@OrderNo,[IsShow]=@IsShow,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2019/11/23 23:46:32|
+【SQL参数】：@Status0:1
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/11/23 23:46:32|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[ParentId],[Name],[Url],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysMenu]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2

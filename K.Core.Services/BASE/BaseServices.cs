@@ -442,18 +442,31 @@ namespace K.Core.Services.BASE
 
         public virtual async Task<MessageModel<bool>> UpdateOne(TEntity t)
         {
+            //查询是否该对象已被删除
+            if (baseDal.QueryById(t.ID) == null) 
+            {
+                return MessageModel<bool>.Fail("该对象已不存在，无法修改");
+            }
+
             t.Modifier = _httpUser.Name;
             t.ModifyID = _httpUser.ID;
             t.ModifyTime = DateTime.Now;
 
-            List<string> lstIgnoreColumns = new List<string>();
-            lstIgnoreColumns.Add("ID");
+
+            List<string> lstIgnoreColumns = new List<string>();//忽略项
+            //lstIgnoreColumns.Add("ID");
             lstIgnoreColumns.Add("Status");
             lstIgnoreColumns.Add("Creator");
             lstIgnoreColumns.Add("CreateID");
             lstIgnoreColumns.Add("CreateTime");
 
-            var data = await baseDal.Update(t, null, lstIgnoreColumns, "ID=" + t.ID);
+            lstIgnoreColumns.Add("Deleter");
+            lstIgnoreColumns.Add("DeleterID");
+            lstIgnoreColumns.Add("DeleteTime");
+
+
+            //var data = await baseDal.Update(t, null, lstIgnoreColumns, "ID='" + t.ID+"'");
+            var data = await baseDal.Update(t, null, lstIgnoreColumns);
 
             return MessageModel<bool>.Success(true);
         }

@@ -164,11 +164,12 @@ namespace K.Core.Repository.Base
             //    up = await Task.Run(() => up.Where(strWhere));
             //}
             //return await Task.Run(() => up.ExecuteCommand()) > 0;
-
+            
             IUpdateable<TEntity> up = _db.Updateable(entity);
             if (lstIgnoreColumns != null && lstIgnoreColumns.Count > 0)
             {
-                up = up.IgnoreColumns(lstIgnoreColumns.ToArray());
+                //up = up.IgnoreColumns(lstIgnoreColumns.ToArray());//这个不知道为何没有效果
+                up = up.IgnoreColumns(it=>lstIgnoreColumns.Contains(it));//这个弃用了,不知道为何可以用
             }
             if (lstColumns != null && lstColumns.Count > 0)
             {

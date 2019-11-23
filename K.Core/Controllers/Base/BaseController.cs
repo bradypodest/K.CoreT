@@ -57,7 +57,7 @@ namespace K.Core.Controllers.Base
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [Authorize("admin")]//实验jwt 验证 ：角色名称为 “admin”
+        //[Authorize("admin")]//实验jwt 验证 ：角色名称为 “admin”
         [HttpGet,Route("GetOneByID")]
         [ResponseCache(Duration = 60)]
         public virtual async Task<MessageModel<T>> GetOneByID(string id) 

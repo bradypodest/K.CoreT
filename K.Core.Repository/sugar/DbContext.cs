@@ -87,10 +87,10 @@ namespace K.Core.Repository
                 }
             });
 
-            //_db.Aop.OnLogExecuted = (sql, pars) => //SQL执行完事件
-            //{
-            //    OutSql2Log(sql, GetParas(pars));
-            //};
+            _db.Aop.OnLogExecuted = (sql, pars) => //SQL执行完事件
+            {
+                var ss = GetParas(pars) + "【SQL语句】：" + sql;
+            };
 
             _db.Aop.OnLogExecuting = (sql, pars) => //SQL执行中事件
             {
