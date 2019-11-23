@@ -336,12 +336,12 @@ namespace K.Core.Services.BASE
             if (lamada != null)
             {
                 return await baseDal.QueryPage(lamada,
-        pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+        pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
             }
             else 
             {
                 return await baseDal.QueryPage(whereExpression,
-       pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+       pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
             }
                
 
@@ -400,12 +400,25 @@ namespace K.Core.Services.BASE
         /// <returns></returns>
         public virtual async Task<MessageModel<int>> AddOne(TEntity t)
         {
+            var messageModel = MessageModel<int>.Fail();
+
+            if (AddOnExecute != null) {//新增前验证  ：如是否已经存在过                
+                messageModel = await AddOnExecute(t);
+                if (!messageModel.success) return messageModel;
+            }
 
             t.CreateID = _httpUser.ID ?? "";
             t.CreateTime = DateTime.Now;
             t.Creator = _httpUser.Name ?? "";
 
-           
+            t.Status = StatusE.Live;
+
+
+            if (string.IsNullOrWhiteSpace(t.ID)) 
+            {
+                t.ID = Guid.NewGuid().ToString();
+            }
+
             var  data = await baseDal.Add(t);//全局异常拦截应该就不需要 try 
 
             return MessageModel<int>.Success(data);
@@ -496,14 +509,14 @@ namespace K.Core.Services.BASE
             if (lamada != null)
             {
                 var data= await baseDal.QueryPage(lamada,
-        pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+        pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
 
                 return MessageModel<PageModel<TEntity>>.Success(data);
             }
             else
             {
                 var data= await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
-       pageDataOptions.Page, pageDataOptions.Rows, pageDataOptions.Order);
+       pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
 
                 return MessageModel<PageModel<TEntity>>.Success(data);
             }

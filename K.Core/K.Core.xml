@@ -149,6 +149,11 @@
             <param name="password"></param>
             <returns></returns>
         </member>
+        <member name="T:K.Core.Controllers.System.SysMenuController">
+            <summary>
+            菜单 
+            </summary>
+        </member>
         <member name="T:K.Core.Controllers.System.SysUserController">
             <summary>
             用户管理

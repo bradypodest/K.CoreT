@@ -43,7 +43,14 @@ namespace K.Core.Model.Models
 
                 // 创建表
                 myContext.CreateTableByEntity(false,
-                    typeof(SysUser));
+                    typeof(SysUser),
+                    typeof(SysMenu),
+                    typeof(SysMenuPowerGroup),
+                    typeof(SysPower),
+                    typeof(SysPowerGroup),
+                    typeof(SysRole),
+                    typeof(SysRoleMenuPowerGroup)
+                    );
                 //myContext.CreateTableByEntity(false,
                 //    typeof(Advertisement),
                 //    typeof(BlogArticle),

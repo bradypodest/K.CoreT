@@ -33,6 +33,7 @@ namespace K.Core.Common.HttpContextUser
 
         public List<string> GetClaimValueByType(string ClaimType)
         {
+            var s = GetClaimsIdentity();
 
             return (from item in GetClaimsIdentity()
                     where item.Type == ClaimType

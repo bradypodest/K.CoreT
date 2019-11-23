@@ -435,7 +435,7 @@
             通用分页信息类
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.page">
+        <member name="P:K.Core.Model.PageModel`1.pageIndex">
             <summary>
             当前页标
             </summary>
@@ -450,7 +450,7 @@
             数据总数
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.PageSize">
+        <member name="P:K.Core.Model.PageModel`1.pageSize">
             <summary>
             每页大小
             </summary>
@@ -460,12 +460,12 @@
             返回数据
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageDataOptions.Page">
+        <member name="P:K.Core.Model.PageDataOptions.PageIndex">
             <summary>
             当前页
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageDataOptions.Rows">
+        <member name="P:K.Core.Model.PageDataOptions.PageSize">
             <summary>
             多少 pagesize
             </summary>
@@ -509,6 +509,41 @@
         <member name="P:K.Core.Model.TableModel`1.Data">
             <summary>
             返回数据集
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.ParentId">
+             <summary>
+            父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Name">
+             <summary>
+            菜单名称
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Url">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.OrderNo">
+             <summary>
+            排序号
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.IsShow">
+            <summary>
+            是否显示
             </summary>
         </member>
         <member name="P:K.Core.Model.SysUserVM.UserName">

@@ -390,7 +390,7 @@ namespace K.Core.Repository.Base
              .ToPageListAsync(intPageIndex, intPageSize, totalCount);
 
             int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / intPageSize.ObjToDecimal())).ObjToInt();
-            return new PageModel<TEntity>() { dataCount = totalCount, pageCount = pageCount, page = intPageIndex, PageSize = intPageSize, data = list };
+            return new PageModel<TEntity>() { dataCount = totalCount, pageCount = pageCount, pageIndex = intPageIndex, pageSize = intPageSize, data = list };
         }
 
 

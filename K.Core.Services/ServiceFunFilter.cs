@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K.Core.Common.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -44,16 +45,16 @@ namespace K.Core.Services
         ///// </summary>
         //protected Action<PageGridData<T>> GetPageDataOnExecuted;
 
-        ///// <summary>
-        ///// 调用新建处理前(SaveModel为传入的原生数据)
-        ///// </summary>
-        //protected Func<SaveModel, WebResponseContent> AddOnExecute;
+        /// <summary>
+        /// 调用新建处理前
+        /// </summary>
+        protected Func<T, Task<MessageModel<int>>> AddOnExecute;
 
-        ///// <summary>
-        ///// 调用新建保存数据库前处理(已将提交的原生数据转换成了对象)
-        /////  Func<T, object,ResponseData>  T为主表数据，object为明细数据(如果需要使用明细对象,请用 object as List<T>转换) 
-        ///// </summary>
-        //protected Func<T, object, WebResponseContent> AddOnExecuting;
+        /// <summary>
+        /// 调用新建保存数据库前处理(已将提交的原生数据转换成了对象)
+        ///  Func<T, object,MessageModel>  T为主表数据，object为明细数据(如果需要使用明细对象,请用 object as List<T>转换) 
+        /// </summary>
+        protected Func<T, object, MessageModel<int>> AddOnExecuting;
 
         ///// <summary>
         ///// 调用新建保存数据库后处理。
@@ -126,5 +127,10 @@ namespace K.Core.Services
         ///// 导入保存后
         ///// </summary>
         //protected Func<List<T>, WebResponseContent> ImportOnExecuting;
+
+
+
+        //////////////
+
     }
 }

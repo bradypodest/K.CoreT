@@ -11,15 +11,14 @@ namespace K.Core.Model
         /// 当前页
         /// </summary>
         [Display(Name = "当前页")]
-        public int Page { get; set; } = 1;
+        public int PageIndex { get; set; } = 1;
         /// <summary>
         /// 多少 pagesize
         /// </summary>
         [Display(Name = "页大小")]
-        public int Rows { get; set; } = 50;
+        public int PageSize { get; set; } = 50;
         public int Total { get; set; }
         public string TableName { get; set; }
-        public string Sort { get; set; }
         /// <summary>
         /// 排序方式    格式如  "ID desc" 默认为 CreateTime desc
         /// </summary>

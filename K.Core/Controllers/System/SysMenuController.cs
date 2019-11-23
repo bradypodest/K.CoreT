@@ -9,13 +9,17 @@ using K.Core.Controllers.Base;
 using K.Core.IServices.System;
 using K.Core.Model;
 using K.Core.Model.Models;
+using K.Core.Model.ViewModels.System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.System
 {
+    /// <summary>
+    /// 菜单 
+    /// </summary>
     [Route("api/SysMenu")]
-    public class SysMenuController : BaseController<SysMenu, SysMenu, ISysMenuService>
+    public class SysMenuController : BaseController<SysMenu, SysMenuVM, ISysMenuService>
     {
         readonly ISysMenuService _sysMenuServices;
         private readonly IUser _user;

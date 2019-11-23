@@ -12,7 +12,7 @@ namespace K.Core.Model
         /// <summary>
         /// 当前页标
         /// </summary>
-        public int page { get; set; } = 1;
+        public int pageIndex { get; set; } = 1;
         /// <summary>
         /// 总页数
         /// </summary>
@@ -24,7 +24,7 @@ namespace K.Core.Model
         /// <summary>
         /// 每页大小
         /// </summary>
-        public int PageSize { set; get; }
+        public int pageSize { set; get; }
         /// <summary>
         /// 返回数据
         /// </summary>
