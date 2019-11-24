@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
+using K.Core.Common.Model;
 using K.Core.Controllers.Base;
 using K.Core.IServices.System;
 using K.Core.Model;
@@ -40,7 +41,19 @@ namespace K.Core.Controllers.System
 
         #region  其他方法
 
-
+        /// <summary>
+        /// 获取菜单树
+        /// </summary>
+        /// <param name="parentId"></param>
+        /// <returns></returns>
+        [HttpGet, Route("GetMenuTree")]
+        public async Task<MessageModel<SysMenuTreeVM>> GetMenuTree(string parentId ="")
+        {
+            if (string.IsNullOrWhiteSpace(parentId)) {
+                parentId = default(Guid).ToString();
+            }
+            return await _sysMenuServices.GetMenuTree(parentId);
+        }
 
 
         #endregion

@@ -511,6 +511,51 @@
             返回数据集
             </summary>
         </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.ParentId">
+             <summary>
+            父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Name">
+             <summary>
+            菜单名称
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Url">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.OrderNo">
+             <summary>
+            排序号
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Children">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.ParentArray">
+            <summary>
+            父节点数组（追溯到根节点）
+            </summary>
+        </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.ParentId">
              <summary>
             父级ID
