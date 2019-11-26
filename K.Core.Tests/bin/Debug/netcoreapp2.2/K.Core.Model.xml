@@ -39,9 +39,24 @@
             状态
             </summary>
         </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.DeleteTime">
+            <summary>
+            删除时间
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.Deleter">
+             <summary>
+            删除人
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.BaseExtendEntity.DeleterID">
+            <summary>
+            删除人ID
+            </summary>
+        </member>
         <member name="F:K.Core.Model.StatusE.Live">
             <summary>
-            存活
+            正常
             </summary>
         </member>
         <member name="F:K.Core.Model.StatusE.Delete">
@@ -51,7 +66,7 @@
         </member>
         <member name="F:K.Core.Model.StatusE.Ban">
             <summary>
-            禁止  ，如用户
+            禁用  ，如用户  
             </summary>
         </member>
         <member name="P:K.Core.Model.BaseExtendTwoEntity.CreateID">
@@ -84,24 +99,104 @@
             修改时间
             </summary>
         </member>
-        <member name="T:K.Core.Model.MessageModel`1">
+        <member name="T:K.Core.Model.Models.SysMenu">
             <summary>
-            通用返回信息类
+            
             </summary>
         </member>
-        <member name="P:K.Core.Model.MessageModel`1.Success">
+        <member name="P:K.Core.Model.Models.SysMenu.ParentId">
+             <summary>
+            父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.Name">
+             <summary>
+            菜单名称
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.Url">
             <summary>
-            操作是否成功
+            菜单链接地址
             </summary>
         </member>
-        <member name="P:K.Core.Model.MessageModel`1.Msg">
+        <member name="P:K.Core.Model.Models.SysMenu.Description">
             <summary>
-            返回信息
+            描述
             </summary>
         </member>
-        <member name="P:K.Core.Model.MessageModel`1.Data">
+        <member name="P:K.Core.Model.Models.SysMenu.Icon">
             <summary>
-            返回数据集合
+            图标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.OrderNo">
+             <summary>
+            排序号
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenu.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysMenuPowerGroup">
+            <summary>
+            菜单-权限组
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysPower">
+            <summary>
+            单个权限 （一个api 接口）
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.SysPowerGroupID">
+            <summary>
+            权限组ID
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.Name">
+            <summary>
+            权限名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.ApiUrl">
+            <summary>
+            权限api
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPower.IsOpen">
+            <summary>
+            是否公开api   : 0 否，1 true
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysPowerGroup">
+            <summary>
+            权限组（一组api接口组成的一个权限） 比如 查询权限里面包含那些接口
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPowerGroup.Name">
+            <summary>
+            权限组名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysPowerGroup.OrderNo">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysRole.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysRole.Description">
+             <summary>
+            描述
+             </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.SysRoleMenuPowerGroup">
+            <summary>
+            角色-菜单-权限组
             </summary>
         </member>
         <member name="P:K.Core.Model.Models.SysUser.UserName">
@@ -144,7 +239,7 @@
             最后登陆失败时间
              </summary>
         </member>
-        <member name="P:K.Core.Model.Models.SysUser.headPicUrl">
+        <member name="P:K.Core.Model.Models.SysUser.HeadPicUrl">
             <summary>
             头像
             </summary>
@@ -340,7 +435,7 @@
             通用分页信息类
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.page">
+        <member name="P:K.Core.Model.PageModel`1.pageIndex">
             <summary>
             当前页标
             </summary>
@@ -355,7 +450,7 @@
             数据总数
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageModel`1.PageSize">
+        <member name="P:K.Core.Model.PageModel`1.pageSize">
             <summary>
             每页大小
             </summary>
@@ -365,19 +460,19 @@
             返回数据
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageDataOptions.Page">
+        <member name="P:K.Core.Model.PageDataOptions.PageIndex">
             <summary>
             当前页
             </summary>
         </member>
-        <member name="P:K.Core.Model.PageDataOptions.Rows">
+        <member name="P:K.Core.Model.PageDataOptions.PageSize">
             <summary>
             多少 pagesize
             </summary>
         </member>
         <member name="P:K.Core.Model.PageDataOptions.Order">
             <summary>
-            排序方式    格式如  "ID desc"
+            排序方式    格式如  "ID desc" 默认为 CreateTime desc
             </summary>
         </member>
         <member name="P:K.Core.Model.PageDataOptions.Wheres">
@@ -386,19 +481,9 @@
             关于条件 ，查看ExpressionType 枚举
             </summary>
         </member>
-        <member name="F:K.Core.Model.ResponseEnum.NoPermissions">
+        <member name="P:K.Core.Model.PageDataOptions.IsAll">
             <summary>
-            无权限
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.ResponseEnum.NoFound">
-            <summary>
-            找不到指定资源
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.ResponseEnum.ServerError">
-            <summary>
-            找不到指定资源
+            是否查询全部（包含删除的） ，默认不查询
             </summary>
         </member>
         <member name="T:K.Core.Model.TableModel`1">
@@ -425,6 +510,151 @@
             <summary>
             返回数据集
             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.ParentId">
+             <summary>
+            父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Name">
+             <summary>
+            菜单名称
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Url">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.OrderNo">
+             <summary>
+            排序号
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Children">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.ParentArray">
+            <summary>
+            父节点数组（追溯到根节点）
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.ParentId">
+             <summary>
+            父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Name">
+             <summary>
+            菜单名称
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Url">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.OrderNo">
+             <summary>
+            排序号
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.UserPwd">
+             <summary>
+            密码
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.RoleId">
+             <summary>
+            角色id
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.RoleName">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.ErrorCount">
+             <summary>
+            错误次数 
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.HeadPicUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Birth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Address">
+             <summary>
+            地址
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Mobile">
+             <summary>
+            电话
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SysUserVM.Remark">
+             <summary>
+            备注
+             </summary>
         </member>
     </members>
 </doc>

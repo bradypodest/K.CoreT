@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj": {}
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj": {}
   },
   "projects": {
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj",
         "projectName": "K.Core.Common",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Common\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -82,14 +82,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj",
         "projectName": "K.Core.IRepository",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -108,8 +108,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj",
         "projectName": "K.Core.IServices",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -170,8 +170,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
               }
             }
           }
@@ -206,14 +206,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj",
         "projectName": "K.Core.Model",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -232,8 +232,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj"
               }
             }
           }
@@ -272,14 +272,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj",
         "projectName": "K.Core.Repository",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -298,11 +298,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
               },
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
               }
             }
           }
@@ -341,14 +341,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj",
         "projectName": "K.Core.Services",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -367,14 +367,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
               },
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
               },
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
               }
             }
           }
@@ -417,14 +417,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj",
         "projectName": "K.Core.Tests",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tests\\K.Core.Tests.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tests\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -443,14 +443,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Repository\\K.Core.Repository.csproj"
               },
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj"
               },
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj"
               }
             }
           }
@@ -505,14 +505,14 @@
         }
       }
     },
-    "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj",
         "projectName": "K.Core",
-        "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\K.Core.csproj",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core\\obj\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -531,11 +531,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
               },
-              "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
-                "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
               }
             }
           }

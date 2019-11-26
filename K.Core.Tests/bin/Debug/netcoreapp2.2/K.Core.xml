@@ -79,15 +79,100 @@
             职能
             </summary>
         </member>
+        <member name="T:K.Core.AuthHelper.JwtToken">
+            <summary>
+            JWTToken生成类
+            </summary>
+        </member>
+        <member name="M:K.Core.AuthHelper.JwtToken.BuildJwtToken(System.Security.Claims.Claim[])">
+            <summary>
+            获取基于JWT的Token  
+            </summary>
+            <param name="claims"></param>
+            <returns></returns>
+        </member>
         <member name="M:K.Core.AutoMapper.CustomProfile.#ctor">
             <summary>
             配置构造函数，用来创建关系映射
             </summary>
         </member>
-        <member name="F:K.Core.Controllers.Base.BaseController`2._service">
+        <member name="F:K.Core.Controllers.Base.BaseController`3._service">
             <summary>
             这个是对应实体类的 service
             </summary>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.GetPageData(K.Core.Model.PageDataOptions)">
+            <summary>
+            base 分页获取
+            </summary>
+            <param name="pageDataOptions">分页参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.GetOneByID(System.String)">
+            <summary>
+            base 根据id获取单独的一个实体  （看情况是否需要重写）
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Add(`1)">
+            <summary>
+            base 增加一个实体 （看情况是否重写）
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Update(`1)">
+            <summary>
+            base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.Delete(System.String)">
+            <summary>
+            base 根据id 删除一个实体
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:K.Core.Controllers.LoginController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:K.Core.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            获取token 
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysMenuController">
+            <summary>
+            菜单 
+            </summary>
+        </member>
+        <member name="M:K.Core.Controllers.System.SysMenuController.GetMenuTree(System.String)">
+            <summary>
+            获取菜单树
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysUserController">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="M:K.Core.Controllers.System.SysUserController.GetInfoByToken(System.String)">
+            <summary>
+            获取用户详情根据token
+            【无权限】
+            </summary>
+            <param name="token">令牌</param>
+            <returns></returns>
         </member>
         <member name="T:K.Core.Services.GlobalRouteAuthorizeConvention">
             <summary>
@@ -160,6 +245,32 @@
             </summary>
             <param name="response"></param>
             <param name="ms"></param>
+        </member>
+        <member name="T:K.Core.ModelStateExtension">
+            <summary>
+            ModelState扩展类
+            </summary>
+        </member>
+        <member name="M:K.Core.ModelStateExtension.GetFirstErrMsg(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            获取模型绑定中的第一条错误信息
+            </summary>
+            <param name="msDictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.ModelStateExtension.GetErrMsgList(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+             获取错误信息列表
+            </summary>
+            <param name="msDictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.ModelStateExtension.GetAllErrMsgStr(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary,System.String)">
+            <summary>
+            获取ModelState所有错误信息，间隔符间隔
+            </summary>
+            <param name="splitStr">间隔符</param>
+            <returns></returns>
         </member>
         <member name="P:K.Core.Startup.Repository">
             <summary>

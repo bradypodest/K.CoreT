@@ -54,3 +54,17 @@ D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IRepository\obj\Debug\
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.csproj.CopyComplete
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.dll
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.IRepository.deps.json
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.IRepository.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.IRepository.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Common.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Model.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Model.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Model.xml
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\bin\Debug\netcoreapp2.2\K.Core.Common.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.csprojAssemblyReference.cache
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.AssemblyInfoInputs.cache
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.AssemblyInfo.cs
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.csproj.CopyComplete
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IRepository\obj\Debug\netcoreapp2.2\K.Core.IRepository.pdb

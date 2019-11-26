@@ -25,3 +25,12 @@ D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Repository\obj\Debug\n
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.csproj.CopyComplete
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.dll
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core\bin\Debug\netcoreapp2.2\K.Core.Repository.deps.json
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core\bin\Debug\netcoreapp2.2\K.Core.Repository.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core\bin\Debug\netcoreapp2.2\K.Core.Repository.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.csprojAssemblyReference.cache
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.AssemblyInfoInputs.cache
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.AssemblyInfo.cs
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.csproj.CopyComplete
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.Repository\obj\Debug\netcoreapp2.2\K.Core.Repository.pdb

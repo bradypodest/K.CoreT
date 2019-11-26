@@ -7842,11 +7842,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tasks\\K.Core.Tasks.csproj",
+      "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tasks\\K.Core.Tasks.csproj",
       "projectName": "K.Core.Tasks",
-      "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tasks\\K.Core.Tasks.csproj",
+      "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tasks\\K.Core.Tasks.csproj",
       "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-      "outputPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.Tasks\\obj\\",
+      "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Tasks\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7865,8 +7865,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
-              "projectPath": "D:\\localGitCode\\study\\stydyNetCore\\K.CoreT\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
+            "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
             }
           }
         }

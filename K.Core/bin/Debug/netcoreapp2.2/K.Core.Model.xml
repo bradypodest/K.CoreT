@@ -56,7 +56,7 @@
         </member>
         <member name="F:K.Core.Model.StatusE.Live">
             <summary>
-            存活
+            正常
             </summary>
         </member>
         <member name="F:K.Core.Model.StatusE.Delete">
@@ -66,7 +66,7 @@
         </member>
         <member name="F:K.Core.Model.StatusE.Ban">
             <summary>
-            禁止  ，如用户  
+            禁用  ，如用户  
             </summary>
         </member>
         <member name="P:K.Core.Model.BaseExtendTwoEntity.CreateID">

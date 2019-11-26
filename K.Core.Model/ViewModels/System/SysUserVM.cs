@@ -12,7 +12,6 @@ namespace K.Core.Model
         /// </summary>
         [Display(Name = "用户名")]
         [MaxLength(100)]
-        [Editable(true)]
         [Required( ErrorMessage = "请输入账号",AllowEmptyStrings = false)]
         public String UserName { get; set; }
 
@@ -84,7 +83,6 @@ namespace K.Core.Model
         /// </summary>
         [Display(Name = "电话")]
         [MaxLength(100)]
-        [Editable(true)]
         public string Mobile { get; set; }
 
         /// <summary>
@@ -92,7 +90,6 @@ namespace K.Core.Model
         /// </summary>
         [Display(Name = "邮箱")]
         [MaxLength(100)]
-        [Editable(true)]
         [EmailAddress(ErrorMessage = "邮箱格式不正确")]
         public string Email { get; set; }
 
@@ -101,7 +98,6 @@ namespace K.Core.Model
         /// </summary>
         [Display(Name = "备注")]
         [MaxLength(400)]
-        [Editable(true)]
         public string Remark { get; set; }
     }
 }

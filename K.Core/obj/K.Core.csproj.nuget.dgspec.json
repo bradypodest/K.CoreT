@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core\\K.Core.csproj": {}
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj": {}
   },
   "projects": {
-    "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Common\\K.Core.Common.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Common\\K.Core.Common.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj",
         "projectName": "K.Core.Common",
-        "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Common\\K.Core.Common.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Common\\obj\\",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj",
+        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,20 +82,20 @@
         }
       }
     },
-    "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj",
         "projectName": "K.Core.IRepository",
-        "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\obj\\",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj",
+        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,8 +108,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
-                "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
               }
             }
           }
@@ -144,20 +144,20 @@
         }
       }
     },
-    "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj",
         "projectName": "K.Core.IServices",
-        "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\obj\\",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj",
+        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,8 +170,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
-                "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
               }
             }
           }
@@ -206,20 +206,20 @@
         }
       }
     },
-    "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj",
         "projectName": "K.Core.Model",
-        "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\obj\\",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj",
+        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -232,8 +232,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Common\\K.Core.Common.csproj": {
-                "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Common\\K.Core.Common.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Common\\K.Core.Common.csproj"
               }
             }
           }
@@ -272,20 +272,20 @@
         }
       }
     },
-    "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core\\K.Core.csproj": {
+    "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core\\K.Core.csproj",
+        "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj",
         "projectName": "K.Core",
-        "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core\\K.Core.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core\\obj\\",
+        "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\K.Core.csproj",
+        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+        "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -298,11 +298,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-                "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
               },
-              "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj": {
-                "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj"
+              "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
+                "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
               }
             }
           }

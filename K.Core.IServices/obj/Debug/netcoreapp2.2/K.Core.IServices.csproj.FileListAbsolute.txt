@@ -54,3 +54,17 @@ D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IServices\obj\Debug\ne
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.csproj.CopyComplete
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.dll
 D:\localGitCode\study\stydyNetCore\K.CoreT\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.IServices.deps.json
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.IServices.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.IServices.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.Common.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.Model.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.Model.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.Model.xml
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\bin\Debug\netcoreapp2.2\K.Core.Common.pdb
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.csprojAssemblyReference.cache
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.AssemblyInfoInputs.cache
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.AssemblyInfo.cs
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.csproj.CopyComplete
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.dll
+D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.IServices\obj\Debug\netcoreapp2.2\K.Core.IServices.pdb

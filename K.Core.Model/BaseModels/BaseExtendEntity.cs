@@ -1,6 +1,7 @@
 ﻿using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
@@ -73,16 +74,19 @@ namespace K.Core.Model
     public enum StatusE
     {
         /// <summary>
-        /// 存活
+        /// 正常
         /// </summary>
-        Live = 0,
+        [Description("正常")]
+        Live = 1,
         /// <summary>
         /// 删除
         /// </summary>
-        Delete = 1,
+        [Description("删除")]
+        Delete = 2,
         /// <summary>
-        /// 禁止  ，如用户  
+        /// 禁用  ，如用户  
         /// </summary>
-        Ban = 2,
+        [Description("禁用")]
+        Ban = 3,
     }
 }
