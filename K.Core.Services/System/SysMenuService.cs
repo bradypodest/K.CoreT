@@ -156,12 +156,12 @@ namespace K.Core.Services.System
 
             if (subItems.Count > 0)
             {
-                curItem.children = new List<SysMenuTreeVM>();
-                curItem.children.AddRange(subItems);
+                curItem.Children = new List<SysMenuTreeVM>();
+                curItem.Children.AddRange(subItems);
             }
             else
             {
-                curItem.children = null;
+                curItem.Children = null;
             }
             
             foreach (var subItem in subItems)

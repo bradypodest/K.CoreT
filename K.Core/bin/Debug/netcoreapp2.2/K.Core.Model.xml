@@ -556,7 +556,7 @@
             是否显示
             </summary>
         </member>
-        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.children">
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Children">
             <summary>
             子菜单
             </summary>

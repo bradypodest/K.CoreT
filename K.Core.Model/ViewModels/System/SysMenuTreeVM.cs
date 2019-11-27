@@ -50,7 +50,7 @@ namespace K.Core.Model.ViewModels.System
         /// <summary>
         /// 子菜单
         /// </summary>
-        public List<SysMenuTreeVM> children { get; set; } = null;
+        public List<SysMenuTreeVM> Children { get; set; } = null;
 
         /// <summary>
         /// 父节点数组（追溯到根节点）
