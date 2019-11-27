@@ -22,6 +22,11 @@ namespace K.Core.Model.ViewModels.System
         public string Url { get; set; }
 
         /// <summary>
+        /// 菜单页面地址
+        /// </summary>
+        public string PathUrl { get; set; }
+
+        /// <summary>
         /// 描述
         /// </summary>
         public string Description { get; set; }
@@ -45,7 +50,7 @@ namespace K.Core.Model.ViewModels.System
         /// <summary>
         /// 子菜单
         /// </summary>
-        public List<SysMenuTreeVM> Children { get; set; } = null;
+        public List<SysMenuTreeVM> children { get; set; } = null;
 
         /// <summary>
         /// 父节点数组（追溯到根节点）

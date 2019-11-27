@@ -71,7 +71,21 @@ namespace K.Core.Services.System
                                    {
                                        ID = child.ID,
                                        Name = child.Name,
+                                       Url=child.Url,
+                                       PathUrl=child.PathUrl,
+                                       Description=child.Description,
+                                       Icon=child.Icon,
+                                       OrderNo=child.OrderNo,
+                                       IsShow=child.IsShow,
                                        ParentId = child.ParentId,
+
+                                       CreateID=child.CreateID,
+                                       CreateTime=child.CreateTime,
+                                       Creator=child.Creator,
+                                       ModifyID=child.ModifyID,
+                                       Modifier=child.Modifier,
+                                       ModifyTime=child.ModifyTime,
+                                       Status=child.Status
                                    }).ToList();
 
             //虚拟一个根节点
@@ -140,15 +154,14 @@ namespace K.Core.Services.System
 
             var subItems = all.Where(ee => ee.ParentId == curItem.ID).ToList();
 
-            
             if (subItems.Count > 0)
             {
-                curItem.Children = new List<SysMenuTreeVM>();
-                curItem.Children.AddRange(subItems);
+                curItem.children = new List<SysMenuTreeVM>();
+                curItem.children.AddRange(subItems);
             }
             else
             {
-                curItem.Children = null;
+                curItem.children = null;
             }
             
             foreach (var subItem in subItems)

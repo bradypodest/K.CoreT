@@ -42,6 +42,15 @@ namespace K.Core.Model.Models
         public string Url { get; set; }
 
         /// <summary>
+        /// 菜单页面地址
+        /// </summary>
+        [Display(Name = "PathUrl")]
+        [MaxLength(100)]
+        [Editable(true)]
+        [SugarColumn(Length = 100, IsNullable = true)]
+        public string PathUrl { get; set; }
+
+        /// <summary>
         /// 描述
         /// </summary>
         [Display(Name = "Description")]

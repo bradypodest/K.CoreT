@@ -119,6 +119,11 @@
             菜单链接地址
             </summary>
         </member>
+        <member name="P:K.Core.Model.Models.SysMenu.PathUrl">
+            <summary>
+            菜单页面地址
+            </summary>
+        </member>
         <member name="P:K.Core.Model.Models.SysMenu.Description">
             <summary>
             描述
@@ -526,6 +531,11 @@
             菜单链接地址
             </summary>
         </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.PathUrl">
+            <summary>
+            菜单页面地址
+            </summary>
+        </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Description">
             <summary>
             描述
@@ -546,7 +556,7 @@
             是否显示
             </summary>
         </member>
-        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Children">
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.children">
             <summary>
             子菜单
             </summary>
@@ -569,6 +579,11 @@
         <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Url">
             <summary>
             菜单链接地址
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.PathUrl">
+            <summary>
+            菜单页面地址
             </summary>
         </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Description">

@@ -34,6 +34,15 @@ namespace K.Core.Model.ViewModels.System
         public string Url { get; set; }
 
         /// <summary>
+        /// 菜单页面地址
+        /// </summary>
+        [Display(Name = "PathUrl")]
+        [MaxLength(100)]
+        [Editable(true)]
+        public string PathUrl { get; set; }
+
+
+        /// <summary>
         /// 描述
         /// </summary>
         [Display(Name = "描述")]
