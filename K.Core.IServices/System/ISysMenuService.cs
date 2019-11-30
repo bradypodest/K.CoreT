@@ -17,5 +17,11 @@ namespace K.Core.IServices.System
         /// <param name="parentId"></param>
         /// <returns></returns>
         Task<MessageModel<SysMenuTreeVM>> GetMenuTree(string parentId = "");
+        /// <summary>
+        /// 获取用户的菜单树
+        /// </summary>
+        /// <param name="uid"></param>
+        /// <returns></returns>
+        Task<MessageModel<SysMenuTreeVM>> GetUserMenuTree(string uid);
     }
 }

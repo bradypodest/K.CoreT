@@ -27,3 +27,4 @@ D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp
 D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.AssemblyInfo.cs
 D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.dll
 D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.pdb
+D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csprojAssemblyReference.cache

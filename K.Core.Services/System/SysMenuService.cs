@@ -19,7 +19,8 @@ namespace K.Core.Services.System
         ISysMenuRepository _dal;
         IMapper _mapper;
         IUser _httpUser;
-        public SysMenuService(ISysMenuRepository dal, IMapper mapper, IUser httpUser)
+        ISysUserRepository _sysUserRepository;
+        public SysMenuService(ISysMenuRepository dal, IMapper mapper, IUser httpUser, ISysUserRepository sysUserRepository)
         {
             this._dal = dal;
             base.baseDal = dal;
@@ -29,6 +30,8 @@ namespace K.Core.Services.System
 
             _mapper = mapper;
             base._mapper = mapper;
+
+            _sysUserRepository = sysUserRepository;
         }
 
         #region 重写 baseservice方法
@@ -38,7 +41,8 @@ namespace K.Core.Services.System
             //新增前验证
             base.AddOnExecute = async (SysMenu save) =>
             {
-                List<SysMenu> sysMenus = await _dal.Query(x => x.Name.Equals(save.Name) && x.ParentId.Equals(save.ParentId) );
+                //List<SysMenu> sysMenus = await _dal.Query(x => x.MenuId.Equals(save.MenuId) && x.ParentId.Equals(save.ParentId) );
+                List<SysMenu> sysMenus = await _dal.Query(x => x.MenuId.Equals(save.MenuId) );
                 if (sysMenus != null && sysMenus.Count > 0) 
                 {
                     return MessageModel<int>.Fail("已经存在该菜单");
@@ -62,6 +66,11 @@ namespace K.Core.Services.System
         /// <returns></returns>
         public async Task<MessageModel<SysMenuTreeVM>> GetMenuTree(string parentId = "")
         {
+            if (string.IsNullOrWhiteSpace(parentId))
+            {
+                parentId = default(Guid).ToString();
+            }
+
             var sysMenus = await _dal.Query(d=>d.Status==Model.StatusE.Live);//里面是没有根节点的,因为根节点是虚拟的
 
             var sysMenuTrees = (from child in sysMenus
@@ -70,6 +79,7 @@ namespace K.Core.Services.System
                                    select new SysMenuTreeVM
                                    {
                                        ID = child.ID,
+                                       MenuId=child.MenuId,
                                        Name = child.Name,
                                        Url=child.Url,
                                        PathUrl=child.PathUrl,
@@ -141,6 +151,25 @@ namespace K.Core.Services.System
 
             return messageModel;
         }
+
+        /// <summary>
+        /// 获取用户的菜单
+        /// </summary>
+        /// <param name="uid"></param>
+        /// <returns></returns>
+        public async Task<MessageModel<SysMenuTreeVM>> GetUserMenuTree(string uid)
+        {
+            //判断当前用户
+            var sysUser = await _sysUserRepository.QueryById(uid);
+            if (sysUser == null) {
+                return  MessageModel<SysMenuTreeVM>.Fail("不存在该用户");
+            }
+
+            //查找对应用户的
+            //先用全部凑合
+            return await GetMenuTree();
+        }
+
         #endregion
 
         /// <summary>
@@ -173,5 +202,6 @@ namespace K.Core.Services.System
                 LoopToAppendChildren(all, subItem, pid);
             }
         }
+
     }
 }

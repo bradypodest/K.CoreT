@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using K.Core.AuthHelper.OverWrite;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
@@ -49,12 +50,31 @@ namespace K.Core.Controllers.System
         [HttpGet, Route("GetMenuTree")]
         public async Task<MessageModel<SysMenuTreeVM>> GetMenuTree(string parentId ="")
         {
-            if (string.IsNullOrWhiteSpace(parentId)) {
-                parentId = default(Guid).ToString();
-            }
             return await _sysMenuServices.GetMenuTree(parentId);
         }
 
+        /// <summary>
+        /// 获取用户的菜单树
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        [HttpGet, Route("GetUserMenuTree")]
+        public async Task<MessageModel<SysMenuTreeVM>> GetUserMenuTree(string token ) 
+        {
+            var data = MessageModel<SysMenuTreeVM>.Fail();
+
+            if (!string.IsNullOrEmpty(token))
+            {
+                var tokenModel = JwtHelper.SerializeJwt(token);
+                if (tokenModel != null && !string.IsNullOrWhiteSpace(tokenModel.Uid))
+                {
+                    return await _sysMenuServices.GetUserMenuTree(tokenModel.Uid);
+                }
+
+            }
+
+            return data;
+        }
 
         #endregion
     }

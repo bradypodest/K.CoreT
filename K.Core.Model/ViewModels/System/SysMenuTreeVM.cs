@@ -12,6 +12,11 @@ namespace K.Core.Model.ViewModels.System
         public string ParentId { get; set; }
 
         /// <summary>
+        ///菜单Id （字母名称）,如：SysUser
+        /// </summary>
+        public string MenuId { get; set; }
+
+        /// <summary>
         ///菜单名称
         /// </summary>
         public string Name { get; set; }

@@ -23,6 +23,16 @@ namespace K.Core.Model.Models
         public string ParentId { get; set; }
 
         /// <summary>
+        ///菜单Id （字母名称）,如：SysUser
+        /// </summary>
+        [Display(Name = "菜单Id")]
+        [MaxLength(100)]
+        [Editable(true)]
+        [Required(AllowEmptyStrings = false)]
+        [SugarColumn(Length = 100, IsNullable = true)]
+        public string MenuId { get; set; }
+
+        /// <summary>
         ///菜单名称
         /// </summary>
         [Display(Name = "菜单名称")]

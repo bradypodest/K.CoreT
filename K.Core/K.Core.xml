@@ -161,6 +161,13 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
+        <member name="M:K.Core.Controllers.System.SysMenuController.GetUserMenuTree(System.String)">
+            <summary>
+            获取用户的菜单树
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Controllers.System.SysUserController">
             <summary>
             用户管理
