@@ -621,6 +621,26 @@
             是否显示
             </summary>
         </member>
+        <member name="T:K.Core.Model.ViewModels.System.SysPowerGroupVM">
+            <summary>
+            权限组（一组api接口组成的一个权限） 比如 查询权限里面包含那些接口
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysPowerGroupVM.Name">
+            <summary>
+            权限组名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysPowerGroupVM.OrderNo">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysPowerGroupVM.SysPowers">
+            <summary>
+            包含的权限api
+            </summary>
+        </member>
         <member name="P:K.Core.Model.SysUserVM.UserName">
             <summary>
             用户名

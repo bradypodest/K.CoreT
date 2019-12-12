@@ -109,6 +109,11 @@
             父级ID
              </summary>
         </member>
+        <member name="P:K.Core.Model.Models.SysMenu.MenuId">
+             <summary>
+            菜单Id （字母名称）,如：SysUser
+             </summary>
+        </member>
         <member name="P:K.Core.Model.Models.SysMenu.Name">
              <summary>
             菜单名称
@@ -521,6 +526,11 @@
             父级ID
              </summary>
         </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.MenuId">
+             <summary>
+            菜单Id （字母名称）,如：SysUser
+             </summary>
+        </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Name">
              <summary>
             菜单名称
@@ -556,7 +566,7 @@
             是否显示
             </summary>
         </member>
-        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.children">
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.Children">
             <summary>
             子菜单
             </summary>
@@ -569,6 +579,11 @@
         <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.ParentId">
              <summary>
             父级ID
+             </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.MenuId">
+             <summary>
+            菜单Id （字母名称）,如：SysUser
              </summary>
         </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.Name">

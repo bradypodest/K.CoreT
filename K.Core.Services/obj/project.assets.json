@@ -6737,12 +6737,11 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7957,23 +7956,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\Karl\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Services\\K.Core.Services.csproj",
+      "projectUniqueName": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj",
       "projectName": "K.Core.Services",
-      "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Services\\K.Core.Services.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Services\\obj\\",
+      "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\K.Core.Services.csproj",
+      "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
+      "outputPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7986,14 +7985,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IRepository\\K.Core.IRepository.csproj"
+            "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IRepository\\K.Core.IRepository.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.IServices\\K.Core.IServices.csproj"
+            "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.IServices\\K.Core.IServices.csproj"
             },
-            "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj": {
-              "projectPath": "D:\\study\\myStudy\\studyAndr\\K.Core2\\K.Core\\K.Core.Model\\K.Core.Model.csproj"
+            "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj": {
+              "projectPath": "D:\\localGitCode\\study\\K.CoreAndVue\\K.CoreT\\K.Core.Model\\K.Core.Model.csproj"
             }
           }
         }
