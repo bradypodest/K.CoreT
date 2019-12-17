@@ -48,9 +48,15 @@ namespace K.Core.Controllers.System
             return await _sysMenuPowerGServices.GetMenuPowerGroups(menuId);
         }
 
-        public async Task<MessageModel<bool>> UpdateMenuPowerGroups(List<SysMenuPowerGroupVM> sysMenuPowerG) 
+        /// <summary>
+        /// 更新菜单权限
+        /// </summary>
+        /// <param name="sysMenuPowerGVMs"></param>
+        /// <returns></returns>
+        [HttpPost, Route("UpdateMenuPowerGroups")]
+        public async Task<MessageModel<bool>> UpdateMenuPowerGroups(List<SysMenuPowerGroupVM> sysMenuPowerGVMs) 
         {
-            return await _sysMenuPowerGServices.UpdateMenuPowerGroups(sysMenuPowerG);
+            return await _sysMenuPowerGServices.UpdateMenuPowerGroups(sysMenuPowerGVMs);
         }
 
         #endregion

@@ -17,6 +17,8 @@ namespace K.Core.IRepository.Base
 
         Task<int> Add(TEntity model);
 
+        Task<int> Add(List<TEntity> listEntity);
+
         Task<bool> DeleteById(object id);
 
         Task<bool> Delete(TEntity model);

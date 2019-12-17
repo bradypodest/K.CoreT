@@ -154,6 +154,16 @@
             菜单-权限组
             </summary>
         </member>
+        <member name="P:K.Core.Model.Models.SysMenuPowerGroup.SysMenuID">
+            <summary>
+            菜单ID          1
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenuPowerGroup.SysPowerGroupID">
+            <summary>
+            菜单权限组ID    多
+            </summary>
+        </member>
         <member name="T:K.Core.Model.Models.SysPower">
             <summary>
             单个权限 （一个api 接口）
@@ -519,6 +529,21 @@
         <member name="P:K.Core.Model.TableModel`1.Data">
             <summary>
             返回数据集
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.ViewModels.System.SysMenuPowerGroupVM">
+            <summary>
+            菜单-权限 联系
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuPowerGroupVM.SysMenuID">
+            <summary>
+            菜单ID          1
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuPowerGroupVM.SysPowerGroupID">
+            <summary>
+            菜单权限组ID    多
             </summary>
         </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.ParentId">

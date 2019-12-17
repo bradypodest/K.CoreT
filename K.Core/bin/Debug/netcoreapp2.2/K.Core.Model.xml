@@ -154,6 +154,16 @@
             菜单-权限组
             </summary>
         </member>
+        <member name="P:K.Core.Model.Models.SysMenuPowerGroup.SysMenuID">
+            <summary>
+            菜单ID          1
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.SysMenuPowerGroup.SysPowerGroupID">
+            <summary>
+            菜单权限组ID    多
+            </summary>
+        </member>
         <member name="T:K.Core.Model.Models.SysPower">
             <summary>
             单个权限 （一个api 接口）
@@ -521,6 +531,21 @@
             返回数据集
             </summary>
         </member>
+        <member name="T:K.Core.Model.ViewModels.System.SysMenuPowerGroupVM">
+            <summary>
+            菜单-权限 联系
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuPowerGroupVM.SysMenuID">
+            <summary>
+            菜单ID          1
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysMenuPowerGroupVM.SysPowerGroupID">
+            <summary>
+            菜单权限组ID    多
+            </summary>
+        </member>
         <member name="P:K.Core.Model.ViewModels.System.SysMenuTreeVM.ParentId">
              <summary>
             父级ID
@@ -619,6 +644,26 @@
         <member name="P:K.Core.Model.ViewModels.System.SysMenuVM.IsShow">
             <summary>
             是否显示
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.ViewModels.System.SysPowerGroupVM">
+            <summary>
+            权限组（一组api接口组成的一个权限） 比如 查询权限里面包含那些接口
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysPowerGroupVM.Name">
+            <summary>
+            权限组名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysPowerGroupVM.OrderNo">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysPowerGroupVM.SysPowers">
+            <summary>
+            包含的权限api
             </summary>
         </member>
         <member name="P:K.Core.Model.SysUserVM.UserName">
