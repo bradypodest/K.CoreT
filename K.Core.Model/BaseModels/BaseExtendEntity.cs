@@ -44,7 +44,7 @@ namespace K.Core.Model
         //[Column(TypeName = "int")]
         [Editable(true)]
         [SugarColumn(IsNullable = false)]
-        public StatusE Status { get; set; }
+        public StatusE Status { get; set; } = StatusE.Live;
 
         /// <summary>
         /// 删除时间

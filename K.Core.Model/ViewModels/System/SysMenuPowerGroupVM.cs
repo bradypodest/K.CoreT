@@ -20,8 +20,8 @@ namespace K.Core.Model.ViewModels.System
         /// </summary>
         public string SysPowerGroupID { get; set; }
         
-        public SysMenu SysMenu { get; set; }
+        //public SysMenu SysMenu { get; set; }
         public SysPowerGroup SysPowerGroup { get; set; }
-        public List<SysPower> SysPowers { get; set; }
+        public List<SysPower> SysPowers { get; set; } = null;
     }
 }

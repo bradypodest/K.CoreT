@@ -425,14 +425,59 @@ namespace K.Core.Repository.Base
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public async Task<bool> UseTranAsync(Action action)
+        public bool UseTran(Action action)
         {
-            var result = await  _db.Ado.UseTranAsync(() => action());
-            return  result.IsSuccess; 
+            var resultB = false;
+            try
+            {
+                DbContext.Init(BaseDBConfig.ConnectionString, (DbType)BaseDBConfig.DbType);
+                var  tranContext = DbContext.GetDbContext();
+                var tranDb = tranContext.Db;
+
+
+                var result = tranDb.UseTranAsync(() => action());
+                result.Wait();
+                resultB = result.Result.IsSuccess;
+            }
+            catch (Exception ex)
+            {
+                //tranDb.Ado.Close();
+                //tranDb.Ado.Dispose();
+                var s = "";
+            }
+            
+
+            //if (result.Result.IsSuccess == false) 
+            //{
+            //    _db.ChangeDatabase("1");
+            //}
+            
+
+            //return result.Result.IsSuccess;
+            return resultB;
         }
 
 
+        public bool UseCatchTran(Action action) 
+        {
+            try
+            {
+                _db.Ado.BeginTran();
+                action();
+                _db.Ado.CommitTran();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _db.Ado.RollbackTran();
 
+                return false;
+            }
+        }
+        //public Task<bool> UseTran(Action action)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
 }

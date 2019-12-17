@@ -53,10 +53,11 @@ namespace K.Core.IRepository.Base
             Expression<Func<T, T2, T3, bool>> whereLambda = null) where T : class, new();
 
 
+        bool UseTran(Action action);
 
+        //Task<bool> UseTran(Action action);
 
-        Task<bool> UseTranAsync(Action action);
-
+        bool UseCatchTran(Action action);
 
     }
 }

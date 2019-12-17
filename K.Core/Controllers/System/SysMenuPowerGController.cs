@@ -54,7 +54,7 @@ namespace K.Core.Controllers.System
         /// <param name="sysMenuPowerGVMs"></param>
         /// <returns></returns>
         [HttpPost, Route("UpdateMenuPowerGroups")]
-        public async Task<MessageModel<bool>> UpdateMenuPowerGroups(List<SysMenuPowerGroupVM> sysMenuPowerGVMs) 
+        public async Task<MessageModel<bool>> UpdateMenuPowerGroups([FromBody]List<SysMenuPowerGroupVM> sysMenuPowerGVMs) 
         {
             return await _sysMenuPowerGServices.UpdateMenuPowerGroups(sysMenuPowerGVMs);
         }

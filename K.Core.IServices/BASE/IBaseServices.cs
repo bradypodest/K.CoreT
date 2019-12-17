@@ -80,6 +80,8 @@ namespace K.Core.IServices.BASE
 
 
         Task<MessageModel<bool>> UseTranAsync(Action action);
+
+        MessageModel<bool> UseTran(Action action);
     }
 
 }

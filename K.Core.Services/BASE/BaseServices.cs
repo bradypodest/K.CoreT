@@ -538,16 +538,28 @@ namespace K.Core.Services.BASE
         #endregion
 
 
-        public async Task<MessageModel<bool>> UseTranAsync(Action action)
+        public Task<MessageModel<bool>> UseTranAsync(Action action)
         {
-            var result = await baseDal.UseTranAsync(() => action());
-            if (result) 
+            //var result = await baseDal.UseTran(() => action());
+            //if (result) 
+            //{
+            //    return  MessageModel<bool>.Success();
+            //}
+            //return  MessageModel<bool>.Fail();
+
+            throw new NotImplementedException();
+        }
+
+
+        public MessageModel<bool> UseTran(Action action)
+        {
+            var result =  baseDal.UseTran(() => action());
+            if (result)
             {
                 return MessageModel<bool>.Success();
             }
             return MessageModel<bool>.Fail();
         }
-
     }
 
 }

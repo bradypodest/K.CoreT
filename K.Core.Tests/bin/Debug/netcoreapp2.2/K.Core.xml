@@ -168,6 +168,20 @@
             <param name="token"></param>
             <returns></returns>
         </member>
+        <member name="M:K.Core.Controllers.System.SysMenuPowerGController.GetMenuPowerGroups(System.String)">
+            <summary>
+            获取菜单权限
+            </summary>
+            <param name="menuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.System.SysMenuPowerGController.UpdateMenuPowerGroups(System.Collections.Generic.List{K.Core.Model.ViewModels.System.SysMenuPowerGroupVM})">
+            <summary>
+            更新菜单权限
+            </summary>
+            <param name="sysMenuPowerGVMs"></param>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Controllers.System.SysUserController">
             <summary>
             用户管理

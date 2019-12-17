@@ -77,13 +77,33 @@ namespace K.Core.Services.System
                 {
                     //var sysMenuPowerGroupVM = new SysMenuPowerGroupVM();
 
-                    //mapper
-                    var source = new Source<SysMenuPowerGroup> { Value = item };
-                    var sysMenuPowerGroupVM = _mapper.Map<Destination<SysMenuPowerGroupVM>>(source).Value;
-                    
+                    var sysMenuPowerGroupVM = new SysMenuPowerGroupVM() {
+                        ID = item.ID,
+                        Status = item.Status,
+
+                        CreateID = item.CreateID,
+                        CreateTime = item.CreateTime,
+                        Creator = item.Creator,
+
+                        SysMenuID = item.SysMenuID,
+                        SysPowerGroupID=item.SysPowerGroupID
+
+                    };
+                    //mapper 有错误，我也不知道为啥
+                    //try
+                    //{
+                    //    var source = new Source<SysMenuPowerGroup> { Value = item };
+                    //    var destination = _mapper.Map<Destination<SysMenuPowerGroupVM>>(source);
+                    //    sysMenuPowerGroupVM = destination.Value;
+                    //}
+                    //catch (Exception ex)
+                    //{
+
+                    //    throw;
+                    //}
 
 
-                    sysMenuPowerGroupVM.SysMenu = sysMenu;
+                    //sysMenuPowerGroupVM.SysMenu = sysMenu;
                     sysMenuPowerGroupVM.SysPowers = sysPowers.Where(d => d.SysPowerGroupID == item.SysPowerGroupID).ToList();
 
                     sysMenuPowerGroupVM.SysPowerGroup = await _sysPowerGroupRepository.QueryById(item.SysPowerGroupID);
@@ -116,31 +136,78 @@ namespace K.Core.Services.System
                 return MessageModel<bool>.Fail("菜单已不存在");
             }
 
-            //开启事务
-            var tranResult= await _dal.UseTranAsync(async () =>
-             {
-                 //查找到对应的菜单-权限组
-                 var sysMenuPowerGroups = await _dal.Query(m => m.SysMenuID == sysMenu.ID&&m.Status==StatusE.Live);
-                 //删除对应菜单的权限组
-                 await _dal.DeleteByIds(sysMenuPowerGroups.Select(d=>d.ID).ToArray());
 
-                 //查询对应的权限组对应的权限 且删除
-                 await _sysPowerRepository.DeleteByIds((await _sysPowerRepository.Query(m => (sysMenuPowerGroups.Select(d=>d.SysPowerGroupID).ToArray() )
-                                                        .Contains( m.SysPowerGroupID )  
-                                                        && m.Status == StatusE.Live))
+            //因为后台数据库的数据都需要新增人
+            sysMenuPowerGVMs.ForEach(d => {
+                d.ID = Guid.NewGuid().ToString();
+
+                d.CreateID = _httpUser.ID;
+                d.CreateTime = DateTime.Now;
+                d.Creator = _httpUser.Name;
+
+                d.SysPowerGroup.CreateID = _httpUser.ID;
+                d.SysPowerGroup.CreateTime = DateTime.Now;
+                d.SysPowerGroup.Creator = _httpUser.Name;
+
+                d.SysPowers.ForEach(p => {
+                    p.CreateID = _httpUser.ID;
+                    p.CreateTime = DateTime.Now;
+                    p.Creator = _httpUser.Name;
+                });
+            });
+
+
+            //开启事务
+            var tranResult =  _dal.UseTran(async () =>
+            //var tranResult = _dal.UseCatchTran(async () =>
+            {
+             //查找到对应的菜单-权限组
+             var sysMenuPowerGroups = await _dal.Query(m => m.SysMenuID == sysMenu.ID && m.Status == StatusE.Live);
+             //删除对应菜单的权限组  （menuPowerGroup）
+             await _dal.DeleteByIds(sysMenuPowerGroups.Select(d => d.ID).ToArray());
+
+             //查询权限组(powerGroup)  且删除
+             await _sysPowerGroupRepository.DeleteByIds(sysMenuPowerGroups.Select(d => d.SysPowerGroupID).ToArray());
+
+             //查询对应的权限组对应的权限 且删除
+             var ss = sysMenuPowerGroups.Select(d => d.SysPowerGroupID).ToArray();
+                  //var p = await _sysPowerRepository.Query(
+                  //                                        m => (sysMenuPowerGroups.Select(d => d.SysPowerGroupID)).Contains(m.SysPowerGroupID)
+                  //                                       && m.Status == StatusE.Live);
+
+                  var psd = new string[] { "9285fad0-8c45-2a05-80da-7ed0ab14c61b", "9122b35e-5f55-14f7-e333-ae2099d416a3" };
+                  //     var p = await _sysPowerRepository.Query(
+                  //                                        m => "9285fad0-8c45-2a05-80da-7ed0ab14c61b".Contains(m.SysPowerGroupID)
+                  //                                       && m.Status == StatusE.Live);
+                  //     var ppp = await _sysPowerRepository.Query(
+                  //                                        m => ps.Contains(m.SysPowerGroupID)
+                  //                                       && m.Status == StatusE.Live);
+
+                  var ps = sysMenuPowerGroups.Select(d => d.SysPowerGroupID).ToArray();
+                  await _sysPowerRepository.DeleteByIds((await _sysPowerRepository.Query(
+                                                         m => ps.Contains(m.SysPowerGroupID)
+                                                        && m.Status == StatusE.Live)
+                                                       )
                                                         .Select(d => d.ID).ToArray());
 
 
-                 //将 SysMenuPowerGroupVM 转为 SysMenuPowerGroup
-                 //将数据转化为T
-                 var source = new Source<List<SysMenuPowerGroupVM>> { Value = sysMenuPowerGVMs };
+                  //await _sysPowerRepository.DeleteByIds((await _sysPowerRepository.Query(
+                  //                                        m => (sysMenuPowerGroups.Select(d=>d.SysPowerGroupID).ToArray()).Contains( m.SysPowerGroupID )
+                  //                                       && m.Status == StatusE.Live)
+                  //                                      )
+                  //                                       .Select(d => d.ID).ToArray());
+
+
+                  //将 SysMenuPowerGroupVM 转为 SysMenuPowerGroup
+                  //将数据转化为T
+                  var source = new Source<List<SysMenuPowerGroupVM>> { Value = sysMenuPowerGVMs };
                  var t = _mapper.Map<Destination<List<SysMenuPowerGroup>>>(source);
                  var sysMenuPowerGroupsU = t.Value;
 
 
-
                  //新增对应的权限组
                  await _dal.Add(sysMenuPowerGroupsU);
+
 
                  //新增权限组
                  await _sysPowerGroupRepository.Add(sysMenuPowerGVMs.Select(d=>d.SysPowerGroup).ToList());
@@ -150,14 +217,22 @@ namespace K.Core.Services.System
                  foreach (var item in sysMenuPowerGVMs)
                  {
                      //sysPowers.Add(item.SysPowers);
-                     sysPowers.Union(item.SysPowers).ToList<SysPower>();
+                     sysPowers=sysPowers.Union(item.SysPowers).ToList();
                  }
 
-                 //新增权限组对应的权限
-                 await _sysPowerRepository.Add(sysPowers);
+                  //新增权限组对应的权限
+                  try
+                  {
+                      await _sysPowerRepository.Add(sysPowers);
+                  }
+                  catch (Exception ex)
+                  {
 
+                      throw;
+                  }
+                
              });
-
+            
             if (tranResult) 
             {
                 return MessageModel<bool>.Success("更新成功");
