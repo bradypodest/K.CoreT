@@ -17,7 +17,7 @@ using AutoMapper;
 namespace K.Core.Services.BASE
 {
     public class BaseServices<TEntity> : ServiceFunFilter<TEntity>
-        , IBaseServices<TEntity> 
+        , IBaseServices<TEntity>
         where TEntity : BaseExtendTwoEntity, new()
     {
         //public IBaseRepository<TEntity> baseDal = new BaseRepository<TEntity>();
@@ -284,7 +284,7 @@ namespace K.Core.Services.BASE
             if (pageDataOptions.IsAll)
             {
             }
-            else 
+            else
             {
                 oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
             }
@@ -330,20 +330,20 @@ namespace K.Core.Services.BASE
             #endregion
 
             var lamada = oLamadaExtention.GetLambda();
-            
-            pageDataOptions.Order=!string.IsNullOrWhiteSpace(pageDataOptions.Order)?pageDataOptions.Order:"CreateTime desc";
+
+            pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
 
             if (lamada != null)
             {
                 return await baseDal.QueryPage(lamada,
         pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
             }
-            else 
+            else
             {
                 return await baseDal.QueryPage(whereExpression,
        pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
             }
-               
+
 
         }
 
@@ -414,12 +414,12 @@ namespace K.Core.Services.BASE
             t.Status = StatusE.Live;
 
 
-            if (string.IsNullOrWhiteSpace(t.ID)) 
+            if (string.IsNullOrWhiteSpace(t.ID))
             {
                 t.ID = Guid.NewGuid().ToString();
             }
 
-            var  data = await baseDal.Add(t);//全局异常拦截应该就不需要 try 
+            var data = await baseDal.Add(t);//全局异常拦截应该就不需要 try 
 
             return MessageModel<int>.Success(data);
         }
@@ -433,7 +433,7 @@ namespace K.Core.Services.BASE
             deleteOne.DeleterID = _httpUser.ID;
             deleteOne.Deleter = _httpUser.Name;
             deleteOne.DeleteTime = DateTime.Now;
-            
+
 
             var data = await baseDal.Update(deleteOne);
 
@@ -443,7 +443,7 @@ namespace K.Core.Services.BASE
         public virtual async Task<MessageModel<bool>> UpdateOne(TEntity t)
         {
             //查询是否该对象已被删除
-            if (baseDal.QueryById(t.ID) == null) 
+            if (baseDal.QueryById(t.ID) == null)
             {
                 return MessageModel<bool>.Fail("该对象已不存在，无法修改");
             }
@@ -517,18 +517,18 @@ namespace K.Core.Services.BASE
 
             pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
 
-            
+
 
             if (lamada != null)
             {
-                var data= await baseDal.QueryPage(lamada,
+                var data = await baseDal.QueryPage(lamada,
         pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
 
                 return MessageModel<PageModel<TEntity>>.Success(data);
             }
             else
             {
-                var data= await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
+                var data = await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
        pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
 
                 return MessageModel<PageModel<TEntity>>.Success(data);
@@ -536,6 +536,18 @@ namespace K.Core.Services.BASE
 
         }
         #endregion
+
+
+        public async Task<MessageModel<bool>> UseTranAsync(Action action)
+        {
+            var result = await baseDal.UseTranAsync(() => action());
+            if (result) 
+            {
+                return MessageModel<bool>.Success();
+            }
+            return MessageModel<bool>.Fail();
+        }
+
     }
 
 }

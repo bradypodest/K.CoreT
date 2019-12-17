@@ -78,6 +78,8 @@ namespace K.Core.IServices.BASE
 
         Task<MessageModel<PageModel<TEntity>>> GetPageData(PageDataOptions pageDataOptions);
 
+
+        Task<MessageModel<bool>> UseTranAsync(Action action);
     }
 
 }

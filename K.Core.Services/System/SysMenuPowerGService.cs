@@ -1,13 +1,16 @@
 ﻿using AutoMapper;
+using K.Core.AutoMapper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
 using K.Core.IRepository.System;
 using K.Core.IServices.System;
 using K.Core.Model;
 using K.Core.Model.Models;
+using K.Core.Model.ViewModels.System;
 using K.Core.Services.BASE;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,9 +21,10 @@ namespace K.Core.Services.System
         ISysMenuPowerGRepository _dal;
         ISysMenuRepository _sysMenuRepository;
         ISysPowerRepository _sysPowerRepository;
+        ISysPowerGroupRepository _sysPowerGroupRepository;
         IMapper _mapper;
         IUser _httpUser;
-        public SysMenuPowerGService(ISysMenuPowerGRepository dal, IMapper mapper, IUser httpUser, ISysMenuRepository sysMenuRepository, ISysPowerRepository sysPowerRepository)
+        public SysMenuPowerGService(ISysMenuPowerGRepository dal, IMapper mapper, IUser httpUser, ISysMenuRepository sysMenuRepository, ISysPowerRepository sysPowerRepository, ISysPowerGroupRepository sysPowerGroupRepository)
         {
             this._dal = dal;
             base.baseDal = dal;
@@ -33,6 +37,7 @@ namespace K.Core.Services.System
 
             _sysMenuRepository = sysMenuRepository;
             _sysPowerRepository = sysPowerRepository;
+            _sysPowerGroupRepository = sysPowerGroupRepository;
         }
 
 
@@ -41,11 +46,16 @@ namespace K.Core.Services.System
         #endregion
 
         #region ISysMenuPowerGservice 实现方法
-        public async Task<MessageModel<List<SysMenuPowerGroup>>> GetMenuPowerGroups(string menuId) 
+        /// <summary>
+        /// 获取菜单权限   待优化代码
+        /// </summary>
+        /// <param name="menuId"></param>
+        /// <returns></returns>
+        public async Task<MessageModel<List<SysMenuPowerGroupVM>>> GetMenuPowerGroups(string menuId) 
         {
             if (string.IsNullOrWhiteSpace(menuId)) 
             {
-                return MessageModel<List<SysMenuPowerGroup>>.Fail("未传入菜单ID");
+                return MessageModel<List<SysMenuPowerGroupVM>>.Fail("未传入菜单ID");
             }
 
             //查询菜单是否存在
@@ -53,16 +63,82 @@ namespace K.Core.Services.System
             if (sysMenu != null && sysMenu.Status != StatusE.Delete) 
             {
                 //查询菜单的权限组
-                var sysMenuPowerGroups = _dal.Query(d => d.SysMenuID == menuId && d.Status == StatusE.Live);
+                var sysMenuPowerGroups = await _dal.Query(d => d.SysMenuID == menuId && d.Status == StatusE.Live);
 
-                //var sysPowers = _sysPowerRepository.Query(d=>d.Status == StatusE.Live);
+                //var resultR=from sysMenuPowersG in sysMenuPowerGroups.sys
+                
 
-                //var sysPowers= _sysPowerRepository.QueryByIDs()
+                var arrayPowerGroups = sysMenuPowerGroups.Select(s => s.SysPowerGroupID).ToArray();
+
+                var sysPowers = await _sysPowerRepository.Query(d => (arrayPowerGroups).Contains(d.SysPowerGroupID) && d.Status == StatusE.Live);
+
+                var returnMenuPowerGroupsVM = new List<SysMenuPowerGroupVM>();
+                foreach (var item in sysMenuPowerGroups)
+                {
+                    //var sysMenuPowerGroupVM = new SysMenuPowerGroupVM();
+
+                    //mapper
+                    var source = new Source<SysMenuPowerGroup> { Value = item };
+                    var sysMenuPowerGroupVM = _mapper.Map<Destination<SysMenuPowerGroupVM>>(source).Value;
+                    
+
+
+                    sysMenuPowerGroupVM.SysMenu = sysMenu;
+                    sysMenuPowerGroupVM.SysPowers = sysPowers.Where(d => d.SysPowerGroupID == item.SysPowerGroupID).ToList();
+
+                    sysMenuPowerGroupVM.SysPowerGroup = await _sysPowerGroupRepository.QueryById(item.SysPowerGroupID);
+
+                    returnMenuPowerGroupsVM.Add(sysMenuPowerGroupVM);
+
+                }
+
+                return MessageModel<List<SysMenuPowerGroupVM>>.Success(returnMenuPowerGroupsVM);
+
             }
 
-            return MessageModel<List<SysMenuPowerGroup>>.Fail("菜单已不存在");
+            return MessageModel<List<SysMenuPowerGroupVM>>.Fail("菜单已不存在");
 
         }
-        #endregion 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sysMenuPowerG"></param>
+        /// <returns></returns>
+        public async Task<MessageModel<bool>> UpdateMenuPowerGroups(List<SysMenuPowerGroupVM> sysMenuPowerG)
+        {
+            var menu = sysMenuPowerG?.FirstOrDefault().SysMenu;
+
+            //判断对应的菜单是否存在
+            var sysMenu = await _sysMenuRepository.QueryById(menu?.ID);
+            if (sysMenu == null || sysMenu.Status == StatusE.Delete) 
+            {
+                return MessageModel<bool>.Fail("菜单已不存在");
+            }
+
+            //开启事务
+            await _dal.UseTranAsync(async () =>
+             {
+                 //查找到对应的菜单-权限组
+                 var sysMenuPowerGroups = await _dal.Query(m => m.SysMenuID == sysMenu.ID&&m.Status==StatusE.Live);
+
+                 //删除对应菜单的权限组
+                 await _dal.DeleteByIds(sysMenuPowerGroups.Select(d=>d.ID).ToArray());
+
+
+                 
+                 //_dal.DeleteByIds(sysMenuPowerG.Where(d=>string.IsNullOrWhiteSpace(d.ID)).Select(d => d.ID).ToArray());
+
+                 //新增或更新权限组
+                 //if()
+
+
+
+
+
+             });
+
+        }
+        #endregion
     }
 }

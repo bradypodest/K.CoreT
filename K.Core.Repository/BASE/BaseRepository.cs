@@ -418,6 +418,21 @@ namespace K.Core.Repository.Base
             return await _db.Queryable(joinExpression).Where(whereLambda).Select(selectExpression).ToListAsync();
         }
 
+
+
+        /// <summary>
+        /// 使用 事务
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public async Task<bool> UseTranAsync(Action action)
+        {
+            var result = await  _db.Ado.UseTranAsync(() => action());
+            return  result.IsSuccess; 
+        }
+
+
+
     }
 
 }

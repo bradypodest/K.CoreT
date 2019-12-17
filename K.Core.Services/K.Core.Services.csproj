@@ -33,6 +33,7 @@
     <ProjectReference Include="..\K.Core.IRepository\K.Core.IRepository.csproj" />
     <ProjectReference Include="..\K.Core.IServices\K.Core.IServices.csproj" />
     <ProjectReference Include="..\K.Core.Model\K.Core.Model.csproj" />
+    <ProjectReference Include="..\K.Core\K.Core.csproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
