@@ -235,7 +235,7 @@ namespace K.Core.Services.System
             
             if (tranResult) 
             {
-                return MessageModel<bool>.Success("更新成功");
+                return MessageModel<bool>.Success(true,"更新成功");
             }
 
             return MessageModel<bool>.Fail("事务出错，请重试");

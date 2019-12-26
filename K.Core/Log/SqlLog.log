@@ -1209,3 +1209,941 @@ UNION ALL
 【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
 
 【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:31:47|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/12/17 19:31:47|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/12/17 19:31:51|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/12/17 19:31:51|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/12/17 19:31:59|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/12/17 19:32:00|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2019/12/17 19:32:00|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2019/12/17 19:32:09|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 19:32:14|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:33:10|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:33:10|
+【SQL参数】：@SysMenuID0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+@Status1:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE (( [SysMenuID] = @SysMenuID0 ) AND ( [Status] = @Status1 ))
+--------------------------------
+2019/12/17 19:33:14|
+【SQL参数】：@InPara0:af16bbaf-a30a-48c1-bdb7-b4bd7e7ab87c
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:33:14|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE ((1=2) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/17 19:33:33|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:33:33|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:35:16|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 19:35:25|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:36:41|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:44:51|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:45:58|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:45:58|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('689149bf-234e-cf4b-be29-5e9921466845','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/17 19:46:16|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:46:46|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:46:46|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:47:20|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:47:20|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:47:20|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:47:20|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:47:24|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 19:47:29|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:47:29|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:51:10|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 19:51:11|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:53:32|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 19:53:33|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:53:43|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:55:22|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 19:55:23|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:55:23|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('689149bf-234e-cf4b-be29-5e9921466845','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/17 19:55:23|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:56:06|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:56:06|
+【SQL参数】：@InPara0:689149bf-234e-cf4b-be29-5e9921466845
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:57:59|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:58:01|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysMenuPowerGroup] WHERE [ID] IN ('0be9b29d-6de4-4661-8695-3b9a7fdf5f62','724c2e4c-6bc9-45b3-a7e2-238a9f47ed89') 
+--------------------------------
+2019/12/17 19:58:01|
+【SQL参数】：
+【SQL语句】：INSERT [SysPowerGroup]  ([Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'es' AS [Name],N'2' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 19:58:01.438' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'689149bf-234e-cf4b-be29-5e9921466845' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ce' AS [Name],N'1' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 19:58:01.438' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/17 19:58:01|
+【SQL参数】：
+【SQL语句】：INSERT [SysPower]  ([SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'689149bf-234e-cf4b-be29-5e9921466845' AS [SysPowerGroupID],N'12' AS [Name],N'sa' AS [ApiUrl],0 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 19:58:01.438' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'096d160b-af3d-ae23-cfea-48b07183dc91' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'689149bf-234e-cf4b-be29-5e9921466845' AS [SysPowerGroupID],N'da' AS [Name],N'2' AS [ApiUrl],0 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 19:58:01.438' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'26863f55-100d-a78e-da7f-da480c08ff74' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [SysPowerGroupID],N'ce' AS [Name],N'ss' AS [ApiUrl],0 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 19:58:01.438' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'1fcd7984-4421-51eb-1a41-503092c8ea5d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/17 19:58:05|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 19:58:36|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysMenuPowerGroup] WHERE [ID] IN ('03df74f6-abfc-42d5-acd7-ee65108c821f','7b4f9c34-6597-4e1a-acf6-8f7b3c55379e') 
+--------------------------------
+2019/12/17 20:06:01|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:06:02|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:06:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:06:37|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:07:10|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:07:42|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:09:07|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:09:14|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:09:34|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:10:04|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:13:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:14:03|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:14:03|
+【SQL参数】：@InPara0:689149bf-234e-cf4b-be29-5e9921466845
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:14:08|
+【SQL参数】：@InPara0:af16bbaf-a30a-48c1-bdb7-b4bd7e7ab87c
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:18:35|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:18:36|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:19:15|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:19:26|
+【SQL参数】：@InPara0:af16bbaf-a30a-48c1-bdb7-b4bd7e7ab87c
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:19:28|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:24:15|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:25:17|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:26:07|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:26:12|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:26:42|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:26:43|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:26:43|
+【SQL参数】：@SysMenuID0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+@Status1:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE (( [SysMenuID] = @SysMenuID0 ) AND ( [Status] = @Status1 ))
+--------------------------------
+2019/12/17 20:26:43|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','689149bf-234e-cf4b-be29-5e9921466845','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/17 20:27:10|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:27:11|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:27:41|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:27:42|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:27:42|
+【SQL参数】：@InPara0:689149bf-234e-cf4b-be29-5e9921466845
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:28:18|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:28:19|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:28:54|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:28:56|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:29:39|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/17 20:29:42|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:29:49|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:29:50|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysMenuPowerGroup] WHERE [ID] IN ('73dec77b-ccf9-4632-93fb-8e4ba3778964','b6f09cb3-a21d-411b-843a-aa041706b4c6','c689bbbe-6735-4836-b5e3-4afa562c80e0') 
+--------------------------------
+2019/12/17 20:29:50|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysPower] WHERE [ID] IN ('0ccea455-5304-769e-2ae0-e26517e3f176','1fcd7984-4421-51eb-1a41-503092c8ea5d') 
+--------------------------------
+2019/12/17 20:29:50|
+【SQL参数】：
+【SQL语句】：INSERT [SysMenuPowerGroup]  ([SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'ad53afaf-4ca4-4ced-9126-a7e71473dd42' AS [SysMenuID],N'404dab37-83a1-cd50-c3dc-4b4584aba2f2' AS [SysPowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'5848349c-cc8f-478b-bf96-8e4fb3b77ef0' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ad53afaf-4ca4-4ced-9126-a7e71473dd42' AS [SysMenuID],N'689149bf-234e-cf4b-be29-5e9921466845' AS [SysPowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'879497e1-9188-48c5-ae09-6e8f8bccc3ac' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ad53afaf-4ca4-4ced-9126-a7e71473dd42' AS [SysMenuID],N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [SysPowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'7def2da4-5dec-488c-9d59-c31b52b10c98' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/17 20:29:50|
+【SQL参数】：
+【SQL语句】：INSERT [SysPowerGroup]  ([Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'qqqqq' AS [Name],N'12' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'404dab37-83a1-cd50-c3dc-4b4584aba2f2' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'es' AS [Name],N'2' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'689149bf-234e-cf4b-be29-5e9921466845' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ce' AS [Name],N'1' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/17 20:29:50|
+【SQL参数】：
+【SQL语句】：INSERT [SysPower]  ([SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'404dab37-83a1-cd50-c3dc-4b4584aba2f2' AS [SysPowerGroupID],N'11111' AS [Name],N'2' AS [ApiUrl],1 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'0ccea455-5304-769e-2ae0-e26517e3f176' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [SysPowerGroupID],N'ce' AS [Name],N'ss' AS [ApiUrl],0 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-17 20:29:50.511' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'1fcd7984-4421-51eb-1a41-503092c8ea5d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/17 20:29:55|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:29:56|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/17 20:29:56|
+【SQL参数】：@InPara0:689149bf-234e-cf4b-be29-5e9921466845
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/18 19:14:02|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/12/18 19:14:04|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/18 19:14:04|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/18 19:14:53|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 11:41:58|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/12/26 11:42:00|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:42:00|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:42:04|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 11:42:07|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:42:07|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','689149bf-234e-cf4b-be29-5e9921466845')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 11:47:09|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:47:10|
+【SQL参数】：@InPara0:689149bf-234e-cf4b-be29-5e9921466845
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:52:24|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 11:52:48|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:57:27|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 11:57:30|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:59:44|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 11:59:45|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 11:59:45|
+【SQL参数】：@SysMenuID0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+@Status1:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE (( [SysMenuID] = @SysMenuID0 ) AND ( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 12:01:34|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 12:01:37|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 12:03:21|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 12:03:22|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 12:27:09|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 12:27:24|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 12:29:25|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 12:29:32|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 12:31:14|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 12:31:15|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 12:31:15|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','689149bf-234e-cf4b-be29-5e9921466845')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 15:55:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 15:55:50|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 15:56:37|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 15:56:37|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','689149bf-234e-cf4b-be29-5e9921466845')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 15:56:37|
+【SQL参数】：@InPara0:404dab37-83a1-cd50-c3dc-4b4584aba2f2
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 15:58:05|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 15:58:07|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:00:21|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:00:23|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:03:28|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:03:29|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:04:03|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:05:05|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:05:23|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:06:13|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:06:14|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:06:18|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:06:40|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:07:05|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/12/26 16:07:05|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:07:07|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:07:12|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:07:17|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysPower] WHERE [ID] IN ('0ccea455-5304-769e-2ae0-e26517e3f176','1fcd7984-4421-51eb-1a41-503092c8ea5d') 
+--------------------------------
+2019/12/26 16:07:17|
+【SQL参数】：
+【SQL语句】：INSERT [SysPowerGroup]  ([Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'qqqqq' AS [Name],N'12' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-26 16:07:13.575' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'404dab37-83a1-cd50-c3dc-4b4584aba2f2' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ce' AS [Name],N'1' AS [OrderNo],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-26 16:07:13.576' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/26 16:07:31|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:07:51|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:07:54|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:07:56|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysPowerGroup] WHERE [ID] IN ('ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','404dab37-83a1-cd50-c3dc-4b4584aba2f2') 
+--------------------------------
+2019/12/26 16:07:56|
+【SQL参数】：
+【SQL语句】：INSERT [SysPower]  ([SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [SysPowerGroupID],N'ce' AS [Name],N'ss' AS [ApiUrl],0 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-26 16:07:55.577' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'1fcd7984-4421-51eb-1a41-503092c8ea5d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'404dab37-83a1-cd50-c3dc-4b4584aba2f2' AS [SysPowerGroupID],N'11111' AS [Name],N'2' AS [ApiUrl],1 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-26 16:07:55.577' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'0ccea455-5304-769e-2ae0-e26517e3f176' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/26 16:14:04|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:14:08|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:14:28|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:14:30|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:14:30|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:14:30|
+【SQL参数】：@InPara0:404dab37-83a1-cd50-c3dc-4b4584aba2f2
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:14:33|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:14:35|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysMenuPowerGroup] WHERE [ID] IN ('30141dbc-fd50-4a4f-87bb-c89e2363196d','5a833f97-6a01-4a9d-b235-df015b4d7588') 
+--------------------------------
+2019/12/26 16:15:16|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:15:19|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysPowerGroup] WHERE [ID] IN ('ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','404dab37-83a1-cd50-c3dc-4b4584aba2f2') 
+--------------------------------
+2019/12/26 16:15:19|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','404dab37-83a1-cd50-c3dc-4b4584aba2f2')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 16:16:30|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:16:32|
+【SQL参数】：@SysMenuID0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+@Status1:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE (( [SysMenuID] = @SysMenuID0 ) AND ( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 16:16:32|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysPowerGroup] WHERE [ID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d') 
+--------------------------------
+2019/12/26 16:19:14|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2019/12/26 16:19:15|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2019/12/26 16:19:17|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:19:21|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:19:23|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d','404dab37-83a1-cd50-c3dc-4b4584aba2f2')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 16:20:16|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:20:16|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 16:20:25|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:20:26|
+【SQL参数】：
+【SQL语句】：INSERT [SysPower]  ([SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'404dab37-83a1-cd50-c3dc-4b4584aba2f2' AS [SysPowerGroupID],N'11111' AS [Name],N'2' AS [ApiUrl],1 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-26 16:20:26.445' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'0ccea455-5304-769e-2ae0-e26517e3f176' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d' AS [SysPowerGroupID],N'ce' AS [Name],N'ss' AS [ApiUrl],0 AS [IsOpen],N'1' AS [CreateID],N'admin' AS [Creator],'2019-12-26 16:20:26.445' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'1fcd7984-4421-51eb-1a41-503092c8ea5d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2019/12/26 16:20:34|
+【SQL参数】：@InPara0:af16bbaf-a30a-48c1-bdb7-b4bd7e7ab87c
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:20:41|
+【SQL参数】：@InPara0:af16bbaf-a30a-48c1-bdb7-b4bd7e7ab87c
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:21:44|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2019/12/26 16:21:44|
+【SQL参数】：@Status1:1
+
+【SQL语句】：SELECT [SysPowerGroupID],[Name],[ApiUrl],[IsOpen],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPower]  WHERE (([SysPowerGroupID] IN ('404dab37-83a1-cd50-c3dc-4b4584aba2f2','ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d')) AND( [Status] = @Status1 ))
+--------------------------------
+2019/12/26 16:21:44|
+【SQL参数】：@InPara0:ed0ffa8f-7d59-09ce-ef60-4245f93a8a4d
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE [ID] IN (@InPara0)  
