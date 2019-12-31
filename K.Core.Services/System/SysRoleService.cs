@@ -1,4 +1,7 @@
-﻿using K.Core.IServices.System;
+﻿using AutoMapper;
+using K.Core.Common.HttpContextUser;
+using K.Core.IRepository.System;
+using K.Core.IServices.System;
 using K.Core.Model.Models;
 using K.Core.Services.BASE;
 using System;
@@ -9,5 +12,20 @@ namespace K.Core.Services.System
 {
     public class SysRoleService : BaseServices<SysRole>, ISysRoleService
     {
+        ISysRoleRepository _dal;
+        IMapper _mapper;
+        IUser _httpUser;
+
+        public SysRoleService(ISysRoleRepository dal, IMapper mapper, IUser httpUser) 
+        {
+            this._dal = dal;
+            base.baseDal = dal;
+
+            _httpUser = httpUser;
+            base._httpUser = httpUser;
+
+            _mapper = mapper;
+            base._mapper = mapper;
+        }
     }
 }
