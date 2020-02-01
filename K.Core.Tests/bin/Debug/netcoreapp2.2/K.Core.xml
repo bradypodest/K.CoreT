@@ -168,6 +168,11 @@
             <param name="token"></param>
             <returns></returns>
         </member>
+        <member name="T:K.Core.Controllers.System.SysMenuPowerGController">
+            <summary>
+            菜单权限组
+            </summary>
+        </member>
         <member name="M:K.Core.Controllers.System.SysMenuPowerGController.GetMenuPowerGroups(System.String)">
             <summary>
             获取菜单权限
@@ -181,6 +186,26 @@
             </summary>
             <param name="sysMenuPowerGVMs"></param>
             <returns></returns>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysPowerController">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysPowerGroupController">
+            <summary>
+            权限组
+            </summary>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysRoleController">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="T:K.Core.Controllers.System.SysRoleMenuPowerGController">
+            <summary>
+            用户角色菜单权限组
+            </summary>
         </member>
         <member name="T:K.Core.Controllers.System.SysUserController">
             <summary>

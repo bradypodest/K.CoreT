@@ -9,6 +9,12 @@ namespace K.Core.Model.Models
     public class SysRole : BaseExtendTwoEntity
     {
         /// <summary>
+        /// 角色ID
+        /// </summary>
+        [SugarColumn(Length = 50, IsNullable = false)]
+        public string RoleID { get; set; }
+
+        /// <summary>
         /// 角色名称
         /// </summary>
         [SugarColumn(Length = 50, IsNullable = false)]

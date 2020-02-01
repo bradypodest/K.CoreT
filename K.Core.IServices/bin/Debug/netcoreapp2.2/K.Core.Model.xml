@@ -204,6 +204,11 @@
             排序
             </summary>
         </member>
+        <member name="P:K.Core.Model.Models.SysRole.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
         <member name="P:K.Core.Model.Models.SysRole.Name">
             <summary>
             角色名称

@@ -428,6 +428,29 @@ namespace K.Core.Services.BASE
         {
             TEntity deleteOne = await baseDal.QueryById(ID);
 
+            if (deleteOne == null || deleteOne.Status== StatusE.Delete) 
+            {
+                return MessageModel<bool>.Fail(false,"对应数据不存在,操作失败");
+            }
+
+            //查询删除条件
+            var messageModel = MessageModel<bool>.Fail();
+            if (DelOnExecute != null)
+            {//删除前验证                 
+                messageModel = await DelOnExecute(deleteOne);
+                if (!messageModel.success) return messageModel;
+            }
+
+            ////删除的操作   :待  以后  
+            //if (DelOnExecuting != null)
+            //{
+
+            //}
+            //else 
+            //{
+                
+            //}
+
             //标志删除
             deleteOne.Status = StatusE.Delete;
             deleteOne.DeleterID = _httpUser.ID;

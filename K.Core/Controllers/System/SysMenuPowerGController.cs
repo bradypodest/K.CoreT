@@ -16,6 +16,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.System
 {
+    /// <summary>
+    /// 菜单权限组
+    /// </summary>
     [Route("api/SysMenuPowerG")]
     public class SysMenuPowerGController : BaseController<SysMenuPowerGroup, SysMenuPowerGroup, ISysMenuPowerGService>
     {

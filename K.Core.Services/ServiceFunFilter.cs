@@ -98,6 +98,16 @@ namespace K.Core.Services
         ///// </summary>
         //protected Func<object[], WebResponseContent> DelOnExecuting;
 
+        /// <summary>
+        /// 删除前处理：如查询某条件是否符合要求
+        /// </summary>
+        protected Func<T, Task<MessageModel<bool>>> DelOnExecute;
+
+        /// <summary>
+        /// 删除操作中操作的内容：不为空则调用该处内容
+        /// </summary>
+        protected Func<T, bool> DelOnExecuting;
+
         ///// <summary>
         ///// 删除后处理,object[]已删除的主键,此处已开启了DbContext事务(重点),如果还有其他业务处事，直接在这里写EF代码,不需要再开启事务
         ///// 如果执行的是手写sql请用repository.DbContext.Database.ExecuteSqlCommand()或 repository.DbContext.Set<T>().FromSql执行具体sql语句

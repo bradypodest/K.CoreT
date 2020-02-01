@@ -14,6 +14,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.System
 {
+    /// <summary>
+    /// 权限组
+    /// </summary>
     [Route("api/SysPowerGroup")]
     public class SysPowerGroupController : BaseController<SysPowerGroup, SysPowerGroup, ISysPowerGroupService>
     {

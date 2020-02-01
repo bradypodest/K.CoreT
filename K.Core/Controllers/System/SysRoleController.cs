@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.System
 {
+    /// <summary>
+    /// 角色
+    /// </summary>
     [Route("api/SysRole")]
     public class SysRoleController  : BaseController<SysRole, SysRole, ISysRoleService>
     {

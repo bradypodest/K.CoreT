@@ -14,6 +14,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.System
 {
+    /// <summary>
+    /// 用户角色菜单权限组
+    /// </summary>
     [Route("api/SysRoleMenuPowerG")]
     public class SysRoleMenuPowerGController : BaseController<SysRoleMenuPowerGroup, SysRoleMenuPowerGroup, ISysRoleMenuPowerGService>
     {

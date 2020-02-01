@@ -91,6 +91,11 @@ namespace K.Core.Common.Model
                 data=obj,
             };
         }
+
+        public static implicit operator MessageModel<T>(MessageModel<bool> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     

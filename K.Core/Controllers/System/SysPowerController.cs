@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace K.Core.Controllers.System
 {
+    /// <summary>
+    /// 权限
+    /// </summary>
     [Route("api/SysPower")]
     public class SysPowerController : BaseController<SysPower, SysPower, ISysPowerService>
     {
