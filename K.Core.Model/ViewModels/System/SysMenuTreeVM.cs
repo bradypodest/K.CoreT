@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K.Core.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -62,9 +63,9 @@ namespace K.Core.Model.ViewModels.System
         /// </summary>
         public List<string> ParentArray { get; set; }
 
-        ///// <summary>
-        ///// 权限
-        ///// </summary>
-        //public List<SysPowerGroup> Powers { get; set; }
+        /// <summary>
+        /// 权限
+        /// </summary>
+        public List<SysPowerGroupVM> PowerGroups { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using K.Core.AutoMapper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
 using K.Core.IRepository.System;
@@ -20,7 +21,10 @@ namespace K.Core.Services.System
         IMapper _mapper;
         IUser _httpUser;
         ISysUserRepository _sysUserRepository;
-        public SysMenuService(ISysMenuRepository dal, IMapper mapper, IUser httpUser, ISysUserRepository sysUserRepository)
+        ISysPowerGroupRepository _sysPowerGroupRepository;
+        ISysMenuPowerGRepository _sysMenuPowerGRepository;
+
+        public SysMenuService(ISysMenuRepository dal, IMapper mapper, IUser httpUser, ISysUserRepository sysUserRepository,ISysMenuPowerGRepository sysMenuPowerGRepository , ISysPowerGroupRepository sysPowerGroupRepository)
         {
             this._dal = dal;
             base.baseDal = dal;
@@ -32,6 +36,10 @@ namespace K.Core.Services.System
             base._mapper = mapper;
 
             _sysUserRepository = sysUserRepository;
+
+            _sysPowerGroupRepository = sysPowerGroupRepository;
+
+            _sysMenuPowerGRepository = sysMenuPowerGRepository;
         }
 
         #region 重写 baseservice方法
@@ -73,30 +81,44 @@ namespace K.Core.Services.System
 
             var sysMenus = await _dal.Query(d=>d.Status==Model.StatusE.Live);//里面是没有根节点的,因为根节点是虚拟的
 
-            var sysMenuTrees = (from child in sysMenus
-                                       //where child.IsDeleted == false
-                                   orderby child.OrderNo
-                                   select new SysMenuTreeVM
-                                   {
-                                       ID = child.ID,
-                                       MenuId=child.MenuId,
-                                       Name = child.Name,
-                                       Url=child.Url,
-                                       PathUrl=child.PathUrl,
-                                       Description=child.Description,
-                                       Icon=child.Icon,
-                                       OrderNo=child.OrderNo,
-                                       IsShow=child.IsShow,
-                                       ParentId = child.ParentId,
 
-                                       CreateID=child.CreateID,
-                                       CreateTime=child.CreateTime,
-                                       Creator=child.Creator,
-                                       ModifyID=child.ModifyID,
-                                       Modifier=child.Modifier,
-                                       ModifyTime=child.ModifyTime,
-                                       Status=child.Status
-                                   }).ToList();
+
+            var sysMenuTrees = (from child in sysMenus
+                                    //where child.IsDeleted == false
+                                orderby child.OrderNo
+                                select new SysMenuTreeVM
+                                {
+                                    ID = child.ID,
+                                    MenuId = child.MenuId,
+                                    Name = child.Name,
+                                    Url = child.Url,
+                                    PathUrl = child.PathUrl,
+                                    Description = child.Description,
+                                    Icon = child.Icon,
+                                    OrderNo = child.OrderNo,
+                                    IsShow = child.IsShow,
+                                    ParentId = child.ParentId,
+
+                                    CreateID = child.CreateID,
+                                    CreateTime = child.CreateTime,
+                                    Creator = child.Creator,
+                                    ModifyID = child.ModifyID,
+                                    Modifier = child.Modifier,
+                                    ModifyTime = child.ModifyTime,
+                                    Status = child.Status,
+
+
+
+                                    //PowerGroups = _mapper.Map<Destination<List<SysMenuPowerGroupVM>>>(new Source<SysMenuPowerGroup> { Value = _sysMenuPowerGRepository.Query() }).Value;
+
+                                        //转换
+                                        //将数据转化为T
+            //                           var source = new Source<SysUser> { Value = sysUserInfo };
+            //var t = _mapper.Map<Destination<SysUserVM>>(source);
+
+           //data = MessageModel<SysUserVM>.Success(t.Value);
+
+        }).ToList();
 
             //虚拟一个根节点
             SysMenuTreeVM rootRoot = new SysMenuTreeVM
@@ -110,13 +132,16 @@ namespace K.Core.Services.System
             };
 
             sysMenuTrees = sysMenuTrees.OrderBy(d => d.OrderNo).ToList();
-                       
-            LoopToAppendChildren(sysMenuTrees, rootRoot, parentId);//不是很懂是如何传递回rootRoot的
+
+            //查询出所有菜单权限组
+            var allSysMenuPowerGs= await _sysMenuPowerGRepository.Query(mg=>mg.Status== Model.StatusE.Live);
+            //查询出所有的权限组
+            var allSysPowerGroups= await _sysPowerGroupRepository.Query(g=>g.Status==Model.StatusE.Live);
 
             //查询每个节点的父节点 数组
             foreach (var item in sysMenuTrees)
             {
-                if (!default(Guid).ToString().Equals(item.ID)) 
+                if (!default(Guid).ToString().Equals(item.ID))
                 {
                     //
                     List<string> pidArray = new List<string>();
@@ -125,7 +150,7 @@ namespace K.Core.Services.System
 
                     var parent = sysMenuTrees.FirstOrDefault(d => d.ID == item.ParentId);
 
-                    while (parent != null) 
+                    while (parent != null)
                     {
                         pidArray.Add(parent.ID);
                         parent = sysMenuTrees.FirstOrDefault(d => d.ID == parent.ParentId);
@@ -137,10 +162,32 @@ namespace K.Core.Services.System
 
                     item.ParentArray = pidArray;
 
+
+                    //给每个节点加上权限组
+                    item.PowerGroups = (from child in allSysPowerGroups
+                                        join mppg in allSysMenuPowerGs on child.ID equals mppg.SysPowerGroupID
+                                        where mppg.SysMenuID == item.ID
+                                        orderby child.OrderNo
+                                        select new SysPowerGroupVM
+                                        {
+                                            ID = child.ID,
+                                            Name = child.Name,
+                                            OrderNo = child.OrderNo,
+
+                                            CreateID = child.CreateID,
+                                            CreateTime = child.CreateTime,
+                                            Creator = child.Creator,
+                                            ModifyID = child.ModifyID,
+                                            Modifier = child.Modifier,
+                                            ModifyTime = child.ModifyTime,
+                                            Status = child.Status,
+
+                                        }).ToList();
                 }
             }
 
-
+            LoopToAppendChildren(sysMenuTrees, rootRoot, parentId);//不是很懂是如何传递回rootRoot的
+                       
             var messageModel = MessageModel<SysMenuTreeVM>.Success();
 
             if (messageModel.success)

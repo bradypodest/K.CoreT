@@ -175,7 +175,7 @@ namespace K.Core.Services.System
                   //                                        m => (sysMenuPowerGroups.Select(d => d.SysPowerGroupID)).Contains(m.SysPowerGroupID)
                   //                                       && m.Status == StatusE.Live);
 
-                  var psd = new string[] { "9285fad0-8c45-2a05-80da-7ed0ab14c61b", "9122b35e-5f55-14f7-e333-ae2099d416a3" };
+                  //var psd = new string[] { "9285fad0-8c45-2a05-80da-7ed0ab14c61b", "9122b35e-5f55-14f7-e333-ae2099d416a3" };
                   //     var p = await _sysPowerRepository.Query(
                   //                                        m => "9285fad0-8c45-2a05-80da-7ed0ab14c61b".Contains(m.SysPowerGroupID)
                   //                                       && m.Status == StatusE.Live);
