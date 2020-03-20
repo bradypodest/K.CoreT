@@ -5664,3 +5664,575 @@ UNION ALL
 【SQL参数】：@Status0:2
 
 【SQL语句】：SELECT * FROM (SELECT [RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/9 15:28:49|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/9 15:28:49|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/9 15:28:49|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 9:58:18|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/3/20 9:58:20|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 9:58:21|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 9:58:21|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 9:58:22|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 9:58:22|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 9:58:35|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 9:58:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 9:59:09|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 9:59:09|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 10:02:56|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 10:03:00|
+【SQL参数】：@InPara0:4f381c81-d263-4763-bd56-7412c802e8a9
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 10:03:03|
+【SQL参数】：@InPara0:ad53afaf-4ca4-4ced-9126-a7e71473dd42
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 10:15:59|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 10:15:59|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 10:16:00|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 13:37:39|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/3/20 13:37:40|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 13:37:40|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 13:37:44|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 13:37:47|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 13:37:47|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 13:37:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 13:53:39|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 13:53:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 13:53:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 13:59:55|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 13:59:55|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 13:59:58|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 14:00:07|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 14:00:07|
+【SQL参数】：@RoleID:PhoneAdmin
+@Name:手机管理员
+@Description:手机管理员q
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/3/20 14:00:07
+@ID:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：UPDATE [SysRole]  SET
+           [RoleID]=@RoleID,[Name]=@Name,[Description]=@Description,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2020/3/20 14:00:08|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:00:08|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:00:12|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:01:42|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:01:42|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:01:43|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:01:58|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:02:30|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:02:30|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:02:33|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:07:53|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:07:53|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:08:00|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:08:00|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:08:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:08:02|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:28:30|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 14:28:30|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 14:28:45|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:28:45|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:28:45|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:28:45|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:28:48|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 14:31:39|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:31:39|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:31:58|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 14:31:58|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 14:31:59|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:06:41|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:06:41|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:06:41|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:06:41|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:06:55|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 15:06:55|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 15:06:58|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:07:17|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:07:55|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:08:25|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:08:55|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/3/20 15:08:55|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 15:08:55|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 15:08:58|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:09:09|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:13:08|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/3/20 15:13:09|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 15:13:09|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 15:13:14|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/3/20 15:13:15|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 15:13:15|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 15:13:27|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/3/20 15:13:27|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 15:13:28|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 15:13:31|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:13:31|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:13:40|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:14:27|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:14:32|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysRoleMenuPowerGroup] WHERE [ID] IN ('55ac1ab8-1640-4071-9373-46e0211d3be7','5b3e2425-732b-4973-a3cf-55e2a3bc3975','b42827ce-ca4c-4404-8b09-ef76afac2eb1','b85d74c7-8149-4f56-84ec-d8229dcc5df2','cbbfa44c-c34d-490b-badc-8d6379144175','dcbfef57-52a1-4630-ad6b-c31c085c0638','ea6163e6-a414-4d72-8229-97da4b0b432f','fdb29bdc-31f6-470e-ae0f-542eb13a5fff') 
+--------------------------------
+2020/3/20 15:14:33|
+【SQL参数】：
+【SQL语句】：INSERT [SysRoleMenuPowerGroup]  ([RoleID],[MenuID],[PowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4ec7bb01-414f-459f-a0c5-3fecf0edf0d1' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'0ad18ce6-5253-4942-bba5-4bbc3713af0e' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4744fc6b-8cdc-46c9-9d45-11fea24ff45c' AS [MenuID],N'b3cf0d8c-81b2-6c5f-17b6-f64816168ef6' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'75e3f008-8e75-4649-8127-218d5945684e' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4744fc6b-8cdc-46c9-9d45-11fea24ff45c' AS [MenuID],N'ea1013b5-ffd9-1e34-6ab7-e53f6b7c0e6a' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'571ae474-a8f3-43f0-a30f-ed89e7e5160d' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'9fa1fa68-881c-4953-87ef-c4ea38d9ad7e' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'e82f7522-637b-4ccc-845f-ad00e8ce83f1' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'a23ac684-90ad-4d4e-9a39-9cf27ce5371d' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'c552686a-d953-4241-bc3e-73c2639e900c' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'93698e6e-2510-48bd-a3c2-5f8deb898186' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'ce395c1e-314f-4c21-93a6-4157b3a1d2a1' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'f870a2c3-eb40-4ccf-8552-f39010a4964a' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'3e16f39e-28e8-404f-8bef-867a4bd1237b' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'a5650c97-9bd7-40de-a191-ac6b92101021' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:14:32.307' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'c094d688-cf57-4b20-b203-65f38b96f13f' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2020/3/20 15:18:20|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:18:20|
+【SQL参数】：
+【SQL语句】：INSERT [SysRoleMenuPowerGroup]  ([RoleID],[MenuID],[PowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4ec7bb01-414f-459f-a0c5-3fecf0edf0d1' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'c3854c64-ed75-4913-871a-7e8aa5965a2b' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4744fc6b-8cdc-46c9-9d45-11fea24ff45c' AS [MenuID],N'b3cf0d8c-81b2-6c5f-17b6-f64816168ef6' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'19d5c25b-2cb2-4f54-9ca1-84616e5c1b34' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4744fc6b-8cdc-46c9-9d45-11fea24ff45c' AS [MenuID],N'ea1013b5-ffd9-1e34-6ab7-e53f6b7c0e6a' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'4f600de9-fcc9-4bc8-b8e5-c96948f770a1' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'9fa1fa68-881c-4953-87ef-c4ea38d9ad7e' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'4b4be050-fa6f-4349-a5b2-9ab5bde8bd07' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'a23ac684-90ad-4d4e-9a39-9cf27ce5371d' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'2e62391f-9309-42fc-aab3-5368dddae658' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'93698e6e-2510-48bd-a3c2-5f8deb898186' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'456e74f4-167d-4122-85d5-c4b64b9c2285' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'f870a2c3-eb40-4ccf-8552-f39010a4964a' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'b981f5e9-3234-4695-89d2-e641e1dffd80' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'a5650c97-9bd7-40de-a191-ac6b92101021' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:20.403' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'42b4adf7-f076-40ea-ac51-2b1d5a348f22' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2020/3/20 15:18:23|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:18:35|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:18:35|
+【SQL参数】：
+【SQL语句】：DELETE FROM [SysRoleMenuPowerGroup] WHERE [ID] IN ('19d5c25b-2cb2-4f54-9ca1-84616e5c1b34','2e62391f-9309-42fc-aab3-5368dddae658','42b4adf7-f076-40ea-ac51-2b1d5a348f22','456e74f4-167d-4122-85d5-c4b64b9c2285','4b4be050-fa6f-4349-a5b2-9ab5bde8bd07','4f600de9-fcc9-4bc8-b8e5-c96948f770a1','b981f5e9-3234-4695-89d2-e641e1dffd80','c3854c64-ed75-4913-871a-7e8aa5965a2b') 
+--------------------------------
+2020/3/20 15:18:35|
+【SQL参数】：
+【SQL语句】：INSERT [SysRoleMenuPowerGroup]  ([RoleID],[MenuID],[PowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID])
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4ec7bb01-414f-459f-a0c5-3fecf0edf0d1' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'cf19048f-d076-4d0e-bb12-ebb39ba4e5c5' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4744fc6b-8cdc-46c9-9d45-11fea24ff45c' AS [MenuID],N'b3cf0d8c-81b2-6c5f-17b6-f64816168ef6' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'1766cebd-3b91-407b-9e94-3af140b76391' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'4744fc6b-8cdc-46c9-9d45-11fea24ff45c' AS [MenuID],N'ea1013b5-ffd9-1e34-6ab7-e53f6b7c0e6a' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'fe14309e-0705-48a9-bed8-a4035f83d6cb' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'9fa1fa68-881c-4953-87ef-c4ea38d9ad7e' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'7963a1fd-0c3a-40bd-82a4-60420f796f59' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'a23ac684-90ad-4d4e-9a39-9cf27ce5371d' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'4c32571c-957e-410a-8f46-d81577d94759' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'93698e6e-2510-48bd-a3c2-5f8deb898186' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'af29a0f6-1945-4b8c-9562-f770fd938be8' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'f870a2c3-eb40-4ccf-8552-f39010a4964a' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'8477e1cf-d47e-4dbe-9dd7-bb254b4d55f7' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]	
+UNION ALL 
+ SELECT N'd940bb2d-948c-4e4e-a9e7-9b8d3e523acf' AS [RoleID],N'a5650c97-9bd7-40de-a191-ac6b92101021' AS [MenuID],N'' AS [PowerGroupID],N'1' AS [CreateID],N'admin' AS [Creator],'2020-03-20 15:18:35.456' AS [CreateTime],NULL AS [ModifyID],NULL AS [Modifier],NULL AS [ModifyTime],N'5a29456a-f006-47e9-927c-314a5b42f710' AS [ID],N'1' AS [Status],NULL AS [DeleteTime],NULL AS [Deleter],NULL AS [DeleterID]
+;
+
+--------------------------------
+2020/3/20 15:19:22|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:19:22|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:19:24|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/3/20 15:19:24|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/3/20 15:19:27|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/3/20 15:19:36|
+【SQL参数】：@InPara0:d940bb2d-948c-4e4e-a9e7-9b8d3e523acf
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/3/20 15:19:40|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )

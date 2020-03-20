@@ -207,6 +207,13 @@
             用户角色菜单权限组
             </summary>
         </member>
+        <member name="M:K.Core.Controllers.System.SysRoleMenuPowerGController.UpdateRoleMenuPowerG(System.Collections.Generic.List{K.Core.Model.ViewModels.System.SysRoleMenuPowerGVM})">
+            <summary>
+            更新角色菜单权限
+            </summary>
+            <param name="sysMenuPowerGVMs"></param>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Controllers.System.SysUserController">
             <summary>
             用户管理

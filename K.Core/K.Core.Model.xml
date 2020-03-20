@@ -676,6 +676,26 @@
             包含的权限api
             </summary>
         </member>
+        <member name="T:K.Core.Model.ViewModels.System.SysRoleMenuPowerGVM">
+            <summary>
+            角色-菜单-权限组  联系
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysRoleMenuPowerGVM.RoleID">
+            <summary>
+            角色ID    1
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysRoleMenuPowerGVM.MenuID">
+            <summary>
+            菜单ID   多
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.ViewModels.System.SysRoleMenuPowerGVM.PowerGroupID">
+            <summary>
+            权限组ID   多
+            </summary>
+        </member>
         <member name="P:K.Core.Model.SysUserVM.UserName">
             <summary>
             用户名
