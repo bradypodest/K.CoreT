@@ -41,6 +41,16 @@ namespace K.Core.Controllers.System
 
         #region  其他方法
 
+        /// <summary>
+        /// 获取角色对应菜单的权限
+        /// </summary>
+        /// <param name="roleId"></param>
+        /// <returns></returns>
+        [HttpGet,Route("GetRoleMenuPowerG")]
+        public async Task<MessageModel<List<SysRoleMenuPowerGVM>>> GetRoleMenuPowerG(string roleId) 
+        {
+            return await _sysRoleMenuPowerGServices.GetRoleMenuPowerG(roleId);
+        }
 
 
         /// <summary>

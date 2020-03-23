@@ -54,6 +54,11 @@
             删除人ID
             </summary>
         </member>
+        <member name="T:K.Core.Model.StatusE">
+            <summary>
+            状态枚举
+            </summary>
+        </member>
         <member name="F:K.Core.Model.StatusE.Live">
             <summary>
             正常

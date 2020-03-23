@@ -36,6 +36,40 @@ namespace K.Core.Services.System
         }
 
         /// <summary>
+        /// 获取角色对应菜单的权限
+        /// </summary>
+        /// <param name="roleId">角色ID</param>
+        /// <returns></returns>
+        public async Task<MessageModel<List<SysRoleMenuPowerGVM>>> GetRoleMenuPowerG(string roleId)
+        {
+            if (string.IsNullOrWhiteSpace(roleId)) 
+            {
+                return MessageModel<List<SysRoleMenuPowerGVM>>.Fail("未传入角色ID");
+            }
+
+            //查询角色是否存在
+            var sysRole = await _sysRoleRepository.QueryById(roleId);
+            if (sysRole != null && sysRole.Status == Model.StatusE.Live)
+            {
+                //查询角色对应菜单的权限组
+                var sysRoleMenuPowerGs = await _dal.Query(m => m.RoleID == roleId && m.Status == Model.StatusE.Live);
+
+                //将 SysRoleMenuPowerG  转为 sysRoleMenuPowerGVM
+                var source = new Source<List<SysRoleMenuPowerGroup>> { Value = sysRoleMenuPowerGs };
+                var t = _mapper.Map<Destination<List<SysRoleMenuPowerGVM>>>(source);
+                var returnSysRoleMenuPowerGroupVM = t.Value;
+
+                return MessageModel<List<SysRoleMenuPowerGVM>>.Success(returnSysRoleMenuPowerGroupVM);
+            }
+            else 
+            {
+                return MessageModel<List<SysRoleMenuPowerGVM>>.Fail("菜单已不存在");
+            }
+
+
+        }
+
+        /// <summary>
         /// 更新角色对应菜单权限
         /// </summary>
         /// <param name="sysRoleMenuPowerGVMs"></param>

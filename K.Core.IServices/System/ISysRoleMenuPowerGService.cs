@@ -17,5 +17,6 @@ namespace K.Core.IServices.System
         /// <param name="sysRoleMenuPowerGVMs"></param>
         /// <returns></returns>
         Task<MessageModel<bool>> UpdateRoleMenuPowerGs(List<SysRoleMenuPowerGVM> sysRoleMenuPowerGVMs);
+        Task<MessageModel<List<SysRoleMenuPowerGVM>>> GetRoleMenuPowerG(string roleId);
     }
 }

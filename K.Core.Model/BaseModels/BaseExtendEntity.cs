@@ -71,6 +71,9 @@ namespace K.Core.Model
         public String DeleterID { get; set; }
     }
 
+    /// <summary>
+    /// 状态枚举
+    /// </summary>
     public enum StatusE
     {
         /// <summary>
