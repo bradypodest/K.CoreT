@@ -1,6 +1,7 @@
 ﻿using K.Core.Common;
 using K.Core.Common.Helper;
 using K.Core.Model.Models;
+using K.Core.Model.Models.Test;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -49,7 +50,10 @@ namespace K.Core.Model.Models
                     typeof(SysPower),
                     typeof(SysPowerGroup),
                     typeof(SysRole),
-                    typeof(SysRoleMenuPowerGroup)
+                    typeof(SysRoleMenuPowerGroup),
+
+                    typeof(TestOrder),
+                    typeof(TestOrderDetail)
                     );
                 //myContext.CreateTableByEntity(false,
                 //    typeof(Advertisement),

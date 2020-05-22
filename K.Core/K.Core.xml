@@ -234,6 +234,17 @@
             <param name="token">令牌</param>
             <returns></returns>
         </member>
+        <member name="T:K.Core.Controllers.Test.TestOrderController">
+            <summary>
+            订单测试
+            </summary>
+        </member>
+        <member name="M:K.Core.Controllers.Test.TestOrderController.GetOneOrderNo">
+            <summary>
+            获取订单的一个流水号
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Services.GlobalRouteAuthorizeConvention">
             <summary>
             Summary:全局路由权限公约

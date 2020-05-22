@@ -29,3 +29,11 @@ D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp
 D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.pdb
 D:\study\myStudy\studyAndr\K.Core2\K.Core\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csprojAssemblyReference.cache
 D:\localGitCode\study\K.CoreAndVue\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csprojAssemblyReference.cache
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\bin\Debug\netcoreapp2.2\K.Core.FrameWork.deps.json
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\bin\Debug\netcoreapp2.2\K.Core.FrameWork.dll
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\bin\Debug\netcoreapp2.2\K.Core.FrameWork.pdb
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csproj.CoreCompileInputs.cache
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.AssemblyInfoInputs.cache
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.AssemblyInfo.cs
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.dll
+E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.pdb

@@ -309,6 +309,61 @@
             备注
              </summary>
         </member>
+        <member name="T:K.Core.Model.Models.Test.TestOrder">
+            <summary>
+            本类是一个测试订单 表 ，用于测试功能时候
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrder.OrderNo">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrder.Qty">
+            <summary>
+            订单数量
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrder.Remakes">
+            <summary>
+            订单备注
+            </summary>
+        </member>
+        <member name="T:K.Core.Model.Models.Test.TestOrderDetail">
+            <summary>
+            订单详情
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.OrderID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.GoodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.GoodsBatch">
+            <summary>
+            商品批次
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.Qty">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.Weight">
+            <summary>
+            重量
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.Remakes">
+            <summary>
+            备注
+            </summary>
+        </member>
         <member name="M:K.Core.Model.Models.DBSeed.SeedAsync(K.Core.Model.Models.MyContext)">
             <summary>
             异步添加种子数据
