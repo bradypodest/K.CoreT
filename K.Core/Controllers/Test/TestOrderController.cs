@@ -47,7 +47,8 @@ namespace K.Core.Controllers.Test
 
             //待处理，先使用简单的
             //return Task < MessageModel<string>$"DD{DateTime.Today.ToString("yyyyMMdd")}";
-            return MessageModel<string>.Success($"DD{DateTime.Today.ToString("yyyyMMddhhmmss")}", "OK");
+            //return MessageModel<string>.Success($"DD{DateTime.Today.ToString("yyyyMMddhhmmss")}", "OK");
+            return MessageModel<string>.Success($"DD{DateTime.Now:yyyyMMddhhmmss}", "OK");
             //SerialNoHelper.Helper.Generate
 
         }
