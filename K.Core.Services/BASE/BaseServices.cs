@@ -44,7 +44,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:根据ID查询数据
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="lstIds">id列表（必须指定主键特性 [SugarColumn(IsPrimaryKey=true)]），如果是联合主键，请使用Where条件</param>
         /// <returns>数据实体列表</returns>
@@ -122,7 +122,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:查询所有数据
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <returns>数据列表</returns>
         public async Task<List<TEntity>> Query()
@@ -132,7 +132,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:查询数据列表
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="strWhere">条件</param>
         /// <returns>数据列表</returns>
@@ -143,7 +143,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:查询数据列表
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="whereExpression">whereExpression</param>
         /// <returns>数据列表</returns>
@@ -153,7 +153,7 @@ namespace K.Core.Services.BASE
         }
         /// <summary>
         /// 功能描述:查询一个列表
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="whereExpression">条件表达式</param>
         /// <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
@@ -170,7 +170,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:查询一个列表
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="strWhere">条件</param>
         /// <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
@@ -182,7 +182,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:查询前N条数据
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="whereExpression">条件表达式</param>
         /// <param name="intTop">前N条</param>
@@ -195,7 +195,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:查询前N条数据
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="strWhere">条件</param>
         /// <param name="intTop">前N条</param>
@@ -211,7 +211,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:分页查询
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="whereExpression">条件表达式</param>
         /// <param name="intPageIndex">页码（下标0）</param>
@@ -234,7 +234,7 @@ namespace K.Core.Services.BASE
 
         /// <summary>
         /// 功能描述:分页查询
-        /// 作　　者:AZLinli.K.Core
+        /// 作　　者:K.Core
         /// </summary>
         /// <param name="strWhere">条件</param>
         /// <param name="intPageIndex">页码（下标0）</param>

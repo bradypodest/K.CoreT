@@ -11,6 +11,7 @@ using K.Core.Common.LogHelper;
 using StackExchange.Profiling;
 using System.Text.RegularExpressions;
 using K.Core.IServices;
+using K.Core.IServices.System;
 
 namespace K.Core.Middlewares
 {
@@ -24,17 +25,29 @@ namespace K.Core.Middlewares
         /// 
         /// </summary>
         private readonly RequestDelegate _next;
-        //private readonly IBlogArticleServices _blogArticleServices;
+
+        private readonly ISysUserService _sysUserService;
+
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="next"></param>
+        ///// <param name="blogArticleServices"></param>
+        //public RequRespLogMildd(RequestDelegate next)
+        //{
+        //    _next = next;
+        //}
+        
         /// <summary>
         /// 
         /// </summary>
         /// <param name="next"></param>
-        /// <param name="blogArticleServices"></param>
-        //public RequRespLogMildd(RequestDelegate next, IBlogArticleServices blogArticleServices)
-        //{
-        //    _next = next;
-        //    _blogArticleServices = blogArticleServices;
-        //}
+        /// <param name="sysUserService"></param>
+        public RequRespLogMildd(RequestDelegate next, ISysUserService sysUserService)
+        {
+            _next = next;
+            _sysUserService = sysUserService;
+        }
 
 
 
@@ -127,6 +140,15 @@ namespace K.Core.Middlewares
             }
         }
 
+
+        //private readonly ISysUserService _sysUserService;
+
+        //IMyScopedService is injected into Invoke
+        //public async Task Invoke(HttpContext httpContext, ISysUserService sysUserService)
+        //{
+        //    //sysUserService. = 1000;
+        //    await _next(httpContext);
+        //}
     }
 }
 

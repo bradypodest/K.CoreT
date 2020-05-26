@@ -481,6 +481,14 @@ namespace K.Core
                                                         // 如果你想注入两个，就这么写  InterceptedBy(typeof(BlogCacheAOP), typeof(BlogLogAOP));
                                                         // 如果想使用Redis缓存，请必须开启 redis 服务，端口号我的是6319，如果不一样还是无效，否则请使用memory缓存 BlogCacheAOP
                           .InterceptedBy(cacheType.ToArray());//允许将拦截器服务的列表分配给注册。      b.上方a之后才能将拦截器添加到要注入容器的接口或者类之上
+
+                //知识点 ： 启用拦截器主要有两个方法：EnableInterfaceInterceptors()，EnableClassInterceptors()。
+                // EnableInterfaceInterceptors方法会动态创建一个接口代理
+                // EnableClassInterceptors方法会创建一个目标类的子类代理类，这里需要注意的是只会拦截虚方法，重写方法
+                ////启用接口代理拦截 As<ITestService>()
+                //     builder.RegisterType<TestService1>().As<ITestService>().InterceptedBy(typeof(AOPTest)).EnableInterfaceInterceptors();
+                ////启用类代理拦截  EnableClassInterceptors方法会创建一个目标类的子类代理类，这里需要注意的是只会拦截虚方法，重写方法
+                //     builder.RegisterType<TestService2>().InterceptedBy(typeof(AOPTest)).EnableClassInterceptors();
                 #endregion
 
                 #region Repository.dll 注入，有对应接口
@@ -534,7 +542,7 @@ namespace K.Core
 
             if (Appsettings.app("AppSettings", "Middleware_RequestResponse", "Enabled").ObjToBool())
             {
-                app.UseReuestResponseLog();//记录请求与返回数据 
+                app.UseReuestResponseLog();//记录请求与返回数据 //即  app.UseMiddleware<RequRespLogMildd>()   //https://www.cnblogs.com/youring2/p/10924705.html
             }
 
             #endregion
@@ -617,12 +625,12 @@ namespace K.Core
             app.UseMvc();
 
 
-            app.UseSignalR(routes =>
-            {
-                //这里要说下，为啥地址要写 /api/xxx 
-                //因为我前后端分离了，而且使用的是代理模式，所以如果你不用/api/xxx的这个规则的话，会出现跨域问题，毕竟这个不是我的controller的路由，而且自己定义的路由
-                routes.MapHub<ChatHub>("/api2/chatHub");
-            });
+            //app.UseSignalR(routes =>
+            //{
+            //    //这里要说下，为啥地址要写 /api/xxx 
+            //    //因为我前后端分离了，而且使用的是代理模式，所以如果你不用/api/xxx的这个规则的话，会出现跨域问题，毕竟这个不是我的controller的路由，而且自己定义的路由
+            //    routes.MapHub<ChatHub>("/api2/chatHub");
+            //});
         }
 
     }
