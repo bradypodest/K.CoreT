@@ -100,13 +100,20 @@ namespace K.Core
             #endregion
 
             #region 初始化DB   orm sugar框架 根据model 层类生成对应的数据库表和数据 ， 可以在项目第一次运行时 打开，等待数据库有数据时注释掉
-            services.AddScoped<K.Core.Model.Models.DBSeed>();
-            services.AddScoped<K.Core.Model.Models.MyContext>();
+            //services.AddScoped<K.Core.Model.Models.DBSeed>();
+            //services.AddScoped<K.Core.Model.Models.MyContext>();
             #endregion
 
             #region Automapper    实体转换关系的模型，AutoMapper是一个.NET的对象映射工具。主要作用是进行领域对象与模型（DTO）之间的转换、数据库查询结果映射至实体对象
             //先配置 映射文件 CustomProfile 类  ，见使用如在 BlogArticleServices类的 方法里 
-            services.AddAutoMapper(typeof(Startup));//这是AutoMapper的2.0新特性   自动找到所有继承了Profile的类然后进行配置
+            services.AddAutoMapper(typeof(Startup));//这是AutoMapper的2.0新特性   自动找到所有继承了Profile的类然后进行配置,
+                                                    //如 public class AliensPersonProfile : Profile
+                                                    //  {
+                                                    //     public AliensPersonProfile()
+                                                    //     {
+                                                    //         CreateMap<Destination, Source>();
+                                                    //      }
+                                                    //  }
             #endregion
             #region CORS    两种cors:一种 所有； 另一种 特殊站点可以访问
             //跨域第二种方法，声明策略，记得下边app中配置
