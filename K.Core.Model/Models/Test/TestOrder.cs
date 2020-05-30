@@ -8,7 +8,7 @@ namespace K.Core.Model.Models.Test
     /// <summary>
     /// 本类是一个测试订单 表 ，用于测试功能时候
     /// </summary>
-    [TableInfoAttribute(TableName = "TestOrder", TableCnName = "订单")]
+    [TableInfoAttribute(TableCnName = "订单", TableName = "TestOrder", DetailTable = new Type[] { typeof(TestOrderDetail) }, DetailTableCnName = "订单明细")]
     public class TestOrder:BaseExtendTwoEntity
     {
         /// <summary>
