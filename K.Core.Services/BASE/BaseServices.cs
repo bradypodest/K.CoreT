@@ -13,6 +13,7 @@ using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
 using AutoMapper;
+using K.Core.Extensions;
 
 namespace K.Core.Services.BASE
 {
@@ -583,6 +584,160 @@ namespace K.Core.Services.BASE
             }
             return MessageModel<bool>.Fail();
         }
+
+        public virtual async Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions)
+        {
+            var messageModel = MessageModel<object>.Fail();
+
+            Type detailType = typeof(TEntity).GetCustomAttribute<EntityAttribute>()?.DetailTable?[0];//局限：只能查询第一个子表  待修改
+            if (detailType == null)
+            {
+                return MessageModel<object>.Fail("该实体无详细表,查询失败!");
+            }
+
+            var obj = await Task.FromResult(typeof(BaseServices<TEntity>)
+                 .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+                 .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions }));
+
+            //object obj = Activator.CreateInstance(BaseServices<detailType>);
+
+            if (obj != null)
+            {
+                return  MessageModel<object>.Success(obj,"OK");
+            }
+            else 
+            {
+                return messageModel;
+            }
+        }
+
+        //private PageGridData<Detail> GetDetailPage<Detail>(PageDataOptions options) where Detail : class
+        //{
+        //    //校验查询值，排序字段，分页大小规则待完
+        //    PageGridData<Detail> gridData = new PageGridData<Detail>();
+        //    if (options.Value == null) return gridData;
+        //    //主表主键字段
+        //    string keyName = typeof(T).GetKeyName();
+
+        //    //生成查询条件
+        //    Expression<Func<Detail, bool>> whereExpression = keyName.CreateExpression<Detail>(options.Value, LinqExpressionType.Equal);
+
+        //    var queryeable = repository.DbContext.Set<Detail>().Where(whereExpression);
+
+        //    gridData.total = queryeable.Count();
+
+        //    string sortName = options.Sort ?? typeof(Detail).GetKeyName();
+        //    Dictionary<string, QueryOrderBy> orderBy = new Dictionary<string, QueryOrderBy>() { {
+        //             sortName,
+        //             options.Order == "asc" ?
+        //             QueryOrderBy.Asc :
+        //             QueryOrderBy.Desc } };
+        //    gridData.rows = queryeable
+        //         .GetIQueryableOrderBy(orderBy)
+        //        .Skip((options.Page - 1) * options.Rows)
+        //        .Take(options.Rows)
+        //        .ToList();
+        //    gridData.summary = GetDetailSummary<Detail>(queryeable);
+        //    return gridData;
+        //}
+
+        private PageModel<Detail> GetDetailPage<Detail>(PageDataOptions pageDataOptions) where Detail : class
+        {
+            //校验查询值，排序字段，分页大小规则待完
+            PageModel<Detail> gridData = new PageModel<Detail>();
+            if (pageDataOptions.Value == null) return gridData;
+            //主表主键字段
+            string keyName = typeof(TEntity).GetKeyName();
+
+            //生成查询条件
+            //Expression<Func<Detail, bool>> whereExpression = keyName.CreateExpression<Detail>(options.Value, LinqExpressionType.Equal);
+
+            //var queryeable = repository.DbContext.Set<Detail>().Where(whereExpression);
+
+            //gridData.total = queryeable.Count();
+
+            //string sortName = options.Sort ?? typeof(Detail).GetKeyName();
+            //Dictionary<string, QueryOrderBy> orderBy = new Dictionary<string, QueryOrderBy>() { {
+            //         sortName,
+            //         options.Order == "asc" ?
+            //         QueryOrderBy.Asc :
+            //         QueryOrderBy.Desc } };
+            //gridData.rows = queryeable
+            //     .GetIQueryableOrderBy(orderBy)
+            //    .Skip((options.Page - 1) * options.Rows)
+            //    .Take(options.Rows)
+            //    .ToList();
+            //gridData.summary = GetDetailSummary<Detail>(queryeable);
+            //return gridData;
+
+
+
+
+
+            var oLamadaExtention = new LamadaExtention<TEntity>();
+
+            if (pageDataOptions.IsAll)
+            {
+            }
+            else
+            {
+                oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+            }
+
+            #region  查询参数     时间类型的可能还是有点 问题
+            //循环判断 : 只能处理 = ,like , !=  , > , <,  >=, <=
+            string[] wheres = new string[] { };
+            if (!string.IsNullOrWhiteSpace(pageDataOptions.Wheres))
+            {
+                wheres = pageDataOptions.Wheres.Split("|");
+            }
+            foreach (var item in wheres)
+            {
+                //如果有特殊情况就需要特殊判断 ： 如情况为 查找一个字符串包含在ID  或者  在Name中
+
+
+                if (!string.IsNullOrWhiteSpace(item))
+                {
+                    string[] oneWhere = item.Split(",");
+
+                    //oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], (ExpressionType)(oneWhere[1].ToInt()));
+                    oLamadaExtention.GetExpression(oneWhere[0], oneWhere[2], oneWhere[1].ToEnum<ExpressionType>());
+                }
+            }
+
+            #endregion
+
+            var lamada = oLamadaExtention.GetLambda();
+
+            pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
+
+
+
+            //     if (lamada != null)
+            //     {
+            //         var data = await baseDal.QueryPage(lamada,
+            // pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+
+            //         return MessageModel<PageModel<TEntity>>.Success(data,"OK");
+            //     }
+            //     else
+            //     {
+            //         var data = await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
+            //pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+
+            //         return MessageModel<PageModel<TEntity>>.Success(data,"OK");
+            //     }
+
+            return gridData;
+
+
+
+
+
+
+        }
+
+
     }
 
 }

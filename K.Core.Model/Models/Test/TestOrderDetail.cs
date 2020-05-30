@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using K.Core.Common.Model;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,11 +9,11 @@ namespace K.Core.Model.Models.Test
     /// <summary>
     /// 订单详情
     /// </summary>
-    [TableInfoAttribute(TableName = "TestOrderDetail", TableCnName = "订单详情")]
+    [EntityAttribute(TableName = "TestOrderDetail", TableCnName = "订单详情")]
     public class TestOrderDetail: BaseExtendTwoEntity
     {
         /// <summary>
-        /// 角色ID
+        /// 订单ID
         /// </summary>
         [SugarColumn(Length = 50, IsNullable = false)]
         public string OrderID { get; set; }
@@ -44,6 +45,6 @@ namespace K.Core.Model.Models.Test
         /// 备注
         /// </summary>
         [SugarColumn(Length = 300, IsNullable = true)]
-        public string Remakes { get; set; }
+        public string Remarks { get; set; }
     }
 }

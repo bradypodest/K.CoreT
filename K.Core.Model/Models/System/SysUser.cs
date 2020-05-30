@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using K.Core.Common.Model;
+using Newtonsoft.Json;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace K.Core.Model.Models
 {
-    [TableInfoAttribute(TableName = "SysUser", TableCnName = "系统用户")]
+    [EntityAttribute(TableName = "SysUser", TableCnName = "系统用户")]
     public class SysUser : BaseExtendTwoEntity
     {
         /// <summary>

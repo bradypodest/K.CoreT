@@ -111,5 +111,16 @@ namespace K.Core.Controllers.Base
         {
             return await _service.DeleteOne(id);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pageDataOptions"></param>
+        /// <returns></returns>
+        [HttpPost, Route("GetDetailPageData")]
+        public virtual async Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions) 
+        {
+            return await _service.GetDetailPageData(pageDataOptions);
+        }
     }
 }

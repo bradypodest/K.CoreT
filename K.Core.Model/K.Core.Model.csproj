@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AttributeManager\TableInfoAttribute.cs" />
     <Compile Remove="Love.cs" />
     <Compile Remove="Models\Advertisement.cs" />
     <Compile Remove="Models\BlogArticle.cs" />
@@ -42,6 +43,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\K.Core.Common\K.Core.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AttributeManager\" />
   </ItemGroup>
 
 </Project>

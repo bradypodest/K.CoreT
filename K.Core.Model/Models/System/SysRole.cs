@@ -1,11 +1,12 @@
-﻿using SqlSugar;
+﻿using K.Core.Common.Model;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace K.Core.Model.Models
 {
-    [TableInfoAttribute(TableName = "SysRole", TableCnName = "角色")]
+    [Entity(TableName = "SysRole", TableCnName = "角色")]
     public class SysRole : BaseExtendTwoEntity
     {
         /// <summary>

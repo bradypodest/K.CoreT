@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using K.Core.Common.Model;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,7 @@ namespace K.Core.Model.Models.Test
     /// <summary>
     /// 本类是一个测试订单 表 ，用于测试功能时候
     /// </summary>
-    [TableInfoAttribute(TableCnName = "订单", TableName = "TestOrder", DetailTable = new Type[] { typeof(TestOrderDetail) }, DetailTableCnName = "订单明细")]
+    [Entity(TableCnName = "订单", TableName = "TestOrder", DetailTable = new Type[] { typeof(TestOrderDetail) }, DetailTableCnName = "订单明细")]
     public class TestOrder:BaseExtendTwoEntity
     {
         /// <summary>
