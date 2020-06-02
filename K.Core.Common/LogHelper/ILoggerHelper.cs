@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace K.Core.Log
+namespace K.Core.Common.LogHelper
 {
     /// <summary>
     /// 日志接口

@@ -19,7 +19,6 @@ using K.Core.Common.MemoryCache;
 using K.Core.Services;
 using K.Core.Hubs;
 using K.Core.IServices;
-using K.Core.Log;
 using K.Core.Middlewares;
 using K.Core.Model;
 using log4net;
@@ -252,7 +251,7 @@ namespace K.Core
             #region Httpcontext
 
             // Httpcontext 注入
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();//注入到AspNetUser
+            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();//注入到AspNetUser
             services.AddScoped<IUser, AspNetUser>();//实例化 AspNetUser ,可注入到 userController
 
             #endregion

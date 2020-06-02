@@ -83,7 +83,7 @@ namespace K.Core.IServices.BASE
 
         MessageModel<bool> UseTran(Action action);
 
-        Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions);
+        object GetDetailPageData(PageDataOptions pageDataOptions);
     }
 
 }

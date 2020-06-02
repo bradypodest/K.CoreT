@@ -1,5 +1,4 @@
 ﻿using K.Core.Common.LogHelper;
-using K.Core.Log;
 using SqlSugar;
 using StackExchange.Profiling;
 using System;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace K.Core.Repository
+namespace K.Core.Common.DbContext
 {
     public class DbContext
     {
@@ -17,7 +16,7 @@ namespace K.Core.Repository
         private static string _connectionString;
         private static DbType _dbType;
         private SqlSugarClient _db;
-        private readonly ILoggerHelper _loggerHelper = new LogHelper();
+        private readonly ILoggerHelper _loggerHelper = new LogHelper.LogHelper();
 
         /// <summary>
         /// 连接字符串 

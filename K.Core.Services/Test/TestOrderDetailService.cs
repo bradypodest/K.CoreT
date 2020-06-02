@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using K.Core.Common.Helper.AutofacManager;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
 using K.Core.IRepository.Test;
@@ -79,5 +80,11 @@ namespace K.Core.Services.Test
 
         }
         #endregion
+
+
+        public static ITestOrderDetailService Instance
+        {
+            get { return AutofacContainerModule.GetService<ITestOrderDetailService>(); }
+        }
     }
 }

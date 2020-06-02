@@ -1,4 +1,5 @@
-﻿using K.Core.Model;
+﻿using K.Core.Common.DbContext;
+using K.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace K.Core.IRepository.Base
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {
+        DbContext dbContext { get; }
 
         Task<TEntity> QueryById(object objId);
         Task<TEntity> QueryById(object objId, bool blnUseCache = false);
@@ -59,5 +61,6 @@ namespace K.Core.IRepository.Base
 
         bool UseCatchTran(Action action);
 
+        
     }
 }

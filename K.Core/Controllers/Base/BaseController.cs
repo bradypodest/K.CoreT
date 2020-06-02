@@ -8,11 +8,13 @@ using K.Core.AutoMapper;
 using K.Core.Common.Helper;
 using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
+using K.Core.Extensions;
 using K.Core.IServices.BASE;
 using K.Core.Model;
 using K.Core.Model.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace K.Core.Controllers.Base
 {
@@ -118,9 +120,14 @@ namespace K.Core.Controllers.Base
         /// <param name="pageDataOptions"></param>
         /// <returns></returns>
         [HttpPost, Route("GetDetailPageData")]
-        public virtual async Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions) 
+        public virtual async Task<MessageModel<object>> GetDetailPageData([FromBody]PageDataOptions pageDataOptions) 
         {
-            return await _service.GetDetailPageData(pageDataOptions);
+            //return await _service.GetDetailPageData(pageDataOptions);
+
+            object pageData = await Task.FromResult(_service.GetDetailPageData(pageDataOptions));
+
+            return MessageModel<object>.Success(pageData, "OK");
+
         }
     }
 }

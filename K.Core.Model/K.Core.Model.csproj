@@ -38,10 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="sqlSugarCore" Version="5.0.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\K.Core.Common\K.Core.Common.csproj" />
   </ItemGroup>
 

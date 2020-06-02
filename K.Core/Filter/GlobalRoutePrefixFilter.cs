@@ -1,6 +1,5 @@
 ﻿using K.Core.Common.LogHelper;
 using K.Core.Hubs;
-using K.Core.Log;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

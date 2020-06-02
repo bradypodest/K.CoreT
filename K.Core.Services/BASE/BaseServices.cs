@@ -14,6 +14,11 @@ using K.Core.Common.HttpContextUser;
 using K.Core.Common.Model;
 using AutoMapper;
 using K.Core.Extensions;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SqlSugar;
+using K.Core.IServices.Test;
+using K.Core.Services.Test;
+using K.Core.Common.Helper.AutofacManager;
 
 namespace K.Core.Services.BASE
 {
@@ -585,31 +590,31 @@ namespace K.Core.Services.BASE
             return MessageModel<bool>.Fail();
         }
 
-        public virtual async Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions)
-        {
-            var messageModel = MessageModel<object>.Fail();
+        //public virtual async Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions)
+        //{
+        //    var messageModel = MessageModel<object>.Fail();
 
-            Type detailType = typeof(TEntity).GetCustomAttribute<EntityAttribute>()?.DetailTable?[0];//局限：只能查询第一个子表  待修改
-            if (detailType == null)
-            {
-                return MessageModel<object>.Fail("该实体无详细表,查询失败!");
-            }
+        //    Type detailType = typeof(TEntity).GetCustomAttribute<EntityAttribute>()?.DetailTable?[0];//局限：只能查询第一个子表  待修改
+        //    if (detailType == null)
+        //    {
+        //        return MessageModel<object>.Fail("该实体无详细表,查询失败!");
+        //    }
 
-            var obj = await Task.FromResult(typeof(BaseServices<TEntity>)
-                 .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
-                 .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions }));
+        //    var obj = await typeof(BaseServices<TEntity>)
+        //         .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+        //         .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
 
-            //object obj = Activator.CreateInstance(BaseServices<detailType>);
+        //    //object obj = Activator.CreateInstance(BaseServices<detailType>);
 
-            if (obj != null)
-            {
-                return  MessageModel<object>.Success(obj,"OK");
-            }
-            else 
-            {
-                return messageModel;
-            }
-        }
+        //    if (obj != null)
+        //    {
+        //        return (MessageModel<object>)obj;
+        //    }
+        //    else 
+        //    {
+        //        return messageModel;
+        //    }
+        //}
 
         //private PageGridData<Detail> GetDetailPage<Detail>(PageDataOptions options) where Detail : class
         //{
@@ -641,11 +646,16 @@ namespace K.Core.Services.BASE
         //    return gridData;
         //}
 
-        private PageModel<Detail> GetDetailPage<Detail>(PageDataOptions pageDataOptions) where Detail : class
+        private async Task<PageModel<Detail>>  GetDetailPage<Detail>(PageDataOptions pageDataOptions) where Detail : class,new ()
         {
-            //校验查询值，排序字段，分页大小规则待完
             PageModel<Detail> gridData = new PageModel<Detail>();
-            if (pageDataOptions.Value == null) return gridData;
+
+            //校验查询值，排序字段，分页大小规则待完
+            //PageModel<Detail> gridData = new PageModel<Detail>();
+            if (pageDataOptions.Value == null)
+            {
+                return gridData;
+            }
             //主表主键字段
             string keyName = typeof(TEntity).GetKeyName();
 
@@ -671,10 +681,7 @@ namespace K.Core.Services.BASE
             //return gridData;
 
 
-
-
-
-            var oLamadaExtention = new LamadaExtention<TEntity>();
+            var oLamadaExtention = new LamadaExtention<Detail>();
 
             if (pageDataOptions.IsAll)
             {
@@ -712,30 +719,195 @@ namespace K.Core.Services.BASE
             pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
 
 
+            if (lamada != null)
+            {
+                try
+                {
 
-            //     if (lamada != null)
-            //     {
-            //         var data = await baseDal.QueryPage(lamada,
-            // pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+               
+                int totalCount = 0;
+                    var DBo = baseDal.dbContext.Db;
 
-            //         return MessageModel<PageModel<TEntity>>.Success(data,"OK");
-            //     }
-            //     else
-            //     {
-            //         var data = await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
-            //pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+                    var list = DBo.Queryable<Detail>()
+                     .OrderByIF(!string.IsNullOrEmpty(pageDataOptions.Order), pageDataOptions.Order)
+                     .WhereIF(lamada != null, lamada)
+                     .ToPageList(pageDataOptions.PageIndex, pageDataOptions.PageSize, ref totalCount);
 
-            //         return MessageModel<PageModel<TEntity>>.Success(data,"OK");
-            //     }
+                    //var list= await baseDal.dbContext.Db.Queryable<Detail>()
+                    // .OrderByIF(!string.IsNullOrEmpty(pageDataOptions.Order), pageDataOptions.Order)
+                    // .WhereIF(lamada != null, lamada)
+                    // .ToPageListAsync(pageDataOptions.PageIndex, pageDataOptions.PageSize, totalCount);
 
-            return gridData;
+                    int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / pageDataOptions.PageSize.ObjToDecimal())).ObjToInt();
+
+                    //var detailContext = (DbContext)baseDal.DbContextObject;
+
+                    //detailContext.SetEn
+
+                    //detailContext.GetEntityDB<Detail>(detailContext.Db);
 
 
+                    //        var data = await baseDal.QueryPage(lamada,
+                    //pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
 
+                    var pagem = new PageModel<Detail>() { dataCount = totalCount, pageCount = pageCount, pageIndex = pageDataOptions.PageIndex, pageSize = pageDataOptions.PageSize, data = list };
 
+               return pagem;
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+            }
+            else
+            {
+                // var data = await baseDal.QueryPage(LambdaHelper.True<TEntity>(),
+                //pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+
+                //return MessageModel<PageModel<Detail>>.Success(data, "OK");
+
+                int totalCount = 0;
+                var list = await baseDal.dbContext.Db.Queryable<Detail>()
+                 .OrderByIF(!string.IsNullOrEmpty(pageDataOptions.Order), pageDataOptions.Order)
+                 .WhereIF(LambdaHelper.True<Detail>() != null, LambdaHelper.True<Detail>())
+                 .ToPageListAsync(pageDataOptions.PageIndex, pageDataOptions.PageSize, totalCount);
+
+                int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / pageDataOptions.PageSize.ObjToDecimal())).ObjToInt();
+
+                return new PageModel<Detail>() { dataCount = totalCount, pageCount = pageCount, pageIndex = pageDataOptions.PageIndex, pageSize = pageDataOptions.PageSize, data = list };
+            }
+
+            //return gridData;
 
 
         }
+
+        public object GetDetailPageData(PageDataOptions pageDataOptions)
+        {
+            Type detailType = typeof(TEntity).GetCustomAttribute<EntityAttribute>()?.DetailTable?[0];//局限：只能查询第一个子表  待修改
+
+            if (detailType == null)
+            {
+                return MessageModel<object>.Fail("该实体无详细表,查询失败!");
+            }
+
+            object obj =  typeof(BaseServices<TEntity>)
+                .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic)
+                .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
+            var obj2 = obj.GetType().GetProperty("Result").GetValue(obj, null);
+            return obj2;
+        }
+
+
+
+        //public virtual async Task<object> GetDetailPageData(PageDataOptions pageDataOptions)
+        //{
+        //    Type detailType = typeof(TEntity).GetCustomAttribute<EntityAttribute>()?.DetailTable?[0];//局限：只能查询第一个子表  待修改
+
+        //    if (detailType == null)
+        //    {
+        //        return MessageModel<object>.Fail("该实体无详细表,查询失败!");
+        //    }
+
+        //    var baseServiceDetail = typeof(BaseServices<>).MakeGenericType(detailType);
+        //    object e = Activator.CreateInstance(baseServiceDetail);
+        //    var obj= baseServiceDetail.GetMethod("GetPageData", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Invoke(e, new object[] { pageDataOptions });
+        //    //dynamic messageModel = Activator.CreateInstance(messageModelT);
+
+
+
+
+
+
+        //    //messageModelT.GetMethod("GetPageData", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Invoke()
+
+        //    // messageModel
+
+        //    //var obj =  typeof(BaseServices<TEntity>)
+        //    //     .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+        //    //     .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
+
+        //    //object obj = Activator.CreateInstance(BaseServices<detailType>);
+
+        //    if (obj != null)
+        //    {
+        //        return (MessageModel<object>)obj;
+        //    }
+        //    else
+        //    {
+        //        return MessageModel<object>.Fail("查询失败");
+        //    }
+        //}
+
+        //public async Task<MessageModel<object>> GetDetailPageData(PageDataOptions pageDataOptions)
+        //{
+        //    Type detailType = typeof(TEntity).GetCustomAttribute<EntityAttribute>()?.DetailTable?[0];//局限：只能查询第一个子表  待修改
+
+        //    if (detailType == null)
+        //    {
+        //        return  MessageModel<object>.Fail("该实体无详细表,查询失败!");
+        //    }
+
+
+        //    //var MethodType = typeof(AutofacContainerModule);
+        //    //var GenericMethod = MethodType.GetMethod("GetService");
+        //    //MethodInfo curMethod = GenericMethod.MakeGenericMethod(typeof(ITestOrderDetailService));
+        //    //object eo= curMethod.Invoke(null, new object[] { });
+
+
+        //    //Assembly mockAssembly = Assembly.GetExecutingAssembly();
+
+
+
+        //    //var baseServiceDetail = typeof(BaseServices<>).MakeGenericType(detailType);
+
+
+        //    //PropertyInfo property = typeof(detailType).GetKeyProperty();
+        //    //object e= property.PropertyType
+        //    //    .Assembly
+        //    //    .CreateInstance(property.PropertyType.FullName)
+
+        //    //var baseServiceDetail = typeof(TestOrderDetailService);
+        //    //object e = Activator.CreateInstance(baseServiceDetail);
+        //    //object eo = baseServiceDetail.GetMethod("Instance", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(null, new object[] { });
+
+        //    //object e = baseServiceDetail.Assembly.CreateInstance(baseServiceDetail.FullName);
+
+        //    //var obj = (Task)baseServiceDetail.GetMethod("GetPageData", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Invoke(eo, new object[] { pageDataOptions });
+        //    //dynamic messageModel = Activator.CreateInstance(messageModelT);
+
+        //    //await obj;
+        //    //var result = obj.GetType().GetProperty("Result").GetValue(obj,null);
+
+
+
+
+        //    //messageModelT.GetMethod("GetPageData", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Invoke()
+
+        //    // messageModel
+
+        //    //var obj =  typeof(BaseServices<TEntity>)
+        //    //     .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+        //    //     .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
+
+        //    //object obj = Activator.CreateInstance(BaseServices<detailType>);
+
+        //    //if (obj != null)
+        //    //{
+        //    //    //return (MessageModel<object>)result;
+        //    //    return MessageModel<object>.Success(result, "OK");
+        //    //}
+        //    //else
+        //    //{
+        //    //    return MessageModel<object>.Fail("查询失败");
+        //    //}
+
+        //    return MessageModel<object>.Fail("查询失败");
+        //}
+
+
+
 
 
     }

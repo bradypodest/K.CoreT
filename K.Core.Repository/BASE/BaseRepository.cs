@@ -1,4 +1,5 @@
 ﻿using K.Core.Common.DB;
+using K.Core.Common.DbContext;
 using K.Core.IRepository.Base;
 using K.Core.Model;
 using K.Core.Model.Models;
@@ -15,7 +16,7 @@ namespace K.Core.Repository.Base
     {
         private DbContext _context;
         private SqlSugarClient _db;
-        private SimpleClient<TEntity> _entityDb;
+        //private SimpleClient<TEntity> _entityDb;
 
         public DbContext Context
         {
@@ -27,20 +28,35 @@ namespace K.Core.Repository.Base
             get { return _db; }
             private set { _db = value; }
         }
-        internal SimpleClient<TEntity> EntityDb
+        //internal SimpleClient<TEntity> EntityDb
+        //{
+        //    get { return _entityDb; }
+        //    private set { _entityDb = value; }
+        //}
+
+        public DbContext dbContext    //这个
         {
-            get { return _entityDb; }
-            private set { _entityDb = value; }
+            get { return _context; }
         }
+
+        //public object DbContextObject 
+        //{
+        //    get { return _context; } 
+        //}
+
         public BaseRepository()
         {
             DbContext.Init(BaseDBConfig.ConnectionString, (DbType)BaseDBConfig.DbType);
             _context = DbContext.GetDbContext();
             _db = _context.Db;
-            _entityDb = _context.GetEntityDB<TEntity>(_db);
+            //_entityDb = _context.GetEntityDB<TEntity>(_db);
         }
 
 
+        //public SimpleClient<Detail> SetEntityDB<Detail>(this DbContext dbContext) where Detail : class, new()
+        //{
+        //    return dbContext.GetEntityDB<Detail>(_db);
+        //}
 
         public async Task<TEntity> QueryById(object objId)
         {

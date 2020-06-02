@@ -30,7 +30,7 @@ namespace K.Core.Model
         /// <summary>
         /// ID
         /// </summary>
-        [Key]//主键
+        [Key]//主键   这个是配合  K.Core.Extensions.EntityProperties.cs类 获取实体的主键使用的
         //[Display(Name = "序号")]//字段显示名称
         //[Column(TypeName = "nvarchar(100)")] //EF
         //[Required(AllowEmptyStrings = false)]//必需

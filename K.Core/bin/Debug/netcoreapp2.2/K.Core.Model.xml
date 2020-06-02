@@ -4,31 +4,6 @@
         <name>K.Core.Model</name>
     </assembly>
     <members>
-        <member name="P:K.Core.Model.TableInfoAttribute.TableName">
-            <summary>
-            真实表名(数据库表名，若没有填写默认实体为表名)
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.TableInfoAttribute.TableCnName">
-            <summary>
-            表中文名
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.TableInfoAttribute.DetailTable">
-            <summary>
-            子表
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.TableInfoAttribute.DetailTableCnName">
-            <summary>
-            子表中文名
-            </summary>
-        </member>
-        <member name="P:K.Core.Model.TableInfoAttribute.DBServer">
-            <summary>
-            数据库
-            </summary>
-        </member>
         <member name="P:K.Core.Model.BaseExtendEntity.ID">
             <summary>
             ID
@@ -336,7 +311,7 @@
         </member>
         <member name="P:K.Core.Model.Models.Test.TestOrderDetail.OrderID">
             <summary>
-            角色ID
+            订单ID
             </summary>
         </member>
         <member name="P:K.Core.Model.Models.Test.TestOrderDetail.GoodsName">
@@ -359,7 +334,7 @@
             重量
             </summary>
         </member>
-        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.Remakes">
+        <member name="P:K.Core.Model.Models.Test.TestOrderDetail.Remarks">
             <summary>
             备注
             </summary>

@@ -136,6 +136,13 @@
             <param name="ID"></param>
             <returns></returns>
         </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.GetDetailPageData(K.Core.Model.PageDataOptions)">
+            <summary>
+            
+            </summary>
+            <param name="pageDataOptions"></param>
+            <returns></returns>
+        </member>
         <member name="T:K.Core.Controllers.LoginController">
             <summary>
             
@@ -245,6 +252,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:K.Core.Controllers.Test.TestOrderDetailController">
+            <summary>
+            订单测试
+            </summary>
+        </member>
         <member name="T:K.Core.Services.GlobalRouteAuthorizeConvention">
             <summary>
             Summary:全局路由权限公约
@@ -297,12 +309,12 @@
             
             </summary>
         </member>
-        <member name="M:K.Core.Middlewares.RequRespLogMildd.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+        <member name="M:K.Core.Middlewares.RequRespLogMildd.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,K.Core.IServices.System.ISysUserService)">
             <summary>
             
             </summary>
             <param name="next"></param>
-            <param name="blogArticleServices"></param>
+            <param name="sysUserService"></param>
         </member>
         <member name="M:K.Core.Middlewares.RequRespLogMildd.RequestDataLog(Microsoft.AspNetCore.Http.HttpRequest)">
             <summary>

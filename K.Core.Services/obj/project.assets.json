@@ -4202,8 +4202,10 @@
           "Microsoft.AspNetCore.SignalR": "1.1.0",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "MiniProfiler.AspNetCore.Mvc": "4.0.165",
           "StackExchange.Redis": "2.0.601",
-          "log4net": "2.0.8"
+          "log4net": "2.0.8",
+          "sqlSugarCore": "5.0.0.2"
         },
         "compile": {
           "bin/placeholder/K.Core.Common.dll": {}
@@ -4242,8 +4244,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "K.Core.Common": "1.0.0",
-          "sqlSugarCore": "5.0.0.2"
+          "K.Core.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/K.Core.Model.dll": {}
