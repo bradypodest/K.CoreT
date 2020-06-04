@@ -1,5 +1,6 @@
 ﻿using K.Core.Common.Model;
 using K.Core.Model;
+using K.Core.Model.ViewModels;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -16,18 +17,18 @@ namespace K.Core.IServices.BASE
         Task<TEntity> QueryById(object objId, bool blnUseCache = false);
         Task<List<TEntity>> QueryByIDs(object[] lstIds);
 
-        Task<int> Add(TEntity model);
+        //Task<int> Add(TEntity model);
 
-        Task<bool> DeleteById(object id);
+        //Task<bool> DeleteById(object id);
 
-        Task<bool> Delete(TEntity model);
+        //Task<bool> Delete(TEntity model);
 
-        Task<bool> DeleteByIds(object[] ids);
+        //Task<bool> DeleteByIds(object[] ids);
 
-        Task<bool> Update(TEntity model);
-        Task<bool> Update(TEntity entity, string strWhere);
+        //Task<bool> Update(TEntity model);
+        //Task<bool> Update(TEntity entity, string strWhere);
 
-        Task<bool> Update(TEntity entity, List<string> lstColumns = null, List<string> lstIgnoreColumns = null, string strWhere = "");
+        //Task<bool> Update(TEntity entity, List<string> lstColumns = null, List<string> lstIgnoreColumns = null, string strWhere = "");
 
         Task<List<TEntity>> Query();
         Task<List<TEntity>> Query(string strWhere);
@@ -44,31 +45,31 @@ namespace K.Core.IServices.BASE
         Task<List<TEntity>> Query(string strWhere, int intPageIndex, int intPageSize, string strOrderByFileds);
 
 
-        Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression, int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null);
+        //Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression, int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null);
 
-        Task<List<TResult>> QueryMuch<T, T2, T3, TResult>(
-            Expression<Func<T, T2, T3, object[]>> joinExpression,
-            Expression<Func<T, T2, T3, TResult>> selectExpression,
-            Expression<Func<T, T2, T3, bool>> whereLambda = null) where T : class, new();
-
-
-
-        //----------------------
-        Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression,
-        PageDataOptions pageDataOptions);
+        //Task<List<TResult>> QueryMuch<T, T2, T3, TResult>(
+        //    Expression<Func<T, T2, T3, object[]>> joinExpression,
+        //    Expression<Func<T, T2, T3, TResult>> selectExpression,
+        //    Expression<Func<T, T2, T3, bool>> whereLambda = null) where T : class, new();
 
 
-        /// <summary>
-        /// 导出
-        /// </summary>
-        /// <param name="pageData"></param>
-        /// <returns></returns>
-        Task<MessageModel<bool>> Export(PageDataOptions pageData);
+
+        ////----------------------
+        //Task<PageModel<TEntity>> QueryPage(Expression<Func<TEntity, bool>> whereExpression,
+        //PageDataOptions pageDataOptions);
+
+
+        ///// <summary>
+        ///// 导出
+        ///// </summary>
+        ///// <param name="pageData"></param>
+        ///// <returns></returns>
+        //Task<MessageModel<bool>> Export(PageDataOptions pageData);
 
 
 
         //将本来baseController执行的方法放到这里 ---------------------
-        Task<MessageModel<int>> AddOne(TEntity T);
+        Task<MessageModel<bool>> AddOne(TEntity T);
 
         Task<MessageModel<bool>> DeleteOne(string ID);
 
@@ -84,6 +85,12 @@ namespace K.Core.IServices.BASE
         MessageModel<bool> UseTran(Action action);
 
         object GetDetailPageData(PageDataOptions pageDataOptions);
+
+        //object Update<TVM>(TVM tvm);
+
+        object UpdateT<SaveModel>(SaveModel saveModel) where SaveModel: SaveModelVM<TEntity> ;
+
+        object AddT<SaveModel>(SaveModel saveModel) where SaveModel: SaveModelVM<TEntity> ;
     }
 
 }

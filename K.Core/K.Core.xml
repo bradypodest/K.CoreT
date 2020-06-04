@@ -122,11 +122,25 @@
             <param name="t"></param>
             <returns></returns>
         </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.AddT(K.Core.Model.ViewModels.SaveModelVM{`0})">
+            <summary>
+            base 新增一个父 子实体 （需要在各自实体control重写,实体类service中写最新的方法）    正在开发，取代上面的 Update方法
+            </summary>
+            <param name="saveModel"></param>
+            <returns></returns>
+        </member>
         <member name="M:K.Core.Controllers.Base.BaseController`3.Update(`1)">
             <summary>
             base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）
             </summary>
             <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.UpdateT(K.Core.Model.ViewModels.SaveModelVM{`0})">
+            <summary>
+            base 更新一个父 子实体 （需要在各自实体control重写,实体类service中写最新的方法）   取代上面的 Update方法
+            </summary>
+            <param name="saveModel"></param>
             <returns></returns>
         </member>
         <member name="M:K.Core.Controllers.Base.BaseController`3.Delete(System.String)">

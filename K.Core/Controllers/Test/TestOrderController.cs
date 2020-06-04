@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using K.Core.IServices.Test;
 using K.Core.Common.Model;
 using K.Core.Common.Helper;
+using K.Core.Model.ViewModels.Test;
 
 namespace K.Core.Controllers.Test
 {
@@ -17,7 +18,7 @@ namespace K.Core.Controllers.Test
     /// 订单测试
     /// </summary>
     [Route("api/TestOrder")]
-    public class TestOrderController : BaseController<TestOrder, TestOrder, ITestOrderService>
+    public class TestOrderController : BaseController<TestOrder, TestOrderVM, ITestOrderService>
     {
         readonly ITestOrderService _testOrderServices;
         private readonly IUser _user;

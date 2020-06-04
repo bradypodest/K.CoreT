@@ -7,6 +7,7 @@ using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -100,7 +101,8 @@ namespace K.Core.Repository.Base
             //return (int)i;
 
             var insert = _db.Insertable(entity);
-            return await insert.ExecuteReturnIdentityAsync();
+            //return await insert.ExecuteReturnIdentityAsync();
+            return await insert.ExecuteCommandAsync();
         }
 
 
@@ -454,14 +456,18 @@ namespace K.Core.Repository.Base
                 var result = tranDb.UseTranAsync(() => action());
                 result.Wait();
                 resultB = result.Result.IsSuccess;
+                if (!resultB) 
+                {
+                    Console.WriteLine("时间："+DateTime.Now.ToString() );
+                    Console.WriteLine("错误：" + result.Result.ErrorMessage);
+                }
             }
             catch (Exception ex)
             {
                 //tranDb.Ado.Close();
                 //tranDb.Ado.Dispose();
-                var s = "";
+                throw ex;
             }
-            
 
             //if (result.Result.IsSuccess == false) 
             //{

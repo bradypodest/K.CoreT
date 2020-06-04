@@ -35,7 +35,7 @@ namespace K.Core.Services.System
         }
 
         #region 重写 baseservice方法
-        public override async Task<MessageModel<int>> AddOne(SysRole saveModel)
+        public override async Task<MessageModel<bool>> AddOne(SysRole saveModel)
         {
             MessageModel<int> messageModel = MessageModel<int>.Fail();
 
@@ -45,10 +45,10 @@ namespace K.Core.Services.System
                 List<SysRole> sysRoles = await _dal.Query(x => x.RoleID.Equals(save.RoleID));
                 if (sysRoles != null && sysRoles.Count > 0)
                 {
-                    return MessageModel<int>.Fail("已经存在该角色");
+                    return MessageModel<bool>.Fail(false,"已经存在该角色");
                 }
 
-                return MessageModel<int>.Success();
+                return MessageModel<bool>.Success(true);
             };
 
             return await base.AddOne(saveModel);

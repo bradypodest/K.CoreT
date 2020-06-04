@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using K.Core.Model;
 using K.Core.Model.Models;
+using System;
 
 namespace K.Core.AutoMapper
 {
@@ -17,6 +18,8 @@ namespace K.Core.AutoMapper
             CreateMap<SysUser, SysUserVM>();
             CreateMap<SysUserVM, SysUser>();
 
+            CreateMap<string, int>().ConvertUsing(Convert.ToInt32);
+            //CreateMap<string, double>().ConvertUsing(Convert.ToDouble());
 
             //1.属性名称一致
             //原对象BlogArticle 转为 目的对象BlogViewModels

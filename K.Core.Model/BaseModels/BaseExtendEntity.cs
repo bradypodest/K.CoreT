@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using Newtonsoft.Json;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,7 @@ namespace K.Core.Model
         /// 删除时间
         /// </summary>
         [SugarColumn(IsNullable = true)]
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.IsoDateTimeConverter))] //为了json 反序列化
         public System.DateTime? DeleteTime { get; set; }
 
         /// <summary>
@@ -74,6 +76,7 @@ namespace K.Core.Model
     /// <summary>
     /// 状态枚举
     /// </summary>
+    [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))] //为了json 反序列化
     public enum StatusE
     {
         /// <summary>

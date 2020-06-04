@@ -33,7 +33,7 @@ namespace K.Core.Services.Test
         }
 
         #region 重写 baseservice方法
-        public override async Task<MessageModel<int>> AddOne(TestOrder saveModel)
+        public override async Task<MessageModel<bool>> AddOne(TestOrder saveModel)
         {
             MessageModel<int> messageModel = MessageModel<int>.Fail();
 
@@ -43,10 +43,10 @@ namespace K.Core.Services.Test
                 List<TestOrder> testOrders = await _dal.Query(x => x.OrderNo.Equals(save.OrderNo));
                 if (testOrders != null && testOrders.Count > 0)
                 {
-                    return MessageModel<int>.Fail("已经存在该订单");
+                    return MessageModel<bool>.Fail(false,"已经存在该订单");
                 }
 
-                return MessageModel<int>.Success();
+                return MessageModel<bool>.Success(true);
             };
 
             return await base.AddOne(saveModel);

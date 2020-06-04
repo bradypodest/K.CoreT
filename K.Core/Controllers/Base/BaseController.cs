@@ -12,6 +12,7 @@ using K.Core.Extensions;
 using K.Core.IServices.BASE;
 using K.Core.Model;
 using K.Core.Model.Models;
+using K.Core.Model.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -74,7 +75,7 @@ namespace K.Core.Controllers.Base
         /// <returns></returns>
         [HttpPost, Route("Add")]
         [ResponseCache(Duration = 60)]
-        public virtual async Task<MessageModel<int>> Add([FromBody]TVM tvm)
+        public virtual async Task<MessageModel<bool>> Add([FromBody]TVM tvm)
         {
             //验证信息放在拦截器中
 
@@ -87,6 +88,20 @@ namespace K.Core.Controllers.Base
 
             //return await _service.AddOne(t);
         }
+
+        /// <summary>
+        /// base 新增一个父 子实体 （需要在各自实体control重写,实体类service中写最新的方法）    正在开发，取代上面的 Update方法
+        /// </summary>
+        /// <param name="saveModel"></param>
+        /// <returns></returns>
+        [HttpPost, Route("AddT")]
+        [ResponseCache(Duration = 60)]
+        public virtual async Task<MessageModel<bool>> AddT([FromBody]SaveModelVM<T> saveModel)
+        {
+            object addResult = await Task.FromResult(_service.AddT<SaveModelVM<T>>(saveModel));
+            return addResult as MessageModel<bool>;
+        }
+
 
         /// <summary>
         /// base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）
@@ -102,7 +117,45 @@ namespace K.Core.Controllers.Base
 
             return await _service.UpdateOne(t.Value);
         }
-        
+
+        ///// <summary>
+        ///// base 更新一个实体 （需要在各自实体control重写,实体类service中写最新的方法）   取代上面的 Update方法  (废弃)
+        ///// </summary>
+        ///// <param name="t"></param>
+        ///// <returns></returns>
+        //[HttpPost, Route("UpdateEx")]
+        //[Obsolete]
+        //public virtual async Task<MessageModel<bool>> UpdateEx([FromBody]TVM tvm)
+        //{
+        //    //将数据转化为T
+        //    //var source = new Source<TVM> { Value = tvm };
+        //    //var t = _mapper.Map<Destination<T>>(source);
+
+
+        //    object updateResult = await Task.FromResult(_service.Update<TVM>(tvm));
+
+        //    return updateResult as MessageModel<bool>;
+        //}
+
+        /// <summary>
+        /// base 更新一个父 子实体 （需要在各自实体control重写,实体类service中写最新的方法）   取代上面的 Update方法
+        /// </summary>
+        /// <param name="saveModel"></param>
+        /// <returns></returns>
+        [HttpPost, Route("UpdateT")]
+        public virtual async Task<MessageModel<bool>> UpdateT([FromBody]SaveModelVM<T> saveModel)
+        {
+            //将数据转化为T
+            //var source = new Source<TVM> { Value = tvm };
+            //var t = _mapper.Map<Destination<T>>(source);
+
+
+            object updateResult = await Task.FromResult(_service.UpdateT<SaveModelVM<T>>(saveModel));
+
+            return updateResult as MessageModel<bool>;
+        }
+
+
         /// <summary>
         /// base 根据id 删除一个实体
         /// </summary>

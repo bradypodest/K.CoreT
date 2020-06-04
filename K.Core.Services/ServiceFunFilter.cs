@@ -48,7 +48,7 @@ namespace K.Core.Services
         /// <summary>
         /// 调用新建处理前
         /// </summary>
-        protected Func<T, Task<MessageModel<int>>> AddOnExecute;
+        protected Func<T, Task<MessageModel<bool>>> AddOnExecute;
 
         /// <summary>
         /// 调用新建保存数据库前处理(已将提交的原生数据转换成了对象)

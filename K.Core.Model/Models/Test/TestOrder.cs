@@ -2,6 +2,7 @@
 using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace K.Core.Model.Models.Test
@@ -16,12 +17,16 @@ namespace K.Core.Model.Models.Test
         /// 订单号
         /// </summary>
         [SugarColumn(Length = 50, IsNullable = false)]
+        [Required]
+        [Display(Name = "订单号")]
         public string OrderNo { get; set; }
 
         /// <summary>
         /// 订单数量
         /// </summary>
         [SugarColumn(IsNullable = false)]
+        [Required]
+        [Display(Name = "订单数量")]
         public int Qty { get; set; }
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -74,9 +75,27 @@ namespace K.Core.Common.Helper
             {
                 System.Runtime.Serialization.Json.DataContractJsonSerializer serializer =
                 new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(T));
-                return (T)serializer.ReadObject(ms);
+                T s;
+                try
+                {
+                    s = (T)serializer.ReadObject(ms);
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                } 
+               
+                return s;
             }
         }
+
+        //JsonConvert.SerializeObject(GetData(), new Da
+        public static T JsonToEntity<T>(string jsonStr) 
+        {
+           return  JsonConvert.DeserializeObject<T>(jsonStr);
+        }
+
 
         public string JSON1<SendData>(List<SendData> vals)
         {

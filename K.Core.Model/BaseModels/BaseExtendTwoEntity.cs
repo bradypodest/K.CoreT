@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using Newtonsoft.Json;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -29,6 +30,7 @@ namespace K.Core.Model
         /// <summary>
         /// 创建时间
         /// </summary>
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.IsoDateTimeConverter))] //为了json 反序列化
         public System.DateTime? CreateTime { get; set; }
 
 
@@ -53,6 +55,7 @@ namespace K.Core.Model
         /// 修改时间
         /// </summary>
         [SugarColumn(IsNullable = true)]
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.IsoDateTimeConverter))] //为了json 反序列化
         public System.DateTime? ModifyTime { get; set; }
 
     }

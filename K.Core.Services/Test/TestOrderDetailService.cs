@@ -34,7 +34,7 @@ namespace K.Core.Services.Test
         }
 
         #region 重写 baseservice方法
-        public override async Task<MessageModel<int>> AddOne(TestOrderDetail saveModel)
+        public override async Task<MessageModel<bool>> AddOne(TestOrderDetail saveModel)
         {
             MessageModel<int> messageModel = MessageModel<int>.Fail();
 

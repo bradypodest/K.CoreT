@@ -11,6 +11,7 @@ using System.Text;
 
 using K.Core.Common.Helper;
 using K.Core.Common.Model;
+using K.Core.Common;
 /*
 * jxx 2017-08-09 
 * 通用实体属操作
@@ -591,6 +592,23 @@ namespace K.Core.Extensions
         {
             object[] keyAttributes = propertyInfo.GetCustomAttributes(typeof(KeyAttribute), false);
             if (keyAttributes.Length > 0)
+                return true;
+            return false;
+        }
+
+
+        public static PropertyInfo GetDetailsProperty(this Type entity)
+        {
+            return entity.GetProperties().GetDetailsProperty();
+        }
+        public static PropertyInfo GetDetailsProperty(this PropertyInfo[] properties)
+        {
+            return properties.Where(c => c.IsDetails()).FirstOrDefault();
+        }
+        public static bool IsDetails(this PropertyInfo propertyInfo)
+        {
+            object[] detailsAttributes = propertyInfo.GetCustomAttributes(typeof(DetailsAttribute), false);
+            if (detailsAttributes.Length > 0)
                 return true;
             return false;
         }
@@ -1297,6 +1315,83 @@ namespace K.Core.Extensions
                 }
             }
         }
+
+
+        //*************************************
+        /// <summary>
+        /// 验证实体数据  
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="type">实体类型 泛型</param>
+        /// <param name="entitys">实体对象</param>
+        /// <param name="removerKey">是否移除主键</param>
+        /// <param name="ignoreFields">忽略的字段</param>
+        /// <returns></returns>
+        public static string ValidateInListEntity<T>(this Type type, List<T> entitys, bool removerKey, string[] ignoreFields = null)
+        {
+            PropertyInfo[] propertyInfo = type.GetProperties();
+            string reslutMsg = string.Empty;
+            foreach (var entity in entitys)
+            {
+                reslutMsg = type.ValidateInEntity<T>(entity, propertyInfo, removerKey, ignoreFields);
+                if (!string.IsNullOrEmpty(reslutMsg))
+                    return reslutMsg;
+            }
+            return reslutMsg;
+        }
+
+         public static string ValidateInEntity<T>(this Type typeinfo, T entity, PropertyInfo[] propertyInfo,  bool removerKey, string[] ignoreFields = null) 
+        {
+            if (entity == null) { return "参数无效"; }
+            if (propertyInfo == null)
+                propertyInfo = typeinfo.GetProperties().Where(x => x.PropertyType.Name != "List`1").ToArray();
+
+            string keyName = typeinfo.GetKeyName();
+
+            foreach (PropertyInfo property in propertyInfo)
+            {
+                //忽略字段 与 主键字段不做验证
+                if ((removerKey && property.Name == keyName) || (ignoreFields != null && ignoreFields.Contains(property.Name)))
+                    continue;
+
+                //移除主键默认为新增数据，将不在编辑列中的有默认值的数据设置为默认值
+                //如果为true默认为添加功能，添加操作所有不能为空的列也必须要提交
+                object propertyValue = property.GetValue(entity);
+                //if (property.GetCustomAttributes(typeof(RequiredAttribute)).Count() > 0
+                //    && property.PropertyType != typeof(int)
+                //    && property.PropertyType != typeof(long)
+                //    && property.PropertyType != typeof(byte)
+                //    && property.PropertyType != typeof(decimal)
+                //    )
+                if (property.GetCustomAttributes(typeof(RequiredAttribute)).Count() > 0
+                        && property.PropertyType != typeof(int)
+                        && property.PropertyType != typeof(long)
+                        && property.PropertyType != typeof(byte)
+                        && property.PropertyType != typeof(decimal)
+                        && property.PropertyType != typeof(double)
+                    && (propertyValue==null || string.IsNullOrWhiteSpace((string)propertyValue))
+                    )
+                {
+                    return property.GetTypeCustomValue<DisplayAttribute>(x => x.Name) + "为必须提交项";
+                }
+                
+
+                bool isEdit = property.ContainsCustomAttributes(typeof(EditableAttribute));
+
+                //if (!isEdit)
+                //{
+                //    if (property.GetCustomAttributes(typeof(RequiredAttribute)).Count() > 0)
+                //    {
+                //        return property.GetTypeCustomValue<DisplayAttribute>(x => x.Name) + "没有配置好Model为编辑列";
+                //    }
+                //    dic.Remove(property.Name);
+                //    continue;
+                //}
+               
+            }
+            return string.Empty;
+        }
+
 
     }
 

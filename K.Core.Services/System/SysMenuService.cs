@@ -43,7 +43,7 @@ namespace K.Core.Services.System
         }
 
         #region 重写 baseservice方法
-        public override async  Task<MessageModel<int>> AddOne(SysMenu saveModel) 
+        public override async  Task<MessageModel<bool>> AddOne(SysMenu saveModel) 
         {
             MessageModel<int> messageModel = MessageModel<int>.Fail();
             //新增前验证
@@ -53,10 +53,10 @@ namespace K.Core.Services.System
                 List<SysMenu> sysMenus = await _dal.Query(x => x.MenuId.Equals(save.MenuId) );
                 if (sysMenus != null && sysMenus.Count > 0) 
                 {
-                    return MessageModel<int>.Fail("已经存在该菜单");
+                    return MessageModel<bool>.Fail(false,"已经存在该菜单");
                 }
 
-                 return MessageModel<int>.Success();
+                 return MessageModel<bool>.Success(true);
             };
 
             return  await base.AddOne(saveModel);
