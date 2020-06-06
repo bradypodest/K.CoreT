@@ -3,6 +3,7 @@ using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace K.Core.Model.Models.Test
@@ -26,6 +27,7 @@ namespace K.Core.Model.Models.Test
         /// </summary>
         [SugarColumn(Length = 50, IsNullable = false)]
         [Required]
+        [Column(TypeName = "nvarchar")]
         [Display(Name = "商品名称")]
         public string GoodsName { get; set; }
 

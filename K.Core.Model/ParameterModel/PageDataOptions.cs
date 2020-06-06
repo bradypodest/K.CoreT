@@ -17,8 +17,17 @@ namespace K.Core.Model
         /// </summary>
         [Display(Name = "页大小")]
         public int PageSize { get; set; } = 50;
+        /// <summary>
+        /// 总数据量
+        /// </summary>
         public int Total { get; set; }
+        /// <summary>
+        /// 表名
+        /// </summary>
         public string TableName { get; set; }
+
+
+
         /// <summary>
         /// 排序方式    格式如  "ID desc" 默认为 CreateTime desc
         /// </summary>
@@ -29,7 +38,6 @@ namespace K.Core.Model
         /// </summary>
         public string Wheres { get; set; }
 
-        public string Foots { get; set; }
         public bool Export { get; set; }
 
         public object Value { get; set; }
@@ -38,5 +46,21 @@ namespace K.Core.Model
         /// 是否查询全部（包含删除的） ，默认不查询
         /// </summary>
         public bool IsAll { get; set; } = false;
+    }
+
+    public class SearchParameters
+    {
+        /// <summary>
+        /// 查询字段名
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// 查询值
+        /// </summary>
+        public string Value { get; set; }
+        /// <summary>
+        /// 显示类型  （可通过这处理为是= , 还是!= 等等）
+        /// </summary>
+        public string DisplayType { get; set; }
     }
 }

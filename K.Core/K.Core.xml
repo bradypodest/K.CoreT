@@ -108,6 +108,13 @@
             <param name="pageDataOptions">分页参数</param>
             <returns></returns>
         </member>
+        <member name="M:K.Core.Controllers.Base.BaseController`3.GetPageDataT(K.Core.Model.PageDataOptions)">
+            <summary>
+            base 分页获取 条件可
+            </summary>
+            <param name="pageDataOptions">分页参数</param>
+            <returns></returns>
+        </member>
         <member name="M:K.Core.Controllers.Base.BaseController`3.GetOneByID(System.String)">
             <summary>
             base 根据id获取单独的一个实体  （看情况是否需要重写）

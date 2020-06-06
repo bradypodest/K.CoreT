@@ -23,6 +23,8 @@ using K.Core.Model.ViewModels;
 using K.Core.AutoMapper;
 using K.Core.Model.ViewModels.Test;
 using System.Linq;
+using K.Core.Const;
+using K.Core.Enums;
 
 namespace K.Core.Services.BASE
 {
@@ -1231,6 +1233,92 @@ namespace K.Core.Services.BASE
 
         }
         #endregion
+
+
+        #region  升级版查询
+        /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <param name="pageDataOptions"></param>
+        /// <returns></returns>
+        public virtual async Task<MessageModel<PageModel<TEntity>>> GetPageDataT(PageDataOptions pageDataOptions)
+        {
+            //var oLamadaExtention = new LamadaExtention<TEntity>();
+            List<Expression<Func<TEntity, bool>>> whereExpressions = new List<Expression<Func<TEntity, bool>>>();
+
+            if (pageDataOptions.IsAll)
+            {
+            }
+            else
+            {
+                //oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+                whereExpressions.Add("Status".CreateExpression<TEntity>(StatusE.Delete, LinqExpressionType.NotEqual));
+            }
+
+            //将条件反序列化
+            List<SearchParameters> searchParametersList = new List<SearchParameters>();
+            if (!string.IsNullOrEmpty(pageDataOptions.Wheres))
+            {
+                try
+                {
+                    searchParametersList = pageDataOptions.Wheres.DeserializeObject<List<SearchParameters>>();
+                }
+                catch { }
+            }
+
+            QueryRelativeList?.Invoke(searchParametersList);//查询前可以在继承类中 扩展条件
+
+            foreach (var item in searchParametersList)
+            {
+                item.DisplayType = item.DisplayType.GetDBCondition();//将文字转为字符，如 thanorequal 转为 >=
+
+                if (string.IsNullOrEmpty(item.Value))
+                {
+                    continue;
+                }
+
+                object[] values = item.Value.Split(',');//这是全部的，没有移除的，
+                                                        //验证 数据是否与数据库中的类型是否一致，即 检查数据的正确性  ，不正确的移除  待完成
+
+
+                if (values == null || values.Length == 0)
+                {
+                    continue;
+                }
+
+                if (item.DisplayType == HtmlElementType.Contains)//如果是in的查询条件，则将值组合起来
+                    item.Value = string.Join(",", values);
+
+                K.Core.Enums.LinqExpressionType expressionType = item.DisplayType.GetLinqCondition();
+
+                if (K.Core.Enums.LinqExpressionType.In == expressionType)
+                {
+                    whereExpressions.Add(item.Name.CreateExpression<TEntity>(values, expressionType));
+                } else
+                {
+                    whereExpressions.Add(item.Name.CreateExpression<TEntity>(item.Value, expressionType));
+                }
+
+            }
+
+            if (base.orderbyString != null && !string.IsNullOrWhiteSpace(base.orderbyString))
+            {
+                pageDataOptions.Order = base.orderbyString;
+            }
+            else
+            {
+                pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
+            }
+
+                var data = await baseDal.QueryPage(whereExpressions,
+       pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+
+                return MessageModel<PageModel<TEntity>>.Success(data);
+
+        }
+        #endregion
+
+
 
         #region  //更新 子 父 表（废弃）
         ///// <summary>

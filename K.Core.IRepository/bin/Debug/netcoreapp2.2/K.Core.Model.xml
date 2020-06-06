@@ -530,6 +530,16 @@
             多少 pagesize
             </summary>
         </member>
+        <member name="P:K.Core.Model.PageDataOptions.Total">
+            <summary>
+            总数据量
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
         <member name="P:K.Core.Model.PageDataOptions.Order">
             <summary>
             排序方式    格式如  "ID desc" 默认为 CreateTime desc
@@ -544,6 +554,21 @@
         <member name="P:K.Core.Model.PageDataOptions.IsAll">
             <summary>
             是否查询全部（包含删除的） ，默认不查询
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SearchParameters.Name">
+            <summary>
+            查询字段名
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SearchParameters.Value">
+            <summary>
+            查询值
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.SearchParameters.DisplayType">
+            <summary>
+            显示类型  （可通过这处理为是= , 还是!= 等等）
             </summary>
         </member>
         <member name="T:K.Core.Model.TableModel`1">

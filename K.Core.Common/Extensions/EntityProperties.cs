@@ -1369,7 +1369,7 @@ namespace K.Core.Extensions
                         && property.PropertyType != typeof(byte)
                         && property.PropertyType != typeof(decimal)
                         && property.PropertyType != typeof(double)
-                    && (propertyValue==null || string.IsNullOrWhiteSpace((string)propertyValue))
+                    && (propertyValue==null || string.IsNullOrWhiteSpace(((string)propertyValue).Trim()))
                     )
                 {
                     return property.GetTypeCustomValue<DisplayAttribute>(x => x.Name) + "为必须提交项";

@@ -412,6 +412,33 @@ namespace K.Core.Repository.Base
             return new PageModel<TEntity>() { dataCount = totalCount, pageCount = pageCount, pageIndex = intPageIndex, pageSize = intPageSize, data = list };
         }
 
+        /// <summary>
+        /// 分页查询[使用版本，其他分页未测试]
+        /// </summary>
+        /// <param name="whereExpression">条件表达式</param>
+        /// <param name="intPageIndex">页码（下标0）</param>
+        /// <param name="intPageSize">页大小</param>
+        /// <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+        /// <returns></returns>
+        public async Task<PageModel<TEntity>> QueryPage(List<Expression<Func<TEntity, bool>>> whereExpressions, int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null)
+        {
+
+            RefAsync<int> totalCount = 0;
+
+            var queryable = _db.Queryable<TEntity>();
+            queryable = queryable.OrderByIF(!string.IsNullOrEmpty(strOrderByFileds), strOrderByFileds);
+
+            foreach (var whereExpression in whereExpressions)
+            {
+                queryable = queryable.WhereIF(whereExpression != null, whereExpression);
+            }
+
+            var list = await queryable.ToPageListAsync(intPageIndex, intPageSize, totalCount);
+
+            int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / intPageSize.ObjToDecimal())).ObjToInt();
+            return new PageModel<TEntity>() { dataCount = totalCount, pageCount = pageCount, pageIndex = intPageIndex, pageSize = intPageSize, data = list };
+        }
+
 
         /// <summary> 
         ///查询-多表查询

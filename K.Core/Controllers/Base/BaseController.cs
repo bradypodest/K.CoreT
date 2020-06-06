@@ -56,6 +56,18 @@ namespace K.Core.Controllers.Base
         }
 
         /// <summary>
+        /// base 分页获取 条件可
+        /// </summary>
+        /// <param name="pageDataOptions">分页参数</param>
+        /// <returns></returns>
+        [HttpPost, Route("GetPageDataT")]
+        [ResponseCache(Duration = 60)]
+        public virtual async Task<MessageModel<PageModel<T>>> GetPageDataT([FromBody]PageDataOptions pageDataOptions)
+        {
+            return await _service.GetPageDataT(pageDataOptions);
+        }
+
+        /// <summary>
         /// base 根据id获取单独的一个实体  （看情况是否需要重写）
         /// </summary>
         /// <param name="id"></param>

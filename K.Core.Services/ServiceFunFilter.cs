@@ -1,4 +1,5 @@
 ﻿using K.Core.Common.Model;
+using K.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,10 @@ namespace K.Core.Services
         ///默认导出最大数量5K数据
         protected int Limit { get; set; } = 5000;
 
-        ///// <summary>
-        ///// 查询前,对现在有的查询字符串条件增加或删除
-        ///// </summary>
-        //protected Action<List<SearchParameters>> QueryRelativeList { get; set; }
+        /// <summary>
+        /// 查询前,对现在有的查询字符串条件增加或删除
+        /// </summary>
+        protected Action<List<SearchParameters>> QueryRelativeList { get; set; }
 
         /// <summary>
         /// 查询前,在现有的查询条件上通过表达式修改查询条件
@@ -34,6 +35,11 @@ namespace K.Core.Services
         ///// 返回的是new Dictionary<object, bool>(){{}}key为排序字段，QueryOrderBy为排序方式
         ///// </summary>
         //protected Expression<Func<T, Dictionary<object, QueryOrderBy>>> OrderByExpression;
+
+        /// <summary>
+        /// 设置查询排序参数 string格式为 CreateTime desc
+        /// </summary>
+        protected string orderbyString;
 
         ///// <summary>
         ///// 设置查询的表名(已弃用)

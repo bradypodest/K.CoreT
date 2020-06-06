@@ -91,6 +91,13 @@ namespace K.Core.IServices.BASE
         object UpdateT<SaveModel>(SaveModel saveModel) where SaveModel: SaveModelVM<TEntity> ;
 
         object AddT<SaveModel>(SaveModel saveModel) where SaveModel: SaveModelVM<TEntity> ;
+
+        /// <summary>
+        /// 实现了条件查询
+        /// </summary>
+        /// <param name="pageDataOptions"></param>
+        /// <returns></returns>
+        Task<MessageModel<PageModel<TEntity>>> GetPageDataT(PageDataOptions pageDataOptions);
     }
 
 }
