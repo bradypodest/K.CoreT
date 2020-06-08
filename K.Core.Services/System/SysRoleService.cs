@@ -62,7 +62,7 @@ namespace K.Core.Services.System
             base.DelOnExecute = async (SysRole modelExecute) =>
             {
                 //查询是否有该角色
-                List<SysRole> sysRoles = await _dal.Query(x => x.RoleID.Equals(modelExecute.RoleID)&& x.Status == Model.StatusE.Live);
+                List<SysRole> sysRoles = await _dal.Query(x => x.RoleID.Equals(modelExecute.RoleID)&& x.Status == 1);
 
                 if (sysRoles != null && sysRoles.Count > 0)
                 {
@@ -74,7 +74,7 @@ namespace K.Core.Services.System
                 }
 
                 //查询是否有用户有该对应的角色
-                List<SysUser> sysUsers = await _sysUserRepository.Query(x => x.Status == Model.StatusE.Live && x.RoleId == modelExecute.RoleID);
+                List<SysUser> sysUsers = await _sysUserRepository.Query(x => x.Status == 1 && x.RoleId == modelExecute.RoleID);
 
                 if (sysUsers != null && sysUsers.Count > 0) 
                 {

@@ -39,13 +39,13 @@ namespace K.Core.Model
         public string ID { get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态   0，1 正常  2，删除  3 禁用  ，如用户  
         /// </summary>
         //[Display(Name = "状态")]
         //[Column(TypeName = "int")]
         [Editable(true)]
         [SugarColumn(IsNullable = false)]
-        public StatusE Status { get; set; } = StatusE.Live;
+        public int Status { get; set; } = 1;//建议不要在实体类里使用枚举类型，现阶段感觉会发生很多问题
 
         /// <summary>
         /// 删除时间
@@ -76,23 +76,23 @@ namespace K.Core.Model
     /// <summary>
     /// 状态枚举
     /// </summary>
-    [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))] //为了json 反序列化
-    public enum StatusE
-    {
-        /// <summary>
-        /// 正常
-        /// </summary>
-        [Description("正常")]
-        Live = 1,
-        /// <summary>
-        /// 删除
-        /// </summary>
-        [Description("删除")]
-        Delete = 2,
-        /// <summary>
-        /// 禁用  ，如用户  
-        /// </summary>
-        [Description("禁用")]
-        Ban = 3,
-    }
+    //[JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))] //为了json 反序列化
+    //public enum StatusE
+    //{
+    //    /// <summary>
+    //    /// 正常
+    //    /// </summary>
+    //    [Description("正常")]
+    //    Live = 1,
+    //    /// <summary>
+    //    /// 删除
+    //    /// </summary>
+    //    [Description("删除")]
+    //    Delete = 2,
+    //    /// <summary>
+    //    /// 禁用  ，如用户  
+    //    /// </summary>
+    //    [Description("禁用")]
+    //    Ban = 3,
+    //}
 }

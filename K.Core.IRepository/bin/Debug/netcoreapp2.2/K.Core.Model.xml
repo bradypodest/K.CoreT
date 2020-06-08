@@ -11,7 +11,7 @@
         </member>
         <member name="P:K.Core.Model.BaseExtendEntity.Status">
             <summary>
-            状态
+            状态   0，1 正常  2，删除  3 禁用  ，如用户  
             </summary>
         </member>
         <member name="P:K.Core.Model.BaseExtendEntity.DeleteTime">
@@ -27,26 +27,6 @@
         <member name="P:K.Core.Model.BaseExtendEntity.DeleterID">
             <summary>
             删除人ID
-            </summary>
-        </member>
-        <member name="T:K.Core.Model.StatusE">
-            <summary>
-            状态枚举
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.StatusE.Live">
-            <summary>
-            正常
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.StatusE.Delete">
-            <summary>
-            删除
-            </summary>
-        </member>
-        <member name="F:K.Core.Model.StatusE.Ban">
-            <summary>
-            禁用  ，如用户  
             </summary>
         </member>
         <member name="P:K.Core.Model.BaseExtendTwoEntity.CreateID">
@@ -549,6 +529,11 @@
             <summary>
             条件 格式：   字段名称,条件（如 0,1,2）,值 | 字段名称,条件（如）,值
             关于条件 ，查看ExpressionType 枚举
+            </summary>
+        </member>
+        <member name="P:K.Core.Model.PageDataOptions.Value">
+            <summary>
+            主表ID 值
             </summary>
         </member>
         <member name="P:K.Core.Model.PageDataOptions.IsAll">

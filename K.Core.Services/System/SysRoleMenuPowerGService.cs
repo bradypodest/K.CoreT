@@ -49,10 +49,10 @@ namespace K.Core.Services.System
 
             //查询角色是否存在
             var sysRole = await _sysRoleRepository.QueryById(roleId);
-            if (sysRole != null && sysRole.Status == Model.StatusE.Live)
+            if (sysRole != null && sysRole.Status == 1)
             {
                 //查询角色对应菜单的权限组
-                var sysRoleMenuPowerGs = await _dal.Query(m => m.RoleID == roleId && m.Status == Model.StatusE.Live);
+                var sysRoleMenuPowerGs = await _dal.Query(m => m.RoleID == roleId && m.Status == 1);
 
                 //将 SysRoleMenuPowerG  转为 sysRoleMenuPowerGVM
                 var source = new Source<List<SysRoleMenuPowerGroup>> { Value = sysRoleMenuPowerGs };
@@ -81,7 +81,7 @@ namespace K.Core.Services.System
 
             #region //条件判断      （先不考虑用抽象方法方法）
             var sysRole = await _sysRoleRepository.QueryById(roleID);
-            if (sysRole == null || sysRole.Status == Model.StatusE.Delete) 
+            if (sysRole == null || sysRole.Status == 2) 
             {
                 return MessageModel<bool>.Fail("角色已不存在");
             }
@@ -106,7 +106,7 @@ namespace K.Core.Services.System
             var tranResult = _dal.UseTran(async ()=> 
             {
                 //查询到之前的角色 权限数据
-                var sysRoleMenuPowerGs = await _dal.Query(m=> m.RoleID== roleID && m.Status == Model.StatusE.Live);
+                var sysRoleMenuPowerGs = await _dal.Query(m=> m.RoleID== roleID && m.Status == 1);
 
                 //删除之前对应的角色的权限数据
                 await _dal.DeleteByIds(sysRoleMenuPowerGs.Select(d=>d.ID).ToArray());

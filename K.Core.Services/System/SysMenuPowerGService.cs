@@ -60,17 +60,17 @@ namespace K.Core.Services.System
 
             //查询菜单是否存在
             var sysMenu = await _sysMenuRepository.QueryById(menuId);
-            if (sysMenu != null && sysMenu.Status != StatusE.Delete) 
+            if (sysMenu != null && sysMenu.Status !=2) 
             {
                 //查询菜单的权限组
-                var sysMenuPowerGroups = await _dal.Query(d => d.SysMenuID == menuId && d.Status == StatusE.Live);
+                var sysMenuPowerGroups = await _dal.Query(d => d.SysMenuID == menuId && d.Status == 1);
 
                 //var resultR=from sysMenuPowersG in sysMenuPowerGroups.sys
                 
 
                 var arrayPowerGroups = sysMenuPowerGroups.Select(s => s.SysPowerGroupID).ToArray();
 
-                var sysPowers = await _sysPowerRepository.Query(d => (arrayPowerGroups).Contains(d.SysPowerGroupID) && d.Status == StatusE.Live);
+                var sysPowers = await _sysPowerRepository.Query(d => (arrayPowerGroups).Contains(d.SysPowerGroupID) && d.Status == 1);
 
                 var returnMenuPowerGroupsVM = new List<SysMenuPowerGroupVM>();
                 foreach (var item in sysMenuPowerGroups)
@@ -131,7 +131,7 @@ namespace K.Core.Services.System
 
             //判断对应的菜单是否存在
             var sysMenu = await _sysMenuRepository.QueryById(menuID);
-            if (sysMenu == null || sysMenu.Status == StatusE.Delete) 
+            if (sysMenu == null || sysMenu.Status == 2) 
             {
                 return MessageModel<bool>.Fail("菜单已不存在");
             }
@@ -162,7 +162,7 @@ namespace K.Core.Services.System
             //var tranResult = _dal.UseCatchTran(async () =>
             {
              //查找到对应的菜单-权限组
-             var sysMenuPowerGroups = await _dal.Query(m => m.SysMenuID == sysMenu.ID && m.Status == StatusE.Live);
+             var sysMenuPowerGroups = await _dal.Query(m => m.SysMenuID == sysMenu.ID && m.Status == 1);
              //删除对应菜单的权限组  （menuPowerGroup）
              await _dal.DeleteByIds(sysMenuPowerGroups.Select(d => d.ID).ToArray());
 
@@ -186,7 +186,7 @@ namespace K.Core.Services.System
                   var ps = sysMenuPowerGroups.Select(d => d.SysPowerGroupID).ToArray();
                   await _sysPowerRepository.DeleteByIds((await _sysPowerRepository.Query(
                                                          m => ps.Contains(m.SysPowerGroupID)
-                                                        && m.Status == StatusE.Live)
+                                                        && m.Status == 1)
                                                        )
                                                         .Select(d => d.ID).ToArray());
 

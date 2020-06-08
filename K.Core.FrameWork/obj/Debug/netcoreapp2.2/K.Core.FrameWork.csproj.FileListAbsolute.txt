@@ -37,4 +37,3 @@ E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork
 E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.AssemblyInfo.cs
 E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.dll
 E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.pdb
-E:\localgit\c#\K.CoreT\K.Core.FrameWork\obj\Debug\netcoreapp2.2\K.Core.FrameWork.csprojAssemblyReference.cache

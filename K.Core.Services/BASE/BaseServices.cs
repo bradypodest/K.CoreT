@@ -298,7 +298,7 @@ namespace K.Core.Services.BASE
         //     }
         //     else
         //     {
-        //         oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+        //         oLamadaExtention.GetExpression("Status", 2, ExpressionType.NotEqual);
         //     }
 
         //     ////循环判断 : 只能处理 = ,like , !=  , > , <,  >=, <=
@@ -448,7 +448,7 @@ namespace K.Core.Services.BASE
         {
             TEntity deleteOne = await baseDal.QueryById(ID);
 
-            if (deleteOne == null || deleteOne.Status== StatusE.Delete) 
+            if (deleteOne == null || deleteOne.Status== 2) 
             {
                 return MessageModel<bool>.Fail(false,"对应数据不存在,操作失败");
             }
@@ -472,7 +472,7 @@ namespace K.Core.Services.BASE
             //}
 
             //标志删除
-            deleteOne.Status = StatusE.Delete;
+            deleteOne.Status = 2;
             deleteOne.DeleterID = _httpUser.ID;
             deleteOne.Deleter = _httpUser.Name;
             deleteOne.DeleteTime = DateTime.Now;
@@ -522,7 +522,7 @@ namespace K.Core.Services.BASE
             }
             else
             {
-                oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+                oLamadaExtention.GetExpression("Status", 2, ExpressionType.NotEqual);
             }
 
             #region  查询参数     时间类型的可能还是有点 问题
@@ -694,7 +694,7 @@ namespace K.Core.Services.BASE
             }
             else
             {
-                oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
+                oLamadaExtention.GetExpression("Status", 2, ExpressionType.NotEqual);
             }
 
             #region  查询参数     时间类型的可能还是有点 问题
@@ -798,9 +798,12 @@ namespace K.Core.Services.BASE
                 return MessageModel<object>.Fail("该实体无详细表,查询失败!");
             }
 
-            object obj =  typeof(BaseServices<TEntity>)
-                .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic)
-                .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
+            //object obj =  typeof(BaseServices<TEntity>)
+            //    .GetMethod("GetDetailPage", BindingFlags.Instance | BindingFlags.NonPublic)
+            //    .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
+            object obj = typeof(BaseServices<TEntity>)
+               .GetMethod("GetDetailPageT", BindingFlags.Instance | BindingFlags.NonPublic)
+               .MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { pageDataOptions });
             var obj2 = obj.GetType().GetProperty("Result").GetValue(obj, null);
             return obj2;
         }
@@ -864,7 +867,8 @@ namespace K.Core.Services.BASE
                         property.SetValue(source, Guid.NewGuid().ToString());
                         break;
                     case "status":
-                        property.SetValue(source, StatusE.Live);
+                        //property.SetValue(source, StatusE.Live);
+                        property.SetValue(source, 1);
                         break;
                     case "createid":
                         property.SetValue(source, _httpUser.ID);
@@ -895,7 +899,7 @@ namespace K.Core.Services.BASE
                 string filed = property.Name.ToLower();
 
                 //标志删除
-                //deleteOne.Status = StatusE.Delete;
+                //deleteOne.Status = 2;
                 //deleteOne.DeleterID = _httpUser.ID;
                 //deleteOne.Deleter = _httpUser.Name;
                 //deleteOne.DeleteTime = DateTime.Now;
@@ -912,7 +916,7 @@ namespace K.Core.Services.BASE
                         property.SetValue(source, DateTime.Now);
                         break;
                     case "status":
-                        property.SetValue(source, StatusE.Delete);
+                        property.SetValue(source, 2);
                         break;
                     default:
                         break;
@@ -1065,17 +1069,8 @@ namespace K.Core.Services.BASE
 
             if (baseDal.UseTran(() =>
             {
-                //删除情况下
+                
                 var DBo = baseDal.dbContext.Db;
-                //查询出需要删除的子表数据
-                List<Detail> dels =  DBo.Queryable<Detail>().In(delKeys).ToList();
-                List<Detail> delsDetailEntity = new List<Detail>();
-                foreach (var item in dels)
-                {
-                    delsDetailEntity.Add(SetDelDefaultVal(item));//删除实体类设置默认值之后，下面操作就是修改了，本系统删除是软删除
-                }
-                //上方代码是否可以替换为  反射
-
                 //更新主表
                 baseDal.Update(te, null, UpdateIgnoreDefaultField());
 
@@ -1088,15 +1083,30 @@ namespace K.Core.Services.BASE
 
                     up.ExecuteCommandHasChange();
                 }
-                //更新子表删除
-                foreach (var item in delsDetailEntity)
+
+                //删除情况下
+                //查询出需要删除的子表数据
+                if (delKeys != null && delKeys.Count > 0)
                 {
-                    //应该是从数据库查询的，所以不需要忽略一些字段
-                    DBo.Updateable(item).ExecuteCommandHasChange();
+                    List<Detail> dels = DBo.Queryable<Detail>().In(delKeys).ToList();
+                    List<Detail> delsDetailEntity = new List<Detail>();
+                    foreach (var item in dels)
+                    {
+                        delsDetailEntity.Add(SetDelDefaultVal(item));//删除实体类设置默认值之后，下面操作就是修改了，本系统删除是软删除
+                    }
+                    //上方代码是否可以替换为  反射
+
+                    //更新子表删除
+                    foreach (var item in delsDetailEntity)
+                    {
+                        //应该是从数据库查询的，所以不需要忽略一些字段
+                        DBo.Updateable(item).ExecuteCommandHasChange();
+                    }
                 }
+
+
                 //子表新增
                 //剔除掉数据中参数未必填的数据 ，如 有的  Name 字段是必填属性，但是数据为空 ，则剔除掉  （思路：实体类上面有 [Required] 特性的）  待修改  
-                
 
                 if (addsDetailEntity!=null && addsDetailEntity.Count>0)
                     DBo.Insertable(addsDetailEntity.ToArray()).ExecuteCommand();
@@ -1251,8 +1261,8 @@ namespace K.Core.Services.BASE
             }
             else
             {
-                //oLamadaExtention.GetExpression("Status", StatusE.Delete, ExpressionType.NotEqual);
-                whereExpressions.Add("Status".CreateExpression<TEntity>(StatusE.Delete, LinqExpressionType.NotEqual));
+                //oLamadaExtention.GetExpression("Status", 2, ExpressionType.NotEqual);
+                whereExpressions.Add("Status".CreateExpression<TEntity>(2, LinqExpressionType.NotEqual));
             }
 
             //将条件反序列化
@@ -1318,7 +1328,95 @@ namespace K.Core.Services.BASE
         }
         #endregion
 
+        #region 升级版子表查询
+        private async Task<PageModel<TDetail>> GetDetailPageT<TDetail>(PageDataOptions pageDataOptions) where TDetail : class, new()
+        {
+            List<Expression<Func<TDetail, bool>>> whereExpressions = new List<Expression<Func<TDetail, bool>>>();
 
+            if (pageDataOptions.IsAll)
+            {
+            }
+            else
+            {
+                //oLamadaExtention.GetExpression("Status", 2, ExpressionType.NotEqual);
+                whereExpressions.Add("Status".CreateExpression<TDetail>(2, LinqExpressionType.NotEqual));
+                //whereExpressions.Add(expression = Expression.Lambda<Func<TDetail, bool>>((p.Status != null));
+            }
+
+            PageModel<TDetail> gridData = new PageModel<TDetail>();
+            //加入主表ID 条件
+            if (pageDataOptions.Value == null || string.IsNullOrWhiteSpace((string)pageDataOptions.Value))
+            {
+                return gridData;
+            }
+            else 
+            {
+                whereExpressions.Add("RefID".CreateExpression<TDetail>((string)pageDataOptions.Value, LinqExpressionType.Equal));//如果以后子表外键不是RefID 字段 ，需要重写这里 （思路：给表示是外键的实体字段上加上特定的表示外键的特性，再根据特性，反射出对应的外键字段名）
+            }
+
+
+            //将条件反序列化
+            List<SearchParameters> searchParametersList = new List<SearchParameters>();
+            if (!string.IsNullOrEmpty(pageDataOptions.Wheres))
+            {
+                try
+                {
+                    searchParametersList = pageDataOptions.Wheres.DeserializeObject<List<SearchParameters>>();
+                }
+                catch { }
+            }
+
+            QueryRelativeList?.Invoke(searchParametersList);//查询前可以在继承类中 扩展条件
+
+            foreach (var item in searchParametersList)
+            {
+                item.DisplayType = item.DisplayType.GetDBCondition();//将文字转为字符，如 thanorequal 转为 >=
+
+                if (string.IsNullOrEmpty(item.Value))
+                {
+                    continue;
+                }
+
+                object[] values = item.Value.Split(',');//这是全部的，没有移除的，
+                                                        //验证 数据是否与数据库中的类型是否一致，即 检查数据的正确性  ，不正确的移除  待完成
+
+
+                if (values == null || values.Length == 0)
+                {
+                    continue;
+                }
+
+                if (item.DisplayType == HtmlElementType.Contains)//如果是in的查询条件，则将值组合起来
+                    item.Value = string.Join(",", values);
+
+                K.Core.Enums.LinqExpressionType expressionType = item.DisplayType.GetLinqCondition();
+
+                if (K.Core.Enums.LinqExpressionType.In == expressionType)
+                {
+                    whereExpressions.Add(item.Name.CreateExpression<TDetail>(values, expressionType));
+                }
+                else
+                {
+                    whereExpressions.Add(item.Name.CreateExpression<TDetail>(item.Value, expressionType));
+                }
+
+            }
+
+            if (base.orderbyString != null && !string.IsNullOrWhiteSpace(base.orderbyString))
+            {
+                pageDataOptions.Order = base.orderbyString;
+            }
+            else
+            {
+                pageDataOptions.Order = !string.IsNullOrWhiteSpace(pageDataOptions.Order) ? pageDataOptions.Order : "CreateTime desc";
+            }
+
+            var data = await baseDal.QueryTDetailPage<TDetail>(whereExpressions,
+   pageDataOptions.PageIndex, pageDataOptions.PageSize, pageDataOptions.Order);
+
+            return data;
+        }
+        #endregion
 
         #region  //更新 子 父 表（废弃）
         ///// <summary>

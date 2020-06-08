@@ -40,6 +40,9 @@ namespace K.Core.Model
 
         public bool Export { get; set; }
 
+        /// <summary>
+        /// 主表ID 值
+        /// </summary>
         public object Value { get; set; }
 
         /// <summary>

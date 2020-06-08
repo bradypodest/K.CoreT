@@ -22182,3 +22182,1318 @@ UNION ALL
 2020/6/6 16:55:23|
 【SQL参数】：
 【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:17:26|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/6/6 17:17:34|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/6 17:17:35|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/6 17:17:36|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:17:36|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:22:22|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:22:22|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:25:47|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:25:47|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:26:13|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:26:14|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:27:10|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:27:10|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:28:27|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:28:27|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/6 17:29:29|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/6 17:29:29|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:06:00|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/6/8 10:06:10|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 10:06:11|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 10:06:11|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/6/8 10:06:25|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:06:25|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:06:45|
+【SQL参数】：@OrderNo1:DD20200604
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [OrderNo] = @OrderNo1 )) CountTable 
+--------------------------------
+2020/6/8 10:06:45|
+【SQL参数】：@OrderNo1:DD20200604
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [OrderNo] = @OrderNo1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:07:08|
+【SQL参数】：@OrderNo1:DD20200604
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [OrderNo] = @OrderNo1 )) CountTable 
+--------------------------------
+2020/6/8 10:07:08|
+【SQL参数】：@OrderNo1:DD20200604
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [OrderNo] = @OrderNo1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:07:35|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:07:35|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:07:48|
+【SQL参数】：@OrderNo1:DD20200604053914
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [OrderNo] = @OrderNo1 )) CountTable 
+--------------------------------
+2020/6/8 10:07:48|
+【SQL参数】：@OrderNo1:DD20200604053914
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [OrderNo] = @OrderNo1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:08:47|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:08:47|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:09:39|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:09:39|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:11:12|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:11:12|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:11:24|
+【SQL参数】：@MethodConst1:DD20200604
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND  ([OrderNo] like '%'+@MethodConst1+'%') ) CountTable 
+--------------------------------
+2020/6/8 10:11:24|
+【SQL参数】：@MethodConst1:DD20200604
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND  ([OrderNo] like '%'+@MethodConst1+'%') ) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:11:34|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:11:34|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:11:49|
+【SQL参数】：@MethodConst1:0525
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND  ([OrderNo] like '%'+@MethodConst1+'%') ) CountTable 
+--------------------------------
+2020/6/8 10:11:49|
+【SQL参数】：@MethodConst1:0525
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND  ([OrderNo] like '%'+@MethodConst1+'%') ) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:11:59|
+【SQL参数】：@MethodConst1:0525
+@Qty2:12
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND  ([OrderNo] like '%'+@MethodConst1+'%')   AND ( [Qty] = @Qty2 )) CountTable 
+--------------------------------
+2020/6/8 10:12:00|
+【SQL参数】：@MethodConst1:0525
+@Qty2:12
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND  ([OrderNo] like '%'+@MethodConst1+'%')   AND ( [Qty] = @Qty2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:12:04|
+【SQL参数】：@Qty1:12
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [Qty] = @Qty1 )) CountTable 
+--------------------------------
+2020/6/8 10:12:04|
+【SQL参数】：@Qty1:12
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [Qty] = @Qty1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:12:36|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:12:36|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:12:53|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:12:53|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:19:37|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:19:37|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:19:54|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/9 0:00:00
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) CountTable 
+--------------------------------
+2020/6/8 10:19:54|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/9 0:00:00
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:21:29|
+【SQL参数】：@CreateTime1:2020/6/4 17:36:00
+@CreateTime2:2020/6/8 0:00:00
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) CountTable 
+--------------------------------
+2020/6/8 10:21:29|
+【SQL参数】：@CreateTime1:2020/6/4 17:36:00
+@CreateTime2:2020/6/8 0:00:00
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:24:07|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:24:07|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:27:00|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:27:00|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:27:09|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:27:09|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:37:07|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:37:07|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:53:11|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:53:11|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:54:32|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 10:54:32|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 10:55:19|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/5 0:00:00
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) CountTable 
+--------------------------------
+2020/6/8 10:55:19|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/5 0:00:00
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:19:05|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:19:05|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:24:04|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:24:04|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:26:39|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:26:39|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:28:29|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:28:29|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:29:19|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:29:19|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:29:47|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:29:47|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:35:29|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:35:29|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:35:30|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:35:30|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:40:55|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:40:55|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:41:21|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:41:22|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:44:22|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:44:22|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:49:27|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:49:27|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:51:15|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 11:51:15|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 11:51:15|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/6/8 11:51:16|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:51:16|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:52:02|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:52:02|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:52:21|
+【SQL参数】：@ModifyTime1:2020/6/1 0:00:00
+@ModifyTime2:2020/6/18 0:00:00
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [ModifyTime] >= @ModifyTime1 )  AND ( [ModifyTime] <= @ModifyTime2 )) CountTable 
+--------------------------------
+2020/6/8 11:52:21|
+【SQL参数】：@ModifyTime1:2020/6/1 0:00:00
+@ModifyTime2:2020/6/18 0:00:00
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [ModifyTime] >= @ModifyTime1 )  AND ( [ModifyTime] <= @ModifyTime2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:52:37|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:52:38|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:52:48|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/6 0:00:00
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) CountTable 
+--------------------------------
+2020/6/8 11:52:48|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/6 0:00:00
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:53:00|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:53:00|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:53:30|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:53:31|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 11:57:52|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 11:57:52|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 12:02:42|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 12:02:42|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 12:02:42|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 12:02:43|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 12:02:43|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 12:02:43|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 12:04:39|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 12:04:39|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 13:03:55|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/19 0:00:00
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) CountTable 
+--------------------------------
+2020/6/8 13:03:55|
+【SQL参数】：@CreateTime1:2020/6/1 0:00:00
+@CreateTime2:2020/6/19 0:00:00
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )  AND ( [CreateTime] >= @CreateTime1 )  AND ( [CreateTime] <= @CreateTime2 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:02:25|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/6/8 14:02:28|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 14:02:28|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:02:35|
+【SQL参数】：@RefID1:7f905b12-aa6f-4670-80d4-faf4ea906409
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:02:37|
+【SQL参数】：@RefID1:7f905b12-aa6f-4670-80d4-faf4ea906409
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:03:50|
+【SQL参数】：@RefID1:195f4884-7c63-4c08-980f-12080f4be6ea
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:03:50|
+【SQL参数】：@RefID1:195f4884-7c63-4c08-980f-12080f4be6ea
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:04:15|
+【SQL参数】：@RefID1:c3c918f5-ef9b-4b2e-a7cd-51e60deacd71
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:04:15|
+【SQL参数】：@RefID1:c3c918f5-ef9b-4b2e-a7cd-51e60deacd71
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:04:28|
+【SQL参数】：@RefID1:c203b55a-1c1d-4383-ae44-60e357eaf0e2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:04:29|
+【SQL参数】：@RefID1:c203b55a-1c1d-4383-ae44-60e357eaf0e2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:04:37|
+【SQL参数】：@RefID1:57bd212e-7c25-4de1-adbd-5e6650f043b2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:04:37|
+【SQL参数】：@RefID1:57bd212e-7c25-4de1-adbd-5e6650f043b2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:04:50|
+【SQL参数】：@RefID1:356ee271-e29a-472c-b9af-af3f7d77f833
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:04:50|
+【SQL参数】：@RefID1:356ee271-e29a-472c-b9af-af3f7d77f833
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:04:56|
+【SQL参数】：@RefID1:57bd212e-7c25-4de1-adbd-5e6650f043b2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:04:56|
+【SQL参数】：@RefID1:57bd212e-7c25-4de1-adbd-5e6650f043b2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:07:53|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:07:53|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:08:45|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:08:45|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:09:23|
+【SQL参数】：@InPara0:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:09:23|
+【SQL参数】：
+【SQL语句】：SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE 1=2  
+--------------------------------
+2020/6/8 14:15:32|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/6/8 14:15:33|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 14:15:33|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:15:39|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:15:39|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:16:31|
+【SQL参数】：@InPara0:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:16:31|
+【SQL参数】：@OrderNo:DD20200604053914
+@Qty:36
+@Remakes:测试子
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:16:31
+@ID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：UPDATE [TestOrder]  SET
+           [OrderNo]=@OrderNo,[Qty]=@Qty,[Remakes]=@Remakes,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:17:09|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:17:10|
+【SQL参数】：@InPara0:1
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:17:10|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/6/8 14:17:11|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 14:17:11|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:17:17|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:17:17|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:18:05|
+【SQL参数】：@InPara0:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:18:08|
+【SQL参数】：@OrderNo:DD20200604053914
+@Qty:36
+@Remakes:测试子
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:18:05
+@ID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：UPDATE [TestOrder]  SET
+           [OrderNo]=@OrderNo,[Qty]=@Qty,[Remakes]=@Remakes,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:18:14|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0604011
+@GoodsBatch:0604011
+@Qty:14
+@Weight:12
+@Remarks:css
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/4 17:40:20
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:18:05
+@ID:27c118f8-bee3-40d3-98a0-872d15988e6e
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:18:17|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0604010
+@GoodsBatch:0604010
+@Qty:13
+@Weight:12
+@Remarks:ddd 
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/4 17:40:20
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:18:05
+@ID:fb0f2fcc-4ea4-49a3-ab6b-2bc6512e6688
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:18:21|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0608001
+@GoodsBatch:0608001
+@Qty:12
+@Weight:12.6
+@Remarks:ccc
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 14:18:05
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:50080b71-dbe1-443f-9e44-e07f83d6f90d
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [TestOrderDetail]  
+           ([Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@Status,@RefID,@GoodsName,@GoodsBatch,@Qty,@Weight,@Remarks,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@DeleteTime,@Deleter,@DeleterID) ;
+--------------------------------
+2020/6/8 14:18:23|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 14:18:23|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:21:31|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0604011
+@GoodsBatch:0604011
+@Qty:14
+@Weight:12
+@Remarks:css
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/4 17:40:20
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:16:31
+@ID:27c118f8-bee3-40d3-98a0-872d15988e6e
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:21:31|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0604010
+@GoodsBatch:0604010
+@Qty:13
+@Weight:12
+@Remarks:ddd 
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/4 17:40:20
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:16:31
+@ID:fb0f2fcc-4ea4-49a3-ab6b-2bc6512e6688
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:21:37|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0608001
+@GoodsBatch:0608001
+@Qty:12
+@Weight:12.5
+@Remarks:ccc
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 14:16:31
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:37c69ee6-fdf5-4c59-b479-cce0901965ad
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [TestOrderDetail]  
+           ([Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@Status,@RefID,@GoodsName,@GoodsBatch,@Qty,@Weight,@Remarks,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@DeleteTime,@Deleter,@DeleterID) ;
+--------------------------------
+2020/6/8 14:26:16|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:26:16|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:26:57|
+【SQL参数】：@InPara0:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:27:00|
+【SQL参数】：@OrderNo:DD20200604053914
+@Qty:36
+@Remakes:测试子
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:26:57
+@ID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：UPDATE [TestOrder]  SET
+           [OrderNo]=@OrderNo,[Qty]=@Qty,[Remakes]=@Remakes,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:27:00|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0608001
+@GoodsBatch:0608001
+@Qty:12
+@Weight:12.5
+@Remarks:ccc
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 14:16:31
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:26:57
+@ID:37c69ee6-fdf5-4c59-b479-cce0901965ad
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:27:40|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:27:40|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:30:39|
+【SQL参数】：@InPara0:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:30:40|
+【SQL参数】：@OrderNo:DD20200604053914
+@Qty:36
+@Remakes:测试子
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:30:39
+@ID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：UPDATE [TestOrder]  SET
+           [OrderNo]=@OrderNo,[Qty]=@Qty,[Remakes]=@Remakes,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:30:40|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0608001
+@GoodsBatch:0608001
+@Qty:12
+@Weight:12.5
+@Remarks:ccc
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 14:16:31
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:30:39
+@ID:37c69ee6-fdf5-4c59-b479-cce0901965ad
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:30:40|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0604011
+@GoodsBatch:0604011
+@Qty:14
+@Weight:12
+@Remarks:css
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/4 17:40:20
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:30:39
+@ID:27c118f8-bee3-40d3-98a0-872d15988e6e
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:30:40|
+【SQL参数】：@Status:1
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0604010
+@GoodsBatch:0604010
+@Qty:13
+@Weight:12
+@Remarks:ddd 
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/4 17:40:20
+@ModifyID:1
+@Modifier:admin
+@ModifyTime:2020/6/8 14:30:39
+@ID:fb0f2fcc-4ea4-49a3-ab6b-2bc6512e6688
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:30:41|
+【SQL参数】：@InPara0:50080b71-dbe1-443f-9e44-e07f83d6f90d
+
+【SQL语句】：SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 14:30:41|
+【SQL参数】：@Status:2
+@RefID:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+@GoodsName:测试e0608001
+@GoodsBatch:0608001
+@Qty:12
+@Weight:12.6
+@Remarks:ccc
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 14:18:05
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:50080b71-dbe1-443f-9e44-e07f83d6f90d
+@DeleteTime:2020/6/8 14:30:41
+@Deleter:admin
+@DeleterID:1
+
+【SQL语句】：UPDATE [TestOrderDetail]  SET
+           [Status]=@Status,[RefID]=@RefID,[GoodsName]=@GoodsName,[GoodsBatch]=@GoodsBatch,[Qty]=@Qty,[Weight]=@Weight,[Remarks]=@Remarks,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 14:30:42|
+【SQL参数】：
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) CountTable 
+--------------------------------
+2020/6/8 14:30:42|
+【SQL参数】：
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] IS NOT NULL )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:30:51|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:30:51|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 14:32:09|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 14:32:09|
+【SQL参数】：@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] IS NOT NULL )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 15:15:03|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/6/8 15:15:11|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:15:11|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 15:15:27|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:15:27|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/6/8 15:15:29|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [ParentId],[MenuId],[Name],[Url],[PathUrl],[Description],[Icon],[OrderNo],[IsShow],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenu]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/6/8 15:15:29|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [SysMenuID],[SysPowerGroupID],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysMenuPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/6/8 15:15:29|
+【SQL参数】：@Status0:1
+
+【SQL语句】：SELECT [Name],[OrderNo],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysPowerGroup]  WHERE ( [Status] = @Status0 )
+--------------------------------
+2020/6/8 15:15:36|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:15:36|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysUser]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/6/8 15:15:51|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:15:51|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 15:16:05|
+【SQL参数】：@Status0:2
+@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] <> @Status0 )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 15:16:05|
+【SQL参数】：@Status0:2
+@RefID1:10dc3f86-7d95-40fb-9d0d-7ebbdeb5f5e7
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] <> @Status0 )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 15:16:45|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:16:45|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/6/8 15:17:05|
+【SQL参数】：@MethodConst0:cs0608
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE  ([RoleID] = @MethodConst0) 
+--------------------------------
+2020/6/8 15:17:05|
+【SQL参数】：@Status:1
+@RoleID:cs0608
+@Name:测试0608
+@Description:ces
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 15:17:05
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:d0489165-6660-4987-9e93-d316029ad2e3
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [SysRole]  
+           ([Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@Status,@RoleID,@Name,@Description,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@DeleteTime,@Deleter,@DeleterID) ;
+--------------------------------
+2020/6/8 15:17:05|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:17:05|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/6/8 15:17:15|
+【SQL参数】：@InPara0:d0489165-6660-4987-9e93-d316029ad2e3
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE [ID] IN (@InPara0)  
+--------------------------------
+2020/6/8 15:17:15|
+【SQL参数】：@MethodConst0:cs0608
+@Status1:1
+
+【SQL语句】：SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE (([RoleID] = @MethodConst0) AND( [Status] = @Status1 ))
+--------------------------------
+2020/6/8 15:17:15|
+【SQL参数】：@Status0:1
+@RoleId1:cs0608
+
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser]  WHERE (( [Status] = @Status0 ) AND ( [RoleId] = @RoleId1 ))
+--------------------------------
+2020/6/8 15:17:15|
+【SQL参数】：@Status:2
+@RoleID:cs0608
+@Name:测试0608
+@Description:ces
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 15:17:05
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:d0489165-6660-4987-9e93-d316029ad2e3
+@DeleteTime:2020/6/8 15:17:15
+@Deleter:admin
+@DeleterID:1
+
+【SQL语句】：UPDATE [SysRole]  SET
+           [Status]=@Status,[RoleID]=@RoleID,[Name]=@Name,[Description]=@Description,[CreateID]=@CreateID,[Creator]=@Creator,[CreateTime]=@CreateTime,[ModifyID]=@ModifyID,[Modifier]=@Modifier,[ModifyTime]=@ModifyTime,[DeleteTime]=@DeleteTime,[Deleter]=@Deleter,[DeleterID]=@DeleterID  WHERE [ID]=@ID
+--------------------------------
+2020/6/8 15:17:15|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:17:15|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/6/8 15:22:26|
+【SQL参数】：
+【SQL语句】：SELECT [UserName],[UserPwd],[RoleId],[RoleName],[LastLoginDate],[LastModifyPwdDate],[ErrorCount],[LastLoginFailDate],[HeadPicUrl],[Sex],[Age],[Birth],[Address],[Mobile],[Email],[Remark],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [SysUser] 
+--------------------------------
+2020/6/8 15:22:26|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [SysRole]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:22:27|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[RoleID],[Name],[Description],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [SysRole]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 2
+--------------------------------
+2020/6/8 15:22:35|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:22:35|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 15:24:22|
+【SQL参数】：@Status:1
+@OrderNo:DD20200608032247
+@Qty:13
+@Remakes:测试0608
+@CreateID:1
+@Creator:admin
+@CreateTime:2020/6/8 15:24:22
+@ModifyID:
+@Modifier:
+@ModifyTime:
+@ID:a777ad53-ccce-4c31-9054-4c904d7e64af
+@DeleteTime:
+@Deleter:
+@DeleterID:
+
+【SQL语句】：INSERT INTO [TestOrder]  
+           ([Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID])
+     VALUES
+           (@Status,@OrderNo,@Qty,@Remakes,@CreateID,@Creator,@CreateTime,@ModifyID,@Modifier,@ModifyTime,@ID,@DeleteTime,@Deleter,@DeleterID) ;
+--------------------------------
+2020/6/8 15:25:56|
+【SQL参数】：@Status0:2
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) CountTable 
+--------------------------------
+2020/6/8 15:25:57|
+【SQL参数】：@Status0:2
+
+【SQL语句】：SELECT * FROM (SELECT [Status],[OrderNo],[Qty],[Remakes],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrder]  WHERE ( [Status] <> @Status0 )) T WHERE RowIndex BETWEEN 1 AND 8
+--------------------------------
+2020/6/8 15:26:02|
+【SQL参数】：@Status0:2
+@RefID1:a777ad53-ccce-4c31-9054-4c904d7e64af
+
+【SQL语句】： SELECT COUNT(1) FROM (SELECT [RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID] FROM [TestOrderDetail]  WHERE ( [Status] <> @Status0 )  AND ( [RefID] = @RefID1 )) CountTable 
+--------------------------------
+2020/6/8 15:26:02|
+【SQL参数】：@Status0:2
+@RefID1:a777ad53-ccce-4c31-9054-4c904d7e64af
+
+【SQL语句】：SELECT * FROM (SELECT [RefID],[GoodsName],[GoodsBatch],[Qty],[Weight],[Remarks],[CreateID],[Creator],[CreateTime],[ModifyID],[Modifier],[ModifyTime],[ID],[Status],[DeleteTime],[Deleter],[DeleterID],ROW_NUMBER() OVER(ORDER BY CreateTime desc) AS RowIndex  FROM [TestOrderDetail]  WHERE ( [Status] <> @Status0 )  AND ( [RefID] = @RefID1 )) T WHERE RowIndex BETWEEN 1 AND 8

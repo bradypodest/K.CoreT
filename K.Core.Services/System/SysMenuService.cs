@@ -79,7 +79,7 @@ namespace K.Core.Services.System
                 parentId = default(Guid).ToString();
             }
 
-            var sysMenus = await _dal.Query(d=>d.Status==Model.StatusE.Live);//里面是没有根节点的,因为根节点是虚拟的
+            var sysMenus = await _dal.Query(d=>d.Status==1);//里面是没有根节点的,因为根节点是虚拟的
 
 
 
@@ -134,9 +134,9 @@ namespace K.Core.Services.System
             sysMenuTrees = sysMenuTrees.OrderBy(d => d.OrderNo).ToList();
 
             //查询出所有菜单权限组
-            var allSysMenuPowerGs= await _sysMenuPowerGRepository.Query(mg=>mg.Status== Model.StatusE.Live);
+            var allSysMenuPowerGs= await _sysMenuPowerGRepository.Query(mg=>mg.Status== 1);
             //查询出所有的权限组
-            var allSysPowerGroups= await _sysPowerGroupRepository.Query(g=>g.Status==Model.StatusE.Live);
+            var allSysPowerGroups= await _sysPowerGroupRepository.Query(g=>g.Status==1);
 
             //查询每个节点的父节点 数组
             foreach (var item in sysMenuTrees)

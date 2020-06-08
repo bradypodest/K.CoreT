@@ -439,6 +439,25 @@ namespace K.Core.Repository.Base
             return new PageModel<TEntity>() { dataCount = totalCount, pageCount = pageCount, pageIndex = intPageIndex, pageSize = intPageSize, data = list };
         }
 
+        public async Task<PageModel<TDetail>> QueryTDetailPage<TDetail>(List<Expression<Func<TDetail, bool>>> whereExpressions, int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null) where TDetail : class
+        {
+
+            RefAsync<int> totalCount = 0;
+
+            var queryable = _db.Queryable<TDetail>();
+            queryable = queryable.OrderByIF(!string.IsNullOrEmpty(strOrderByFileds), strOrderByFileds);
+
+            foreach (var whereExpression in whereExpressions)
+            {
+                queryable = queryable.WhereIF(whereExpression != null, whereExpression);
+            }
+
+            var list = await queryable.ToPageListAsync(intPageIndex, intPageSize, totalCount);
+
+            int pageCount = (Math.Ceiling(totalCount.ObjToDecimal() / intPageSize.ObjToDecimal())).ObjToInt();
+            return new PageModel<TDetail>() { dataCount = totalCount, pageCount = pageCount, pageIndex = intPageIndex, pageSize = intPageSize, data = list };
+        }
+
 
         /// <summary> 
         ///查询-多表查询

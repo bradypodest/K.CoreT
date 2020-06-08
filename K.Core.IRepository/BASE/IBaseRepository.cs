@@ -51,6 +51,8 @@ namespace K.Core.IRepository.Base
 
         Task<PageModel<TEntity>> QueryPage(List<Expression<Func<TEntity, bool>>> whereExpressions, int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null);
 
+        Task<PageModel<TDetail>> QueryTDetailPage<TDetail>(List<Expression<Func<TDetail, bool>>> whereExpressions, int intPageIndex = 1, int intPageSize = 20, string strOrderByFileds = null) where TDetail :class;
+
         Task<List<TResult>> QueryMuch<T, T2, T3, TResult>(
             Expression<Func<T, T2, T3, object[]>> joinExpression,
             Expression<Func<T, T2, T3, TResult>> selectExpression,

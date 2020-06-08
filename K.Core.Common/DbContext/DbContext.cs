@@ -394,5 +394,6 @@ namespace {Namespace}
             return GetCustomEntityDB<T>(sugarClient);
         }
         #endregion
+
     }
 }
